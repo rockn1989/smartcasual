@@ -1754,6 +1754,8 @@ form.subscribe-form .btn-send:hover:after {
   background: #ffffff;
   outline: none;
   font-size: 18px;
+  font-style: italic;
+  font-family: "Cormorant-Italic";
 }
 .order-modal fieldset textarea {
   padding: 20px;
@@ -1766,6 +1768,8 @@ form.subscribe-form .btn-send:hover:after {
   background: #ffffff;
   outline: none;
   font-size: 18px;
+  font-style: italic;
+  font-family: "Cormorant-Italic";
   resize: none;
 }
 .order-modal .modal-btn {
