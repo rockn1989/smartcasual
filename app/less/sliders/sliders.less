@@ -179,7 +179,7 @@
       }
     }
     .slide-img-first {
-      top: 0; 
+      top: 0;
       left: 0;
     }
     .slide-img-second {
@@ -343,6 +343,7 @@
   }
 }
 .detail-product-slider {
+  position: relative;
   margin-left: 3%;
   display: inline-block;
   vertical-align: top;
@@ -359,6 +360,20 @@
       display: inline-block;
       vertical-align: middle;
       height: 100%;
+    }
+  }
+  .zoom {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 900;
+    a {
+      color: darken(@mainColor, 20%);
+      letter-spacing: .8px;
+      font-size: 14px;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
