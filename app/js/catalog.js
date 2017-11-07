@@ -46,5 +46,12 @@ $('.brand-list-size').on('click', 'a', function (e) {
   $(this).addClass('active');
 });
 
+// ZOOM IMG 
+
+var $easyzoom = $('.easyzoom').easyZoom();
+
+// Get an instance API
+var api = $easyzoom.data('easyZoom');
+
 
 });

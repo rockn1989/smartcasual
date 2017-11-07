@@ -204,9 +204,9 @@ a.read-more {
 
 .detail-product-content {
   margin-bottom: 80px !important;
-  padding-top: 30px;
   padding-left: 30px;
   .detail-product-title {
+    margin-top: -5px;
     margin-bottom: 40px;
     text-transform: none;
     font-size: 40px;
@@ -500,3 +500,27 @@ img[data-src] {
   opacity: 0;
 }
 */
+
+
+
+
+.detail-product-slider {
+  .slide {
+    //height: 621px !important;
+    position: relative;
+    overflow: hidden;
+    vertical-align: bottom;
+    a {
+      vertical-align: bottom;
+    }
+    img {
+      max-height: none !important;
+      max-width: none !important;
+    }
+  }
+}
+
+
+.slick-list {
+  max-height: 620px;
+}

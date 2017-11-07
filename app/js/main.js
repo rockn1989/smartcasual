@@ -130,7 +130,7 @@ $('.soc-slider').slick({
 });
 
 $('.detail-product-preview-slider').slick({
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: '.detail-product-slider',
   dots: false,

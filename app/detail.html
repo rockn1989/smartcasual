@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="libs/css/uikit.min.css">
   <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="libs/slick/slick-theme.css">
-  <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.spinner.css">
+  <link rel="stylesheet" href="libs/EasyZoom/easyzoom.css">
   <link rel="stylesheet" href="css/style.css">
   <!--[if lte IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -174,6 +174,14 @@
         </div>  
       </div>
     </div>
+    <div class="uk-container uk-container-medium">
+      <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        <li><a href="">Женское</a></li>
+        <li><a href="">Теплые кофты</a></li>
+        <li>Кашемировый кардиган туника с завязками</li>
+      </ul>
+    </div>
   </header>
 
   <section class="content">
@@ -204,23 +212,35 @@
                   </div>
 
                 </div>
-                <div class="detail-product-video-box"></div>
+                <div class="detail-product-video-box">
+                  <i class="icon-play-button-fill"></i>
+                </div>
               </div>
               <div class="detail-product-slider">
-                <div class="slide">
-                  <img data-lazy="http://via.placeholder.com/300x540" alt="">
+                <div class="slide easyzoom easyzoom--overlay">
+                  <a href="http://via.placeholder.com/1120x1480">
+                    <img data-lazy="http://via.placeholder.com/470x620" alt="">
+                  </a>
                 </div>
-                <div class="slide">
-                  <img data-lazy="http://via.placeholder.com/560x740" alt="">
+                <div class="slide easyzoom easyzoom--overlay">
+                  <a href="http://via.placeholder.com/1120x1480">
+                    <img data-lazy="http://via.placeholder.com/470x620" alt="">
+                  </a>
                 </div>
-                <div class="slide">
-                  <img data-lazy="http://via.placeholder.com/560x740" alt="">
+                <div class="slide easyzoom easyzoom--overlay">
+                  <a href="http://via.placeholder.com/1120x1480">
+                    <img data-lazy="http://via.placeholder.com/470x620" alt="">
+                  </a>
                 </div>
-                <div class="slide">
-                  <img data-lazy="http://via.placeholder.com/560x740" alt="">
+                <div class="slide easyzoom easyzoom--overlay">
+                  <a href="http://via.placeholder.com/1120x1480">
+                    <img data-lazy="http://via.placeholder.com/470x620" alt="">
+                  </a>
                 </div>
-                <div class="slide">
-                  <img data-lazy="http://via.placeholder.com/560x740" alt="">
+                <div class="slide easyzoom easyzoom--overlay">
+                  <a href="http://via.placeholder.com/1120x1480">
+                    <img data-lazy="http://via.placeholder.com/470x620" alt="">
+                  </a>
                 </div>                    
               </div>
             </div>
@@ -828,6 +848,7 @@
   <script src="libs/js/uikit.min.js" defer></script>
   <script src="libs/slick/slick.min.js" defer></script>
   <script src="libs/svg4everybody.min.js" defer></script>
+  <script src="libs/EasyZoom/easyzoom.js" defer></script>
   <script src="js/catalog.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
