@@ -134,3 +134,50 @@ h1 {
 .uk-slidenav-position .uk-slidenav-next {
   right: 10px;
 }
+
+
+.uk-pagination {
+  li {
+    span,a {
+        background: transparent;
+        min-width: auto;
+        padding: 0;
+        margin: 0;
+        margin-right: 30px;
+      }
+    a {
+      color: #202f43;
+      opacity: .7;
+      &:hover {
+        background: transparent;
+        opacity: 1;
+      }
+    }
+  }
+  li.uk-active {
+    span {
+      background: transparent;
+      color: @mainColor;
+    }
+  }
+  .uk-pagination-next {
+    float: none;
+  }
+}
+
+a.btn {
+  padding: 0 30px;
+  display: inline-block;
+  color: #ffffff;
+  height: 60px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f76d57;
+  letter-spacing: 1.3px;
+  font-size: 16px;
+  &:hover {
+    text-decoration: none;
+    background-color: #253446;
+  }
+}

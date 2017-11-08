@@ -123,9 +123,11 @@ $('.soc-slider').slick({
  $('.detail-product-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: false,
+  arrows: true,
   fade: true,
   lazyLoad: 'progressive',
+  prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
+  nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
   asNavFor: '.detail-product-preview-slider'
 });
 
