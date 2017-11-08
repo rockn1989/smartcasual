@@ -1701,6 +1701,11 @@ form.subscribe-form .btn-send:hover:after {
 .detail-product-slider .slick-next {
   width: 28px;
   height: 28px;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  transition: opacity .5s ease;
 }
 .detail-product-slider .slick-prev i,
 .detail-product-slider .slick-next i {
@@ -1715,6 +1720,10 @@ form.subscribe-form .btn-send:hover:after {
 }
 .detail-product-slider .slick-next {
   right: 2%;
+}
+.detail-product-slider:hover .slick-prev,
+.detail-product-slider:hover .slick-next {
+  opacity: 1;
 }
 .detail-product-preview-slider {
   margin: 25px auto 50px;

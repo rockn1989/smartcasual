@@ -402,6 +402,8 @@
   .slick-next {
     width: 28px;
     height: 28px;
+    opacity: 0;
+    transition: opacity .5s ease;
     i {
       color: #202f43;
     }
@@ -416,6 +418,12 @@
   }
   .slick-next {
     right: 2%;
+  }
+  &:hover {
+    .slick-prev,
+    .slick-next {
+      opacity: 1;
+    }
   }
 }
 .detail-product-preview-slider {
