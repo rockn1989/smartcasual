@@ -49,7 +49,7 @@ $('.slider').slick({
   arrows: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   infinite: true,
   centerPadding: '50px',

@@ -618,3 +618,291 @@ img[data-src] {
     letter-spacing: .8px;
   }
 }
+
+
+/* КАТАЛОГ */
+
+.catalog-header {
+  position: relative;
+  padding: 0 15px;
+}
+
+.catalog-select {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  min-width: 175px;
+  height: 50px;
+  line-height: 50px;
+  z-index: 80;
+  .catalog-option-current {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 50px;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      content: "\e917";
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 12px;
+      color: #202f43;
+      font-weight: bold;
+    }
+  }
+  .catalog-option-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    z-index: 101;
+    background: #f6f6f6;
+    a {
+      padding: 0 15px;
+      display: block;
+      color: #202f43;
+      &.active {
+        background: #a0a0a0;
+        position: relative;
+        &:after {
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          content: "\e918";
+          font-family: 'icomoon' !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 12px;
+          color: #202f43;
+        }
+      }
+      &:hover {
+        background: #d3d3d3;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.cart {
+  padding: 15px; 
+  width: 33%;
+  margin-bottom: 40px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid transparent;
+  .cart-img {
+    position: relative;
+    margin-bottom: 20px;
+    height: 320px;
+    //width: 260px;
+    overflow: hidden;
+  }
+  .cart-brands {
+    margin-bottom: 15px;
+    a {
+      color: #202f43;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: .8px;
+    }
+  }
+  .cart-coast {
+    .old-coast {
+      color: #f76d57;
+      text-decoration: line-through;
+      letter-spacing: 0.8px;
+      font-weight: 400;
+    }
+    .coast {
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+  }
+  .cart-status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    z-index: 75;
+    &>div {
+      margin-bottom: 10px;
+      padding: 0 10px;
+      display: block;
+      font-size: 12px;
+      height: 25px;
+      line-height: 25px;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .new {
+      background: #ffffff;
+      color: #202f43;
+      opacity: .7;
+      font-weight: bold;
+    }
+    .discount {
+      background: #f76d57;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+  .action-wrapper {
+    position: absolute;
+    top: 10px;
+    right: -50%;
+    transition: right .3s ease-out;
+    .favorites {
+      margin-bottom: 10px;
+      text-align: center;
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        color: @mainColor;
+        font-size: 40px;
+        &:after {
+          content: '\e90f';
+          font-family: 'icomoon' !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+
+          /* Better Font Rendering =========== */
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #f76d57;
+        }
+        &.checked-favorites {
+           &:after {
+            color: #f76d57;
+            content: '\e910';
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+      }
+    }
+    .brand-color-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin-bottom: 8px;
+        display: block;
+        width: 40px;
+        height: 20px;
+        line-height: 30px;
+        a.color {
+          display: block;
+          width: 40px;
+          height: 20px;
+          &--lightgray {
+            background: #dddddd;
+          }
+          &--blue {
+            background: blue;
+          }
+          &--darkgray {
+            background: gray;
+          }
+          &.checked {
+            position: relative;
+            &:after {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              content: "\e918";
+              font-family: 'icomoon' !important;
+              speak: none;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              font-size: 12px;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+  .preview {
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    bottom: -50%;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 2.8px;
+    color: #ffffff;
+    border-bottom: 3px solid #f76d57;
+    text-transform: uppercase;
+    //transform: translateY(50%);
+    transition: bottom .3s ease-out;
+    z-index: 76;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    border: 1px solid #dddddd;
+    .preview {
+      bottom: 30%;
+    }
+    .action-wrapper {
+      right: 10px;
+    }
+  }
+  @media @tablet-w {
+    width: 45%;
+  }
+}
+

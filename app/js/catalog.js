@@ -46,12 +46,53 @@ $('.brand-list-size').on('click', 'a', function (e) {
   $(this).addClass('active');
 });
 
+// CHANGE FILTER TYPE
+
+$('.catalog-select').on('click', function () {
+  $('.catalog-option-list').slideToggle('350');
+});
+
+$('.catalog-option-list').on('click', 'a', function (e) {
+  e.preventDefault();
+  $(this)
+    .parents()
+    .find('a')
+    .removeClass('active');
+  $(this).addClass('active');
+  $('.catalog-option-current').text($(this).text());
+});
+
+
+// CART CHANGE IMG
+
+$('.action-wrapper .brand-color-list').on('click', 'a' , function (e) {
+  e.preventDefault();
+
+});
+
+// CART CHANGE COLORS
+
+/*$('.action-wrapper .brand-color-list').on('click', 'a.color', function (e) {
+  e.preventDefault();
+  $('.action-wrapper .brand-color-list').find('a.color').removeClass('checked');
+  $(this).addClass('checked');
+});
+*/
+// CART ADD TO FAVORITES
+
+$('.action-wrapper .favorites').on('click', 'a' , function (e) {
+  e.preventDefault();
+  $(this).addClass('checked-favorites');
+});
+
 // ZOOM IMG 
 
-var $easyzoom = $('.easyzoom').easyZoom();
+if($('div').is('.easyzoom')) {
+  var $easyzoom = $('.easyzoom').easyZoom();
 
-// Get an instance API
-var api = $easyzoom.data('easyZoom');
+  // Get an instance API
+  var api = $easyzoom.data('easyZoom');
+}
 
 
 });
