@@ -94,5 +94,30 @@ if($('div').is('.easyzoom')) {
   var api = $easyzoom.data('easyZoom');
 }
 
+// CATALOG SCROLLBAR
+
+$('.filter .group-list').mCustomScrollbar({
+  axis: "y",
+  theme: "siteTheme",
+  scrollInertia: 300
+});
+
+// CATALOG SIDEBAR
+
+$('.catalog-sidebar').on('click', '.js__catalog-sublist-toggle', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+  $(this).siblings('.catalog-sublist').slideToggle('350');
+});
+
+// FILTER EVENTS
+
+$('.filter, .catalog-sidebar').on('click','.jg__group-title-toggle', function() {
+  var _self = $(this);
+  $(this).toggleClass('open-title');
+  $(this).siblings('.group-list').slideToggle('350', function() {
+   _self.toggleClass('open-list');
+  });
+});
 
 });

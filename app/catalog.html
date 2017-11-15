@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="libs/slick/slick-theme.css">
   <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.fadein.css">
+  <link rel="stylesheet" href="libs/malihuScrollBar/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!--[if lte IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -186,8 +187,249 @@
   <section class="content">
     <div class="uk-container uk-container-small">
       <div class="uk-grid">
-        <div class="uk-width-1-4">
-          <div class="filter">123</div>
+        <div class="uk-width-1-4 uk-padding-remove">
+          <div class="catalog-sidebar">
+            <div class="group-title jg__group-title-toggle open-title">Каталог</div>
+            <div class="group-list open-list">
+              <ul class="catalog-list">
+                <li><a href="#">Брюки</a></li>
+                <li><a href="#">Шорты</a></li>
+                <li>
+                  <a href="#" class="active js__catalog-sublist-toggle">Верхняя одежда</a>
+                  <ul class="catalog-sublist">
+                    <li><a href="#">Бомберы</a></li>
+                    <li><a href="#">Горнолыжные куртки</a></li>
+                    <li><a href="#">Демисезонные куртки</a></li>
+                    <li><a href="#">Джинсовые куртки</a></li>
+                    <li><a href="#">Жилеты</a></li>
+                    <li>
+                      <a href="#" class="active js__catalog-sublist-toggle">Кожанные куртки</a>
+                      <ul class="catalog-sublist">
+                        <li><a href="#">Косухи</a></li>
+                        <li><a href="#">Легкие куртки и ветровки</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Джинсы</a></li>
+                <li><a href="#">Жакеты / Жилеты</a></li>
+                <li><a href="#">Бомберы</a></li>
+                <li><a href="#">Комбинезоны</a></li>
+                <li><a href="#">Платья</a></li>
+                <li><a href="#">Рубашки / Блузки</a></li>
+                <li><a href="#">Футболки</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="filter">
+            <form action="" class="filter-form">
+            <!--               <fieldset>
+              <div class="group-title jg__group-title-toggle open-title">Категория</div>
+              <div class="group-list open-list">
+                <label for="cat-01">
+                  <input type="checkbox" id="cat-01">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Брюки</span>
+                </label>
+                <label for="cat-02">
+                  <input type="checkbox" id="cat-02">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Шорты</span>
+                </label>
+                <label for="cat-03">
+                  <input type="checkbox" id="cat-03">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Верхняя одежда</span>
+                </label>
+                <label for="cat-04">
+                  <input type="checkbox" id="cat-04">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Джинсы</span>
+                </label>
+                <label for="cat-05">
+                  <input type="checkbox" id="cat-05">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Жакеты/Жилеты</span>
+                </label>
+                <label for="cat-06">
+                  <input type="checkbox" id="cat-06">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Бомберы</span>
+                </label>
+                <label for="cat-07">
+                  <input type="checkbox" id="cat-07">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Тест 1</span>
+                </label>
+                <label for="cat-08">
+                  <input type="checkbox" id="cat-08">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Тест 2</span>
+                </label>
+                <label for="cat-09">
+                  <input type="checkbox" id="cat-09">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Тест 3</span>
+                </label>
+                <label for="cat-10">
+                  <input type="checkbox" id="cat-10">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">Тест 4</span>
+                </label>
+              </div>
+            </fieldset> -->
+              <fieldset>
+                <div class="group-title jg__group-title-toggle open-title">Материалы</div>
+                <div class="group-list open-list">
+                  <label for="type-01">
+                    <input type="checkbox" id="type-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Ангора</span>
+                  </label>
+                  <label for="type-02">
+                    <input type="checkbox" id="type-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Мохер</span>
+                  </label>
+                  <label for="type-03">
+                    <input type="checkbox" id="type-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Кашемир</span>
+                  </label>
+                  <label for="type-04">
+                    <input type="checkbox" id="type-04">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Альпака</span>
+                  </label>
+                  <label for="type-05">
+                    <input type="checkbox" id="type-05">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Меринос</span>
+                  </label>
+                  <label for="type-06">
+                    <input type="checkbox" id="type-06">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Хлопок</span>
+                  </label>
+                  <label for="type-07">
+                    <input type="checkbox" id="type-07">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест 1</span>
+                  </label>
+                  <label for="type-08">
+                    <input type="checkbox" id="type-08">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест 2</span>
+                  </label>
+                  <label for="type-09">
+                    <input type="checkbox" id="type-09">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест 3</span>
+                  </label>
+                  <label for="type-10">
+                    <input type="checkbox" id="type-10">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест 4</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="group-title jg__group-title-toggle open-title">Размер</div>
+                <div class="group-list open-list">
+                  <label for="size-01">
+                    <input type="checkbox" id="size-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">L</span>
+                  </label>
+                  <label for="size-02">
+                    <input type="checkbox" id="size-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">XL</span>
+                  </label>
+                  <label for="size-03">
+                    <input type="checkbox" id="size-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">M</span>
+                  </label>
+                  <label for="size-04">
+                    <input type="checkbox" id="size-04">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">S</span>
+                  </label>
+                  <label for="size-05">
+                    <input type="checkbox" id="size-05">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">XS</span>
+                  </label>
+                  <label for="size-06">
+                    <input type="checkbox" id="size-06">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">U</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="group-title jg__group-title-toggle open-title">Цвет</div>
+                <div class="group-list open-list">
+                  <label for="color-01">
+                    <input type="checkbox" id="color-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Черный</span>
+                  </label>
+                  <label for="color-02">
+                    <input type="checkbox" id="color-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Синий</span>
+                  </label>
+                  <label for="color-03">
+                    <input type="checkbox" id="color-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Белый</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="group-title jg__group-title-toggle">Бренды</div>
+                <div class="group-list">
+                  <label for="brands-01">
+                    <input type="checkbox" id="brands-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">H&M</span>
+                  </label>
+                  <label for="brands-02">
+                    <input type="checkbox" id="brands-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Gucci</span>
+                  </label>
+                  <label for="brands-03">
+                    <input type="checkbox" id="brands-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Stefanel</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="group-title jg__group-title-toggle">Дополнительно</div>
+                <div class="group-list">
+                  <label for="add-opt-01">
+                    <input type="checkbox" id="add-opt-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест</span>
+                  </label>
+                  <label for="add-opt-02">
+                    <input type="checkbox" id="add-opt-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест</span>
+                  </label>
+                  <label for="add-opt-03">
+                    <input type="checkbox" id="add-opt-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест</span>
+                  </label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
         </div>
         <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
           <div class="catalog">
@@ -228,7 +470,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -266,7 +508,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -304,7 +546,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -342,7 +584,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -380,7 +622,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -418,7 +660,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -456,7 +698,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -494,7 +736,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -532,7 +774,7 @@
                       </li>
                     </ul>
                   </div>
-                  <a href="#" class="preview">Быстрый просмотр</a>
+                  <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
                 </div>
                 <div class="cart-brands">
                   <div class="cart-brand-name">
@@ -547,6 +789,22 @@
                   <span class="coast">1 099 р.</span>
                 </div>
               </div>
+              <div class="read-more-wrapper">
+                <a href="" class="read-more shop-link">Смотреть еще</a>
+              </div>
+              <ul class="uk-pagination uk-float-right mt25">
+                <li class="uk-pagination-prev uk-hidden">
+                  <a href="">Предыдущая</a>
+                 </li>
+                <li class="uk-active"><span>1</span></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><span>...</span></li>
+                <li><a href="">174</a></li>
+                <li class="uk-pagination-next">
+                  <a href="">Следующая</a>
+                 </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -805,6 +1063,7 @@
   <script src="libs/slick/slick.min.js" defer></script>
   <script src="libs/svg4everybody.min.js" defer></script>
   <script src="libs/lazy-load-xt-master/jquery.lazyloadxt.js" defer></script>
+  <script src="libs/malihuScrollBar/jquery.mCustomScrollbar.concat.min.js" defer></script>
   <script src="js/catalog.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
