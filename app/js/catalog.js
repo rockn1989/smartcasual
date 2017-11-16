@@ -95,12 +95,14 @@ if($('div').is('.easyzoom')) {
 }
 
 // CATALOG SCROLLBAR
+if($('.filter').length) {
+  $('.filter .group-list').mCustomScrollbar({
+    axis: "y",
+    theme: "siteTheme",
+    scrollInertia: 300
+  });
+}
 
-$('.filter .group-list').mCustomScrollbar({
-  axis: "y",
-  theme: "siteTheme",
-  scrollInertia: 300
-});
 
 // CATALOG SIDEBAR
 

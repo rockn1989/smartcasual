@@ -1913,6 +1913,7 @@ form.subscribe-form .btn-send:hover:after {
   text-align: center;
   width: 100%;
   height: 320px;
+  font-size: 0;
 }
 .product-slider .slide-img-wrapper .slide-img-first img,
 .product-slider .slide-img-wrapper .slide-img-second img {
