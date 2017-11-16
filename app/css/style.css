@@ -1023,9 +1023,6 @@ img[data-src] {
   max-height: none !important;
   max-width: none !important;
 }
-.slick-list {
-  max-height: 620px;
-}
 /* COMMENTS DETAIL */
 .comments .uk-pagination {
   margin-bottom: 60px;

@@ -10,7 +10,7 @@ $('.products-preview-slider').slick({
         infinity: true,
         fade: true,
         cssEase: 'linear',
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         speed: 500,
         slidesToShow: 1,
@@ -203,7 +203,7 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
     });
   }
 
-// DISABLED UIKIT ANIMATION FOR MOBILE 
+// DISABLED UIKIT ANIMATION FOR MOBILE
 
   UIkit.on('beforeready.uk.dom', function () {
     if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
