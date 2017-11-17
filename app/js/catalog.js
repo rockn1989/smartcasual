@@ -122,4 +122,12 @@ $('.filter, .catalog-sidebar').on('click','.jg__group-title-toggle', function() 
   });
 });
 
+ // CATALOG BANNER
+ 
+ $('.catalog-banner').on('click', '.read-more', function(e) {
+  e.preventDefault();
+  $(this).siblings('.text').toggleClass('open');
+  $(this).toggleClass('open');
+ });
+
 });
