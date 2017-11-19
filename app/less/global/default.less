@@ -191,3 +191,52 @@ a.btn {
 .mt25 {
   margin-top: 25px;
 }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 600;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 591;
+    transition: opacity .3s ease-out;
+  }
+  .left-block,
+  .right-block {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: #ffffff;
+    z-index: 590;
+    transition: all .3s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  }
+  .left-block {
+    left: 0;
+  }
+  .right-block {
+    right: 0;
+  }
+  &.loaded {
+    .left-block {
+      transform: translateX(-100%);
+      width: 0;
+    }
+    .right-block {
+      transform: translateX(100%);
+      width: 0;
+    }
+    img {
+      opacity: 0;
+    }
+  }
+}

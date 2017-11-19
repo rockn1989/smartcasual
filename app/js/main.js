@@ -2,6 +2,11 @@
 
 $(function() {
 
+$(document).ready(function($) {
+  $('.preloader').addClass('loaded');
+  $('body').removeClass('preload');
+  //$('.preloader').remove();
+});
 //  HOME PAGE TOP SLIDER
 
 $('.products-preview-slider').slick({
@@ -13,8 +18,10 @@ $('.products-preview-slider').slick({
         autoplay: true,
         autoplaySpeed: 2000,
         speed: 500,
+        lazyLoad: 'progressive',
         slidesToShow: 1,
         slidesToScroll: 1,
+        lazyLoad: 'progressive',
         prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
         nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
         responsive: [
@@ -45,6 +52,10 @@ $('.products-preview-slider').slick({
 
 // PRODUCT SLIDER
 
+/*$('.slider').on('afterChange', function() {
+    $('.slide.slick-cloned.slick-active').find('img[data-srcset]').lazyLoadXT({show: true});
+});*/
+
 $('.slider').slick({
   arrows: true,
   slidesToShow: 4,
@@ -53,6 +64,7 @@ $('.slider').slick({
   speed: 1000,
   infinite: true,
   centerPadding: '50px',
+  lazyLoad: 'ondemand',
   prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
   nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
   responsive: [
@@ -90,6 +102,7 @@ $('.soc-slider').slick({
   autoplay: false,
   speed: 1000,
   infinite: true,
+  lazyLoad: 'progressive',
   centerPadding: '50px',
   prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
   nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',

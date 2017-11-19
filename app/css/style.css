@@ -318,6 +318,67 @@ a.btn:hover {
 .mt25 {
   margin-top: 25px;
 }
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 600;
+}
+.preloader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 591;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.preloader .left-block,
+.preloader .right-block {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #ffffff;
+  z-index: 590;
+  -webkit-transition: all 0.3s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.3s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.3s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.preloader .left-block {
+  left: 0;
+}
+.preloader .right-block {
+  right: 0;
+}
+.preloader.loaded .left-block {
+  -webkit-transform: translateX(-100%);
+     -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 0;
+}
+.preloader.loaded .right-block {
+  -webkit-transform: translateX(100%);
+     -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 0;
+}
+.preloader.loaded img {
+  opacity: 0;
+}
 /* PAGE HEADER */
 .header-top {
   padding: 8px 0;
