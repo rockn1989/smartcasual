@@ -2,14 +2,22 @@
 
 $(function() {
 
-$(document).ready(function($) {
-  clearInterval(timer);
+
+$('body>*').load(function() {
   $('.preloader').addClass('loaded');
   $('body').removeClass('preload');
   var timer = setTimeout(function() {
     $('.preloader').remove();
   }, 2000);
 });
+
+/*
+$('body>*').each(function(i, el) {
+  console.log($(el));
+  $(el).load(function() {
+    console.log($(el)+' is complete')
+  })
+})*/
 //  HOME PAGE TOP SLIDER
 
 $('.products-preview-slider').slick({
