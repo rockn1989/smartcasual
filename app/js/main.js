@@ -3,7 +3,7 @@
 $(function() {
 
 
-$('body>*').load(function() {
+$(window).load(function() {
   $('.preloader').addClass('loaded');
   $('body').removeClass('preload');
   var timer = setTimeout(function() {
