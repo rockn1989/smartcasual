@@ -3,9 +3,12 @@
 $(function() {
 
 $(document).ready(function($) {
+  clearInterval(timer);
   $('.preloader').addClass('loaded');
   $('body').removeClass('preload');
-  //$('.preloader').remove();
+  var timer = setTimeout(function() {
+    $('.preloader').remove();
+  }, 2000);
 });
 //  HOME PAGE TOP SLIDER
 
@@ -223,6 +226,29 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
       UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
     }
   });
+
+// SLIDE INDICATOR SWITCHER
+
+$('.slide-switcher').on('mousemove', '.switcher', function() {
+ var _self = $(this),
+     indicatorWrapper = $(_self).parents('.slide-switcher').siblings('.slide-indicator-wrapper'),
+     slideImgWrapper = $(_self).parents('.slide-img-wrapper');
+
+ var idPos = $(_self).attr('id').indexOf('-'),
+     id = $(_self).attr('id').slice(idPos+1);
+
+ $(_self)
+  .parents('.slide-switcher')
+  .siblings('.slide-indicator-wrapper')
+  .find('.indicator')
+  .removeClass('active');
+
+
+  var el = $(indicatorWrapper).find('#indicator-'+id).addClass('active');
+  var currentSrc = $(el).attr('data-img');
+
+  $(slideImgWrapper).find('img.current-img').attr('src', currentSrc);
+});
 
 //TEST
 /*[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {

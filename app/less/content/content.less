@@ -2,6 +2,81 @@
 
 .content {
   padding-bottom: 120px;
+  ul {
+    padding-left: 20px;
+    li {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+  }
+  .uk-accordion {
+    margin: 50px 0;
+    .uk-accordion-title {
+      margin: 0;
+      padding: 30px 0;
+      background: transparent;
+      position: relative;
+      font-size: 20px;
+      font-family: @mainFont;
+      text-transform: none;
+      border-bottom: 1px solid #dddddd;
+      &:first-child {
+        border-top: 1px solid #dddddd;
+      }
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        content: "\e917";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 12px;
+        color: #202f43;
+        font-weight: bold;
+      }
+      &.uk-active {
+        border-bottom: 0;
+        &:after {
+          content: "\e916";
+        }
+      }
+    }
+    .uk-accordion-content {
+      padding: 0;
+      padding-bottom: 30px;
+    }
+  }
+  .quote {
+    margin-bottom: 50px;
+    color: #3b3b3b;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .45px;
+  }
+  .padding-right {
+    padding-right: 30px !important;
+  }
+  p {
+    margin-bottom: 50px;
+  }
+  .title-h2 {
+    margin-bottom: 40px;
+    color: #253446;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+  }
 }
 
 .read-more-wrapper {
@@ -1089,6 +1164,7 @@ img[data-src] {
   }
   .catalog-list {
     li {
+      padding-left: 0;
       margin-bottom: 10px;
     }
   }
@@ -1127,4 +1203,38 @@ img[data-src] {
   .mCSB_scrollTools .mCSB_dragger {
     height: 30px !important;
   }
+}
+
+/* LINKS SIDEBAR */
+
+.links-sidebar {
+  margin-top: 70px;
+  .links-list {
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 10px;
+      padding: 0;
+      list-style: none;
+    }
+    a {
+      color: #202f43;
+      font-size: 14px;
+      letter-spacing: 0.38px;
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+/* ABOUT COMPANY */
+
+.about-company-banner {
+  margin-bottom: 50px;
+  height: 310px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
