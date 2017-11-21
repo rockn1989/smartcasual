@@ -22,14 +22,15 @@
 }
 
 .header-bottom {
-  padding: 25px 0;
+  padding: 15px 0;
   .logo {
     img {
-      max-height: 70px;
+      max-width: 135px;
+      max-height: 103px;
     }
   }
   &.remove-padding-bottom {
-    padding-bottom: 0;
+   // padding-bottom: 0;
   }
 }
 
@@ -38,7 +39,7 @@
   &:after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -30px;
     left: 20px;
     right: 20px;
     margin-bottom: 5px;
@@ -53,16 +54,16 @@
 
 .uk-nav {
   ul.uk-navbar-nav {
-    padding-left: 0;
+    padding: 0 3.8%;
     width: 100%;
   }
   li.uk-parent {
-    width: 20%;
+    width: 16.66666%;
     &>a {
       display: inline-block;
       padding: 0;
-      height: 75px;
-      line-height: 75px;
+      height: 103px;
+      line-height: 103px;
       color: #2f3d50;
       font-size: 13px;
       text-transform: uppercase;
@@ -90,18 +91,32 @@
 
 .header-bottom-controls {
   ul {
+    margin-bottom: 0;
+    padding-left: 0;
     text-align: right;
+    font-size: 0;
     li {
-      margin-left: 20%;
+      margin-bottom: 0;
+      width: 33.3333%;
       display: inline-block;
       vertical-align: top;
-      height: 90px;
-      line-height: 90px;
+      height: 103px;
+      line-height: 118px;
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: left;
+        a {
+          margin-left: 7px;
+        }
+      }
     }
   }
   .control-icon {
     color: #000000;
     display: inline;
+    font-size: 16px;
     &:hover {
       text-decoration: none;
       color: #f76d57;;
@@ -168,7 +183,7 @@ ul.uk-grid.dropdown-list {
 
 
 ul.breadcrumbs {
-  margin: 30px auto 50px;
+  margin: 40px auto 50px;
   padding: 0;
   text-align: center;
   list-style: none;

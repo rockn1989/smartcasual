@@ -258,6 +258,12 @@ $('.slide-switcher').on('mousemove', '.switcher', function() {
   $(slideImgWrapper).find('img.current-img').attr('src', currentSrc);
 });
 
+// ACCARDION
+$('.uk-accardion').on('toggle.uk.accordion', function() {
+  console.log(123)
+});
+
+
 //TEST
 /*[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
   img.setAttribute('src', img.getAttribute('data-src'));

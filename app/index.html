@@ -11,6 +11,8 @@
   <meta property="og:image" content="">
   <meta property="og:title" content="">
   <meta property="og:description" content="">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="libs/css/uikit.min.css">
   <link rel="stylesheet" href="libs/slick/slick.css">
@@ -25,7 +27,7 @@
 </head>
 <body class="preload">
   <div class="preloader">
-    <img src="img/logo.png" alt="">
+    <img src="img/logo.svg" alt="" width="200" height="200">
     <div class="left-block"></div>
     <div class="right-block"></div>
   </div>
@@ -47,15 +49,15 @@
     <div id="header-bottom" class="header-bottom">
       <div class="uk-container">
         <div id="nav-wrapper" class="uk-grid uk-grid-collapse">
-          <div class="uk-width-2-10">
+          <div class="uk-width-1-10">
             <a href="/" class="logo">
-              <img src="img/logo.png" alt="">
+              <img src="img/logo.svg" alt="">
             </a>
           </div>
-          <div class="uk-width-6-10">
+          <div class="uk-width-8-10">
             <nav class="uk-nav">
               <ul class="uk-navbar-nav">
-                <li class="uk-parent" data-uk-dropdown="{justify: '#nav-wrapper', delay: 100, remaintime: 50}">
+                <li class="uk-parent" data-uk-dropdown="{justify: '#nav-wrapper', delay: 0, remaintime: 50}">
                   <a href="">Новинки</a>
                   <div class="uk-dropdown uk-dropdown-navbar">
                     <ul class="uk-grid dropdown-list">
@@ -151,16 +153,17 @@
                   </div>
                 </li>
                 <li class="uk-parent"><a href="#">Мужское</a></li>
+                <li class="uk-parent"><a href="#">Женское</a></li>
                 <li class="uk-parent"><a href="#">Распродажа</a></li>
                 <li class="uk-parent"><a href="#">Идеи по стилю</a></li>
               </ul>
             </nav>
           </div>
-          <div class="uk-width-2-10">
+          <div class="uk-width-1-10">
             <div class="header-bottom-controls">
               <ul>
                 <li>
-                  <a href="#search-form" class="control-icon icon-search" data="search-form">
+                  <a href="#search-form" class="control-icon icon-loop" data="search-form">
                   </a>
                 </li>
                 <li>
@@ -169,7 +172,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="control-icon icon-star-medium">
+                  <a href="#" class="control-icon icon-heart">
                   </a>
                 </li>
               </ul>
