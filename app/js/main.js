@@ -68,7 +68,7 @@ $('.slider').slick({
   arrows: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   speed: 1000,
   infinite: true,
   centerPadding: '50px',
@@ -228,13 +228,19 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
 
     $('.feedback-form').validate({
       rules: {
-        message-quality: {
+        "message-quality": {
           required: true
         },
-        message-sleaze: {
+        "message-sleaze": {
           required: true
         },
-        message-text: {
+        "message-text": {
+          required: true
+        },
+        name: {
+          required: true
+        },
+        "score[]": {
           required: true
         },
         email: {
@@ -243,10 +249,11 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
         }
       },
       messages: {
+        name: "Обязательноe поле",
         email: "Обязательноe поле",
-        message-quality: "Обязательноe поле",
-        message-sleaze: "Обязательноe поле",
-        message-text: "Обязательноe поле"
+        "message-quality": "Обязательноe поле",
+        "message-sleaze": "Обязательноe поле",
+        "message-text": "Обязательноe поле"
       },
     });
   }

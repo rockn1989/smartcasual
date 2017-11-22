@@ -45,7 +45,7 @@
 
     <div data-target="header-bottom" class="header-bottom remove-padding-bottom">
       <div class="uk-container border-bold">
-        <div data-target="nav-wrapper" class="uk-grid uk-grid-collapse">
+        <div id="nav-wrapper" class="uk-grid uk-grid-collapse">
           <div class="uk-width-1-10">
             <a href="/" class="logo">
               <img src="img/logo.svg" alt="">
@@ -1039,27 +1039,27 @@
             <label for="">Оценка <sup>*</sup></label>
             <div class="score-box">
               <label for="score1" class="label-score">
-                <input type="radio" name="score" id="score1">
+                <input type="radio" name="score[]" id="score1">
                 <span class="custom-radio"></span>
                 <span class="custom-radio-text">1</span>
               </label>
               <label for="score2" class="label-score">
-                <input type="radio" name="score" id="score2">
+                <input type="radio" name="score[]" id="score2">
                 <span class="custom-radio"></span>
                 <span class="custom-radio-text">2</span>
               </label>
               <label for="score3" class="label-score">
-                <input type="radio" name="score" id="score3">
+                <input type="radio" name="score[]" id="score3">
                 <span class="custom-radio"></span>
                 <span class="custom-radio-text">3</span>
               </label>
               <label for="score4" class="label-score">
-                <input type="radio" name="score" id="score4">
+                <input type="radio" name="score[]" id="score4">
                 <span class="custom-radio"></span>
                 <span class="custom-radio-text">4</span>
               </label>
               <label for="score5" class="label-score">
-                <input type="radio" name="score" id="score5">
+                <input type="radio" name="score[]" id="score5">
                 <span class="custom-radio"></span>
                 <span class="custom-radio-text">5</span>
               </label>
@@ -1079,7 +1079,7 @@
           </fieldset>
           <fieldset>
             <label for="name">Имя <sup>*</sup></label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name">
           </fieldset>
           <fieldset>
             <label for="order-email">Email <sup>*</sup></label>
