@@ -63,15 +63,12 @@ $('.products-preview-slider').slick({
 
 // PRODUCT SLIDER
 
-/*$('.slider').on('afterChange', function() {
-    $('.slide.slick-cloned.slick-active').find('img[data-srcset]').lazyLoadXT({show: true});
-});*/
 
 $('.slider').slick({
   arrows: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   infinite: true,
   centerPadding: '50px',
@@ -227,6 +224,33 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
     });
   }
 
+  if($('form').is('.feedback-form')) {
+
+    $('.feedback-form').validate({
+      rules: {
+        message-quality: {
+          required: true
+        },
+        message-sleaze: {
+          required: true
+        },
+        message-text: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        email: "Обязательноe поле",
+        message-quality: "Обязательноe поле",
+        message-sleaze: "Обязательноe поле",
+        message-text: "Обязательноe поле"
+      },
+    });
+  }
+
 // DISABLED UIKIT ANIMATION FOR MOBILE
 
   UIkit.on('beforeready.uk.dom', function () {
@@ -237,13 +261,13 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
 
 // SLIDE INDICATOR SWITCHER
 
-$('.slide-switcher').on('mousemove', '.switcher', function() {
+function swtichingImg () {
  var _self = $(this),
      indicatorWrapper = $(_self).parents('.slide-switcher').siblings('.slide-indicator-wrapper'),
      slideImgWrapper = $(_self).parents('.slide-img-wrapper');
 
- var idPos = $(_self).attr('id').indexOf('-'),
-     id = $(_self).attr('id').slice(idPos+1);
+ var idPos = $(_self).attr('data-target').indexOf('-'),
+     id = $(_self).attr('data-target').slice(idPos+1);
 
  $(_self)
   .parents('.slide-switcher')
@@ -252,23 +276,46 @@ $('.slide-switcher').on('mousemove', '.switcher', function() {
   .removeClass('active');
 
 
-  var el = $(indicatorWrapper).find('#indicator-'+id).addClass('active');
+  var el = $(indicatorWrapper).find('[data-target="indicator-'+id+'"]').addClass('active');
+
   var currentSrc = $(el).attr('data-img');
 
   $(slideImgWrapper).find('img.current-img').attr('src', currentSrc);
-});
+}
+
+$('.slide-switcher').on('mousemove', '.switcher', swtichingImg);
+
 
 // ACCARDION
 $('.uk-accardion').on('toggle.uk.accordion', function() {
   console.log(123)
 });
 
+// VIDEO PLAYER
 
-//TEST
-/*[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-  img.setAttribute('src', img.getAttribute('data-src'));
-  img.onload = function() {
-    img.removeAttribute('data-src');
-  };
-});*/
+function videoInit () {
+  var videoSource = $('.detail-product-video-box').find('video source'), videoData = {};
+
+  videoSource.each(function(i, el) {
+    if(!videoData["source"]+i) {
+      videoData["source-"+i] = {
+        'src': $(el).attr('src'),
+        'type': $(el).attr('type')
+      }
+    }
+  });
+
+  var source = $('<source/>');
+  var param;
+  for (param in videoData) {
+    source.attr('src',videoData[param].src);
+    source.attr('type',videoData[param].type);
+  }
+  $('.detail-product-video video').append(source);
+  $('.detail-product-video').toggleClass('disabled');
+}
+
+//$('.detail-product-video-box').on('click', 'i.icon-play-button-fill', videoInit);
+
+
 });

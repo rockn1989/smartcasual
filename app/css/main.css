@@ -1222,12 +1222,14 @@ img[data-src] {
 }
 .comment .name {
   margin-right: 15px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: .8px;
 }
 .comment .date {
-  color: #A9ADB1;
+  color: #202f43;
+  opacity: .7;
   font-family: "Cormorant-Italic";
+  letter-spacing: .9px;
 }
 .comment .rating {
   position: relative;
@@ -1278,7 +1280,8 @@ img[data-src] {
   margin-bottom: 20px;
 }
 .comment .comment-body {
-  letter-spacing: .8px;
+  color: #3b3b3b;
+  letter-spacing: .4px;
 }
 /* КАТАЛОГ */
 .catalog .title {
@@ -2380,11 +2383,26 @@ form.subscribe-form .btn-send:hover:after {
   width: 100%;
   height: 95px;
   text-align: center;
-  background: #d4d4d4;
   cursor: pointer;
+  font-size: 0;
 }
-.detail-product-left .detail-product-video-box i {
-  color: #ffffff;
+.detail-product-left .detail-product-video-box:hover img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.detail-product-left .detail-product-video-box img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.detail-product-left .detail-product-video-box video {
+  width: 100%;
+  height: 100%;
 }
 .detail-product-left .detail-product-video-box:before {
   content: '';
@@ -2392,14 +2410,43 @@ form.subscribe-form .btn-send:hover:after {
   vertical-align: middle;
   height: 100%;
 }
-.detail-product-slider {
+.detail-product-left .detail-product-video-box a.videoPlay {
+  position: relative;
+}
+.detail-product-left .detail-product-video-box a.videoPlay:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  content: "\e909";
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.detail-product-box {
   position: relative;
   margin-left: 2%;
   display: inline-block;
   vertical-align: top;
-  width: 80%;
+  width: 76%;
   max-height: 550px;
   overflow: hidden;
+}
+.detail-product-slider {
+  position: relative;
+  z-index: 51;
 }
 .detail-product-slider .slide {
   height: 100%;
@@ -2514,6 +2561,24 @@ form.subscribe-form .btn-send:hover:after {
   right: auto;
   left: 30px;
   bottom: -30px;
+}
+.detail-product-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 52;
+  overflow: hidden;
+  background: #ffffff;
+}
+.detail-product-video.disabled {
+  opacity: 0;
+  z-index: 50;
+}
+.detail-product-video video {
+  width: 100%;
+  height: 100%;
 }
 .slick-loading {
   background: url('../libs/slick/ajax-loader.gif') center no-repeat;
@@ -2800,19 +2865,20 @@ form.subscribe-form .btn-send:hover:after {
 .subscribe-modal .modal-btn:hover {
   background-color: #f76d57;
 }
-.order-modal .uk-modal-dialog {
+.default-modal .uk-modal-dialog {
   padding: 80px 110px;
-  width: 840px;
+  max-width: 750px;
+  width: auto;
   background: #f6f6f6;
 }
-.order-modal .title {
+.default-modal .title {
   margin-bottom: 50px;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.3px;
 }
-.order-modal .uk-close {
+.default-modal .uk-close {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -2820,7 +2886,7 @@ form.subscribe-form .btn-send:hover:after {
   opacity: 1;
   font-weight: 400;
 }
-.order-modal .uk-close:after {
+.default-modal .uk-close:after {
   color: #697380;
   content: '\e915';
   font-family: 'icomoon' !important;
@@ -2838,19 +2904,19 @@ form.subscribe-form .btn-send:hover:after {
   -moz-transition: color .3s linear;
   transition: color .3s linear;
 }
-.order-modal .uk-close:hover:after {
+.default-modal .uk-close:hover:after {
   color: #3b4148;
 }
-.order-modal form:after {
+.default-modal form:after {
   content: '';
   display: block;
   clear: both;
 }
-.order-modal fieldset {
+.default-modal fieldset {
   border: none;
   padding: 0;
 }
-.order-modal fieldset label {
+.default-modal fieldset label:not(class) {
   width: 30%;
   padding-left: 35px;
   height: 60px;
@@ -2863,20 +2929,20 @@ form.subscribe-form .btn-send:hover:after {
   font-family: "Cormorant-Italic";
   color: #A9ADB1;
 }
-.order-modal fieldset label sup {
+.default-modal fieldset label:not(class) sup {
   color: pink;
 }
-.order-modal fieldset label.message {
+.default-modal fieldset label:not(class).message {
   height: 160px;
 }
-.order-modal fieldset label.error {
+.default-modal fieldset label:not(class).error {
   padding: 0;
   height: 30px;
   line-height: 30px;
   color: red;
   background: transparent;
 }
-.order-modal fieldset input {
+.default-modal fieldset input:not([type="radio"]) {
   width: 70%;
   height: 60px;
   line-height: 60px;
@@ -2887,7 +2953,7 @@ form.subscribe-form .btn-send:hover:after {
   outline: none;
   font-size: 18px;
 }
-.order-modal fieldset textarea {
+.default-modal fieldset textarea {
   padding: 20px;
   padding-left: 0;
   width: 70%;
@@ -2900,7 +2966,7 @@ form.subscribe-form .btn-send:hover:after {
   font-size: 18px;
   resize: none;
 }
-.order-modal .modal-btn {
+.default-modal .modal-btn {
   margin-top: 40px;
   padding: 0 25px;
   height: 60px;
@@ -2912,26 +2978,114 @@ form.subscribe-form .btn-send:hover:after {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  background-color: #f76d57;
+  background-color: #253446;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-.order-modal .modal-btn:hover {
-  background-color: #253446;
+.default-modal .modal-btn:hover {
+  background-color: #f76d57;
 }
-.order-modal .required-fileds {
+.default-modal .required-fileds {
   margin-top: 30px;
   font-style: italic;
   color: #A9ADB1;
 }
-.order-modal .required-fileds sup {
+.default-modal .required-fileds sup {
   color: pink;
   line-height: 1;
   top: 0;
 }
-.order-modal .modal-btn {
+.default-modal .modal-btn {
   min-width: 220px;
+}
+.default-modal input[type="radio"] {
+  display: none;
+}
+.default-modal input[type="radio"]:checked ~ .custom-radio:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #697380;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.default-modal label.label-score {
+  margin-right: 20px;
+  padding-left: 0;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  float: none;
+}
+.default-modal .custom-radio {
+  margin-right: 8px;
+  padding: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #d2d5d9;
+  background-color: #ffffff;
+}
+.default-modal .custom-radio-text {
+  padding-top: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Circe";
+  font-style: normal;
+  color: #424242;
+}
+.default-modal .score-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #ffffff;
+}
+.feedback.default-modal .uk-modal-dialog {
+  padding: 80px 0;
+}
+.feedback.default-modal .uk-modal-header {
+  padding: 0 110px;
+}
+.feedback.default-modal .uk-modal-body form {
+  padding: 0 110px;
+}
+.feedback.default-modal fieldset label.message,
+.feedback.default-modal fieldset textarea {
+  height: 111px;
+}
+.feedback.default-modal .example-field {
+  margin-bottom: 40px;
+  padding: 50px 110px;
+  background-color: #ffffff;
+}
+.feedback.default-modal .comment {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.feedback.default-modal .comment-body {
+  color: #3b3b3b;
+}
+.feedback.default-modal .comment-body .bold {
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+.feedback.default-modal .comment-body span {
+  font-weight: 400;
+}
+.feedback.default-modal .comment-body > div {
+  margin-bottom: 10px;
+}
+.feedback.default-modal .comment-body > div:last-child {
+  margin-bottom: 0;
 }
 /* FORMS */
