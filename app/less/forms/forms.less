@@ -1,1 +1,150 @@
 /* FORMS */
+
+.user-form {
+  .action-text {
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-family: "CormorantGaramond-Bold";
+    font-weight: 700;
+    line-height: 42px;
+    color: #253446;
+  }
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 15px;
+    &.rules {
+      margin-top: 35px;
+      label {
+        margin-bottom: 15px;
+        display: block;
+        padding: 0;
+        width: auto;
+        height: auto;
+        line-height: 1;
+        float: none;
+        font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: .38px;
+        background: transparent;
+        opacity: 1;
+        cursor: pointer;
+      }
+      input[type="checkbox"] {
+        display: none;
+        &:checked ~.custom-checkbox {
+          background: #f76d57;
+        }
+      }
+      .custom-checkbox {
+        float: left;
+        display: inline-block;
+        vertical-align: top;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #e0dada;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 2px 0 #f3f3f3;
+        box-shadow: 0 0 2px 0 #f3f3f3;
+      }
+      .custom-label {
+        margin-left: 30px;
+        display: block;
+        vertical-align: top;
+        overflow: hidden;
+        color: #67717e;
+        //opacity: .8;
+        font-size: 15px;
+        letter-spacing: .38px;
+      }
+    }
+  }
+  .btn {
+    display: inline-block;
+    vertical-align: top;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    height: 50px;
+    line-height: 35px;
+    background-color: #263445;
+    border: none;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    min-width: 200px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    &:hover {
+      background-color: #f76d57;
+    }
+  }
+  label:not(class) {
+    padding-left: 35px;
+    width: 30%;
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    background: #ffffff;
+    text-align: left;
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Cormorant-Italic";
+    color: #202f43;
+    &>span {
+      opacity: .7;
+    }
+  }
+  input:not([type="checkbox"]) {
+    width: 70%;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    background: #ffffff;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .8px;
+    color: #3b3b3b;
+  }
+  &.signin {
+    max-width: 360px;
+    .action-text {
+      margin-bottom: 43px;
+      line-height: 1;
+    }
+    label,
+    input {
+      background-color: #f6f6f6;
+    }
+  }
+  &.reg {
+    padding: 92px 95px 90px;
+    max-width: 650px;
+    background-color: #f6f6f6;
+    .btn {
+      min-width: 260px;
+    }
+  }
+}
+
+.forgot-password {
+  margin-bottom: 30px;
+  display: inline-block;
+  color: #67717e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-decoration: underline;
+  letter-spacing: .4px;
+  opacity: .7;
+  &:hover {
+    color: #f76d57;
+    opacity: 1;
+  }
+}
