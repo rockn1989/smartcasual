@@ -413,7 +413,7 @@ a.btn:hover {
 .border-bold:after {
   content: '';
   position: absolute;
-  bottom: -30px;
+  bottom: -15px;
   left: 20px;
   right: 20px;
   margin-bottom: 5px;
@@ -578,7 +578,7 @@ ul.uk-grid.dropdown-list .nav-img {
   max-width: 255px;
 }
 ul.breadcrumbs {
-  margin: 60px auto 50px;
+  margin: 45px auto 50px;
   padding: 0;
   text-align: center;
   list-style: none;
