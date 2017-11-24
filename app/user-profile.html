@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Вход на сайт</title>
+  <title>Личный кабинет</title>
   <meta property="og:url" content="">
   <meta property="og:type" content="Article">
   <meta property="og:site_name" content="">
@@ -176,7 +176,7 @@
     <div class="uk-container uk-container-small">
       <ul class="breadcrumbs">
         <li><a href="/">Главная</a></li>
-        <li>Вход на сайт</li>
+        <li>Личный кабинет</li>
       </ul>
     </div>
   </header>
@@ -184,54 +184,67 @@
   <section class="content">
     <div class="uk-container uk-container-small">
       <div class="uk-grid">
-        <div class="uk-width-large-4-10">
-          <div class="title">Вход на сайт</div>
-          <form action="" class="user-form signin gray">
-            <div class="action-text">Уже зарегистрированы?</div>
-            <fieldset>
-              <label for="signin-form-name"><span>Имя</span></label>
-              <input type="text" id="signin-form-name">
-            </fieldset>
-            <fieldset>
-              <label for="signin-form-name"><span>Пароль</span></label>
-              <input type="text" id="signin-form-name">
-            </fieldset>
-            <a href="" class="forgot-password">Забыли <span>пароль?</span></a>
-            <br>
-            <button type="submit" class="btn">Войти</button>
-          </form>
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Заказы</a></li>
+              <li><a href="#" class="active">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="uk-width-large-6-10">
-          <form action="" class="user-form reg">
-            <div class="action-text">Зарегистрироваться</div>
-            <fieldset>
-              <label for="reg-form-name"><span>Имя</span></label>
-              <input type="text" id="reg-form-name">
-            </fieldset>
-            <fieldset>
-              <label for="reg-form-email"><span>Email</span></label>
-              <input type="mail" id="reg-form-email">
-            </fieldset>
-            <fieldset>
-              <label for="reg-form-pass"><span>Пароль</span></label>
-              <input type="text" id="reg-form-pass">
-            </fieldset>
-            <fieldset class="rules">
-              <label for="politics">
-                <input type="checkbox" id="politics">
-                <span class="custom-checkbox"></span>
-                <span class="custom-label">Я принимаю политику конфиденциальностиы</span>
-              </label>
-              <label for="refusal">
-                <input type="checkbox" id="refusal">
-                <span class="custom-checkbox"></span>
-                <span class="custom-label">
-                  Я не хочу получать информацию от SmartCasual по электронной почте
-                </span>
-              </label>
-            </fieldset>
-            <button type="submit" class="btn">Регистрация</button>
-          </form>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Мои данные</div>
+          <div class="user-forms-wrapper">
+            <form action="" class="user-form gray js__user-info">
+              <fieldset>
+                <label for="user-name">
+                  <span>Имя</span>
+                </label>
+                <input type="text" name="user-name" id="user-name">
+              </fieldset>
+              <fieldset>
+                <label for="user-date">
+                  <span>Дата рождения</span>
+                </label>
+                <input type="text" name="user-date" id="user-date">
+              </fieldset>
+              <fieldset>
+                <label for="user-tel">
+                  <span>Телефон</span>
+                </label>
+                <input type="text" name="user-tel" id="user-tel">
+              </fieldset>
+              <fieldset>
+                <label for="user-email">
+                  <span>Email</span>
+                </label>
+                <input type="text" name="user-email" id="user-email">
+              </fieldset>
+            </form>
+            <div class="title-h3">Сменить пароль</div>
+            <form action="" class="user-form gray js__form-password">
+              <fieldset class="flat-fields">
+                <label for="password">
+                  <span>Новый пароль</span>
+                </label>
+                <input type="password" name="password" id="password">
+              </fieldset>
+              <fieldset class="flat-fields">
+                <label for="password-again">
+                  <span>Подтвердите новый пароль</span>
+                </label>
+                <input type="password" name="password-again" id="password-again">
+              </fieldset>
+              <button type="submit" class="btn">Сохранить</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

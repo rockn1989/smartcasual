@@ -222,7 +222,7 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
         message: "Обязательноe поле"
       },
     });
-  }
+  };
 
   if($('form').is('.feedback-form')) {
 
@@ -256,7 +256,25 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
         "message-text": "Обязательноe поле"
       },
     });
-  }
+  };;
+
+  if($('form').is('.js__form-password')) {
+
+    $('.js__form-password').validate({
+      rules: {
+        password: {
+          required: true
+        },
+        "password-again": {
+          equalTo: '#password'
+        }
+      },
+      messages: {
+        password: "Обязательноe поле",
+        "password-again": "Пожалуйста, введите тот же пароль"
+      },
+    });
+  };
 
 // DISABLED UIKIT ANIMATION FOR MOBILE
 
@@ -300,16 +318,23 @@ $('.uk-accardion').on('toggle.uk.accordion', function() {
 
 // VIDEO PLAYER
 
+function changeVideoStatus (e) {
+
+};
+
 function videoInit () {
-  var videoSource = $('.detail-product-video-box').find('video source'), videoData = {};
+  var _self = $(this);
+  var videoSource = $(this).find('video source'), 
+      videoBtn = $(this).find('i.videoPlay'),
+      videoData = {};
 
   videoSource.each(function(i, el) {
     if(!videoData["source"]+i) {
       videoData["source-"+i] = {
         'src': $(el).attr('src'),
         'type': $(el).attr('type')
-      }
-    }
+      };
+    };
   });
 
   var source = $('<source/>');
@@ -320,9 +345,15 @@ function videoInit () {
   }
   $('.detail-product-video video').append(source);
   $('.detail-product-video').toggleClass('disabled');
-}
+};
 
-//$('.detail-product-video-box').on('click', 'i.icon-play-button-fill', videoInit);
 
+$('.detail-product-video-box').on('click', videoInit);
+
+$('.detail-product-preview-slider').on('click', '.slide, .btn-slide', function () {
+  var video = $('#detail-video')[0];
+  $('.detail-product-video').addClass('disabled');
+  video.pause();
+});
 
 });

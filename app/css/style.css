@@ -29,8 +29,8 @@
 /* ICOMOON FONT */
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon/icomoon.eot?ja4qy9');
-  src: url('../fonts/icomoon/icomoon.eot?ja4qy9#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?ja4qy9') format('truetype'), url('../fonts/icomoon/icomoon.woff?ja4qy9') format('woff'), url('../fonts/icomoon/icomoon.svg?ja4qy9#icomoon') format('svg');
+  src: url('../fonts/icomoon/icomoon.eot?diltcr');
+  src: url('../fonts/icomoon/icomoon.eot?diltcr#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?diltcr') format('truetype'), url('../fonts/icomoon/icomoon.woff?diltcr') format('woff'), url('../fonts/icomoon/icomoon.svg?diltcr#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -130,6 +130,10 @@
 .icon-heart:before {
   content: "\e91a";
 }
+.icon-pause:before {
+  content: "\e91b";
+  color: #424a60;
+}
 body,
 table {
   font-family: "Circe";
@@ -218,6 +222,13 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+.content .title-h3 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: 42px;
+  font-weight: 700;
+  font-family: "CormorantGaramond-Bold";
+}
 .uk-slidenav-position .uk-slidenav {
   margin-top: 0 ;
   -webkit-transform: translateY(-50%);
@@ -298,7 +309,8 @@ h1 {
 .uk-pagination .uk-pagination-next {
   float: none;
 }
-a.btn {
+a.btn,
+button.btn {
   padding: 0 30px;
   display: inline-block;
   color: #ffffff;
@@ -310,7 +322,8 @@ a.btn {
   letter-spacing: 1.3px;
   font-size: 16px;
 }
-a.btn:hover {
+a.btn:hover,
+button.btn:hover {
   text-decoration: none;
   background-color: #f76d57;
 }
@@ -462,7 +475,7 @@ a.btn:hover {
   background: transparent;
 }
 .uk-dropdown {
-  padding: 40px 0;
+  padding: 10px 0;
 }
 .uk-dropdown .uk-container.uk-container-small {
   padding: 0;
@@ -533,7 +546,7 @@ nav.uk-nav:after {
   display: block;
 }
 ul.uk-grid.dropdown-list {
-  padding: 0;
+  padding: 0 0 40px;
 }
 ul.uk-grid.dropdown-list ul {
   padding-left: 0;
@@ -573,6 +586,7 @@ ul.uk-grid.dropdown-list a:hover {
   text-decoration: none;
 }
 ul.uk-grid.dropdown-list .nav-img {
+  margin-top: 60px;
   margin-left: auto;
   text-align: left;
   max-width: 255px;
@@ -2455,8 +2469,10 @@ form.subscribe-form .btn-send:hover:after {
   transition: all .3s ease;
 }
 .detail-product-left .detail-product-video-box video {
+  position: relative;
   width: 100%;
   height: 100%;
+  z-index: 100;
 }
 .detail-product-left .detail-product-video-box:before {
   content: '';
@@ -2464,17 +2480,24 @@ form.subscribe-form .btn-send:hover:after {
   vertical-align: middle;
   height: 100%;
 }
-.detail-product-left .detail-product-video-box a.videoPlay {
-  position: relative;
+.detail-product-left .detail-product-video-box i.videoPlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: red;
+  z-index: 105;
+  z-index: 101;
 }
-.detail-product-left .detail-product-video-box a.videoPlay:after {
+.detail-product-left .detail-product-video-box i.videoPlay:after {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   content: "\e909";
   font-family: 'icomoon' !important;
   speak: none;
@@ -2488,6 +2511,10 @@ form.subscribe-form .btn-send:hover:after {
   font-size: 12px;
   color: #ffffff;
   font-weight: bold;
+}
+.detail-product-left .detail-product-video-box i.videoPlay.pause:after {
+  content: "\e91b";
+  color: #202f43;
 }
 .detail-product-box {
   position: relative;
@@ -2589,6 +2616,8 @@ form.subscribe-form .btn-send:hover:after {
   text-align: center;
   cursor: pointer;
   outline: none;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 .detail-product-preview-slider .slide img {
   display: inline;
@@ -3143,6 +3172,12 @@ form.subscribe-form .btn-send:hover:after {
   margin-bottom: 0;
 }
 /* FORMS */
+.user-forms-wrapper {
+  max-width: 555px;
+}
+.user-form {
+  margin-bottom: 40px;
+}
 .user-form .action-text {
   margin-bottom: 35px;
   font-size: 24px;
@@ -3158,7 +3193,8 @@ form.subscribe-form .btn-send:hover:after {
   margin-bottom: 15px;
 }
 .user-form fieldset.rules {
-  margin-top: 35px;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 .user-form fieldset.rules label {
   margin-bottom: 15px;
@@ -3204,19 +3240,27 @@ form.subscribe-form .btn-send:hover:after {
   font-size: 15px;
   letter-spacing: .38px;
 }
+.user-form fieldset:last-child {
+  margin-bottom: 0;
+}
+.user-form fieldset.flat-fields label,
+.user-form fieldset.flat-fields input {
+  width: 50%;
+}
 .user-form .btn {
+  margin-top: 40px;
+  padding: 0 65px;
   display: inline-block;
   vertical-align: top;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-  height: 50px;
+  height: 60px;
   line-height: 35px;
   background-color: #263445;
   border: none;
   letter-spacing: 2.8px;
   text-transform: uppercase;
-  min-width: 200px;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
@@ -3242,6 +3286,13 @@ form.subscribe-form .btn-send:hover:after {
 .user-form label:not(class) > span {
   opacity: .7;
 }
+.user-form label:not(class).error {
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  color: red;
+  background: transparent;
+}
 .user-form input:not([type="checkbox"]) {
   width: 70%;
   height: 60px;
@@ -3263,9 +3314,8 @@ form.subscribe-form .btn-send:hover:after {
   margin-bottom: 43px;
   line-height: 1;
 }
-.user-form.signin label,
-.user-form.signin input {
-  background-color: #f6f6f6;
+.user-form.signin .btn {
+  margin-top: 30px;
 }
 .user-form.reg {
   padding: 92px 95px 90px;
@@ -3273,10 +3323,13 @@ form.subscribe-form .btn-send:hover:after {
   background-color: #f6f6f6;
 }
 .user-form.reg .btn {
-  min-width: 260px;
+  margin-top: 20px;
+}
+.user-form.gray label,
+.user-form.gray input {
+  background-color: #f6f6f6;
 }
 .forgot-password {
-  margin-bottom: 30px;
   display: inline-block;
   color: #67717e;
   font-size: 16px;

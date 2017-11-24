@@ -212,9 +212,11 @@
 
                 </div>
                 <div class="detail-product-video-box">
-                  <a href="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" data-lightbox-type="video" data-uk-lightbox="{group:2}" class="videoPlay">
-                    <img src="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
-                  </a>
+                    <video poster="img/video-preview-img.png">
+                      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
+                      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv?test1" type="video/ogg">
+                    </video>
+                    <i class="videoPlay"></i>
                 </div>
               </div>
               <div class="detail-product-box">
@@ -281,7 +283,7 @@
                   </div>
                 </div>
                 <div class="detail-product-video disabled">
-                  <video loop="loop" controls></video>
+                  <video id="detail-video" loop="loop" controls="controls" autoplay="true"></video>
                 </div>
               </div>
             </div>

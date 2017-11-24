@@ -1,6 +1,11 @@
 /* FORMS */
 
+.user-forms-wrapper {
+  max-width: 555px;
+}
+
 .user-form {
+  margin-bottom: 40px;
   .action-text {
     margin-bottom: 35px;
     font-size: 24px;
@@ -15,7 +20,8 @@
     border: none;
     margin-bottom: 15px;
     &.rules {
-      margin-top: 35px;
+      margin-top: 40px;
+      margin-bottom: 0;
       label {
         margin-bottom: 15px;
         display: block;
@@ -62,20 +68,30 @@
         letter-spacing: .38px;
       }
     }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.flat-fields {
+      label,input {
+        width: 50%;
+      }
+    }
   }
   .btn {
+    margin-top: 40px;
+    padding: 0 65px;
     display: inline-block;
     vertical-align: top;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
-    height: 50px;
+    height: 60px;
     line-height: 35px;
     background-color: #263445;
     border: none;
     letter-spacing: 2.8px;
     text-transform: uppercase;
-    min-width: 200px;
+    
     cursor: pointer;
     transition: background-color .3s ease;
     &:hover {
@@ -96,6 +112,13 @@
     color: #202f43;
     &>span {
       opacity: .7;
+    }
+    &.error {
+      padding: 0;
+      height: 30px;
+      line-height: 30px;
+      color: red;
+      background: transparent;
     }
   }
   input:not([type="checkbox"]) {
@@ -118,9 +141,8 @@
       margin-bottom: 43px;
       line-height: 1;
     }
-    label,
-    input {
-      background-color: #f6f6f6;
+    .btn {
+      margin-top: 30px;
     }
   }
   &.reg {
@@ -128,13 +150,18 @@
     max-width: 650px;
     background-color: #f6f6f6;
     .btn {
-      min-width: 260px;
+      margin-top: 20px;
+    }
+  }
+  &.gray {
+    label,
+    input {
+      background-color: #f6f6f6;
     }
   }
 }
 
 .forgot-password {
-  margin-bottom: 30px;
   display: inline-block;
   color: #67717e;
   font-size: 16px;
