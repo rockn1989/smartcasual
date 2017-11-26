@@ -391,6 +391,10 @@ button.btn:hover {
 .preloader.loaded img {
   opacity: 0;
 }
+/* VIDEO SPEED CONTROLLER */
+.vsc-controller {
+  display: none;
+}
 /* PAGE HEADER */
 .header-top {
   padding: 8px 0;
@@ -408,7 +412,6 @@ button.btn:hover {
 .header-top span {
   color: #202f43;
   font-size: 14px;
-  font-style: italic;
   font-family: "Cormorant-Italic";
   letter-spacing: 0.7px;
 }
@@ -872,7 +875,6 @@ a.read-more:after {
   line-height: 63px !important;
   color: #444;
   font-family: "Cormorant-Italic";
-  font-style: italic;
   font-size: 20px;
   background: #ffffff;
   border: none !important;
@@ -1947,7 +1949,6 @@ ul.brands-list li a:hover {
 }
 .footer-top .copyright {
   font-size: 18px;
-  font-style: italic;
   font-family: "Cormorant-Italic";
   line-height: 140px;
   letter-spacing: .9px;
@@ -2048,7 +2049,6 @@ form.subscribe-form input {
   line-height: 63px !important;
   color: #202f43;
   font-family: "Cormorant-Italic";
-  font-style: italic;
   background: #ffffff;
   border: none !important;
 }
@@ -2431,7 +2431,6 @@ form.subscribe-form .btn-send:hover:after {
 .soc-slider .soc-post-date {
   color: #202f43;
   font-size: 18px;
-  font-style: italic;
   letter-spacing: 0.9px;
   opacity: .5;
   text-align: right;
@@ -2514,7 +2513,7 @@ form.subscribe-form .btn-send:hover:after {
 }
 .detail-product-left .detail-product-video-box i.videoPlay.pause:after {
   content: "\e91b";
-  color: #202f43;
+  color: #ffffff;
 }
 .detail-product-box {
   position: relative;
@@ -2528,6 +2527,13 @@ form.subscribe-form .btn-send:hover:after {
 .detail-product-slider {
   position: relative;
   z-index: 51;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.detail-product-slider.hidden {
+  opacity: 0;
 }
 .detail-product-slider .slide {
   height: 100%;
@@ -2654,6 +2660,11 @@ form.subscribe-form .btn-send:hover:after {
   z-index: 52;
   overflow: hidden;
   background: #ffffff;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 .detail-product-video.disabled {
   opacity: 0;
@@ -2909,7 +2920,6 @@ form.subscribe-form .btn-send:hover:after {
   background: #ffffff;
   text-align: left;
   font-size: 18px;
-  font-style: italic;
   font-family: "Cormorant-Italic";
   color: #A9ADB1;
 }
@@ -3008,7 +3018,6 @@ form.subscribe-form .btn-send:hover:after {
   background: #ffffff;
   text-align: left;
   font-size: 18px;
-  font-style: italic;
   font-family: "Cormorant-Italic";
   color: #A9ADB1;
 }
@@ -3072,7 +3081,6 @@ form.subscribe-form .btn-send:hover:after {
 }
 .default-modal .required-fileds {
   margin-top: 30px;
-  font-style: italic;
   color: #A9ADB1;
 }
 .default-modal .required-fileds sup {
@@ -3279,7 +3287,6 @@ form.subscribe-form .btn-send:hover:after {
   background: #ffffff;
   text-align: left;
   font-size: 18px;
-  font-style: italic;
   font-family: "Cormorant-Italic";
   color: #202f43;
 }

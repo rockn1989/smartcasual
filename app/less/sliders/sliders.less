@@ -327,7 +327,6 @@
   .soc-post-date {
     color: #202f43;
     font-size: 18px;
-    font-style: italic;
     letter-spacing: 0.9px;
     opacity: .5;
     text-align: right;
@@ -405,7 +404,7 @@
       &.pause {
         &:after {
           content: "\e91b";
-          color: @mainColor;
+          color: #ffffff;
         }
       }
     }
@@ -424,6 +423,10 @@
 .detail-product-slider {
   position: relative;
   z-index: 51;
+  transition: opacity .3s ease-out;
+  &.hidden {
+    opacity: 0;
+  }
   .slide {
     height: 100%;
     text-align: center;
@@ -550,6 +553,8 @@
   z-index: 52;
   overflow: hidden;
   background: #ffffff;
+  opacity: 1;
+  transition: opacity .3s ease-out;
   &.disabled {
     opacity: 0;
     z-index: 50;
