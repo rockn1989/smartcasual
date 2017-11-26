@@ -1,16 +1,18 @@
 'use strict';
 
-function VideoPlayer (initBlock, putAtBlock, callback) {
-  this._self       = initBlock;
-  this.putAtBlock  = putAtBlock;
-  this.siblingsBlock = putAtBlock.siblings('.detail-product-slider');
+function VideoPlayer (options) {
+  this._self       = options.initBlock;
+  this.putAtBlock  = options.putAtBlock;
+  this.siblingsBlock = options.putAtBlock.siblings('.detail-product-slider');
   this.initStatus  = 0;
   this.play        = false;
   this.videoSource;
   this.videoBtn;
   this.video;
-  this.extensible(callback);
+
+  this.extensible(options.callback);
 };
+
 
 // Инициализация плеера
 

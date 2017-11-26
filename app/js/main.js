@@ -313,14 +313,18 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
   var deviceAgent = navigator.userAgent.toLowerCase();
   var typeEvent = navigator.userAgent.match(/(iphone|ipad|ipod)/) ? 'touchstart' : 'click';
 
-  var player = new VideoPlayer($('.detail-product-video-box'), $('.detail-product-video'), function() {
-    $('.detail-product-preview-slider').on('click', '.slide, .btn-slide', function () {
-      var video = $('#detail-video')[0];
-      $('.detail-product-slider').removeClass('hidden');
-      $('.detail-product-video').addClass('disabled');
-      $('.videoPlay').removeClass('pause');
-      video.pause();
-    });
+  var player = new VideoPlayer({
+    initBlock: $('.detail-product-video-box'),
+    putAtBlock: $('.detail-product-video'),
+    callback: function() {
+      $('.detail-product-preview-slider').on('click', '.slide, .btn-slide', function () {
+        var video = $('#detail-video')[0];
+        $('.detail-product-slider').removeClass('hidden');
+        $('.detail-product-video').addClass('disabled');
+        $('.videoPlay').removeClass('pause');
+        video.pause();
+      });
+    }
   });
 
   $('.detail-product-video-box').on(typeEvent, function () {
