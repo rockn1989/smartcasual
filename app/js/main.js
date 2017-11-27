@@ -93,6 +93,41 @@ $('.slider').slick({
 ]
 });
 
+$('.blog-slider').slick({
+  arrows: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1000,
+  infinite: true,
+  centerPadding: '50px',
+  lazyLoad: 'ondemand',
+  prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
+  nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
+  responsive: [
+  {
+    breakpoint: 1025,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 940,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  },
+]
+});
 
 // PRODUCT SLIDER
 
@@ -310,25 +345,27 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
   });
 
   // VIDEO PLAYER
-  var deviceAgent = navigator.userAgent.toLowerCase();
-  var typeEvent = navigator.userAgent.match(/(iphone|ipad|ipod)/) ? 'touchstart' : 'click';
+   if($('.detail-product-video-box').length) {
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var typeEvent = navigator.userAgent.match(/(iphone|ipad|ipod)/) ? 'touchstart' : 'click';
 
-  var player = new VideoPlayer({
-    initBlock: $('.detail-product-video-box'),
-    putAtBlock: $('.detail-product-video'),
-    callback: function() {
-      $('.detail-product-preview-slider').on('click', '.slide, .btn-slide', function () {
-        var video = $('#detail-video')[0];
-        $('.detail-product-slider').removeClass('hidden');
-        $('.detail-product-video').addClass('disabled');
-        $('.videoPlay').removeClass('pause');
-        video.pause();
-      });
-    }
-  });
+    var player = new VideoPlayer({
+      initBlock: $('.detail-product-video-box'),
+      putAtBlock: $('.detail-product-video'),
+      callback: function() {
+        $('.detail-product-preview-slider').on('click', '.slide, .btn-slide', function () {
+          var video = $('#detail-video')[0];
+          $('.detail-product-slider').removeClass('hidden');
+          $('.detail-product-video').addClass('disabled');
+          $('.videoPlay').removeClass('pause');
+          video.pause();
+        });
+      }
+    });
 
-  $('.detail-product-video-box').on(typeEvent, function () {
-    player.init();
-  });
+    $('.detail-product-video-box').on(typeEvent, function () {
+      player.init();
+    });
+   }
 
 });

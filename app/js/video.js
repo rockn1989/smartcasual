@@ -63,6 +63,7 @@ VideoPlayer.prototype.prepareVideo = function () {
   };
 
 
+
   this.putAtBlock.removeClass('disabled');
   this.videoBtn.addClass('pause');
   this.siblingsBlock.addClass('hidden');
