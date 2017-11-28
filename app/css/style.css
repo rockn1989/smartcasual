@@ -29,8 +29,8 @@
 /* ICOMOON FONT */
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon/icomoon.eot?diltcr');
-  src: url('../fonts/icomoon/icomoon.eot?diltcr#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?diltcr') format('truetype'), url('../fonts/icomoon/icomoon.woff?diltcr') format('woff'), url('../fonts/icomoon/icomoon.svg?diltcr#icomoon') format('svg');
+  src: url('../fonts/icomoon/icomoon.eot?50k28p');
+  src: url('../fonts/icomoon/icomoon.eot?50k28p#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.ttf?50k28p') format('truetype'), url('../fonts/icomoon/icomoon.woff?50k28p') format('woff'), url('../fonts/icomoon/icomoon.svg?50k28p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -133,6 +133,9 @@
 .icon-pause:before {
   content: "\e91b";
   color: #424a60;
+}
+.icon-twitter:before {
+  content: "\e91c";
 }
 body,
 table {
@@ -631,12 +634,15 @@ ul.breadcrumbs li a {
 .content {
   padding-bottom: 120px;
 }
-.content ul {
+.content ul,
+.content ol {
   padding-left: 20px;
 }
-.content ul li {
-  margin-bottom: 15px;
+.content ul li,
+.content ol li {
   padding-left: 20px;
+  line-height: 21px;
+  letter-spacing: .4px;
 }
 .content .uk-accordion {
   margin: 50px 0;
@@ -708,6 +714,31 @@ ul.breadcrumbs li a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2.4px;
+}
+.content blockquote {
+  margin: 0;
+  margin: 60px -13%;
+  padding: 40px 13%;
+  color: #253446;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "CormorantGaramond-Bold";
+  line-height: 36px;
+  text-align: center;
+  font-style: normal;
+  background-color: #f6f6f6;
+  border: none;
+}
+.content blockquote span {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Cormorant-Italic";
+  font-style: normal;
+  line-height: 35px;
+  letter-spacing: .9px;
+  opacity: .7;
 }
 .read-more-wrapper {
   border-top: 1px solid #dddddd;
@@ -1944,7 +1975,7 @@ ul.brands-list li a:hover {
 .blog .list-posts {
   font-size: 0;
 }
-.blog .post {
+.post {
   margin-right: 4%;
   margin-bottom: 65px;
   width: 48%;
@@ -1958,29 +1989,29 @@ ul.brands-list li a:hover {
   transition: filter .3s ease;
   transition: filter .3s ease, -webkit-filter .3s ease;
 }
-.blog .post:nth-child(odd) {
+.post:nth-child(odd) {
   margin-right: 0;
 }
-.blog .post:hover .post-img {
+.post:hover .post-img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
-.blog .post .post-img {
+.post .post-img {
   margin-bottom: 35px;
   max-height: 275px;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
-.blog .post .post-title {
+.post .post-title {
   margin-bottom: 5px;
 }
-.blog .post .post-title a {
+.post .post-title a {
   font-size: 24px;
   line-height: 20px;
   color: #263445;
   text-decoration: none;
 }
-.blog .post .post-tags a {
+.post .post-tags a {
   margin-right: 30px;
   color: #67717e;
   font-size: 15px;
@@ -1989,36 +2020,40 @@ ul.brands-list li a:hover {
   text-decoration: none;
   opacity: .7;
 }
-.blog .post .post-tags a:last-child {
+.post .post-tags a:last-child {
   margin-right: 0;
 }
-.blog .post--big {
+.post .post-tags a:hover {
+  color: #f76d57;
+  opacity: 1;
+}
+.post--big {
   position: relative;
   margin-left: -90px;
   margin-bottom: 80px;
   max-height: 475px;
   width: auto;
 }
-.blog .post--big .post-img {
+.post--big .post-img {
   margin-bottom: 0;
   max-height: 475px;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
-.blog .post--big .post-title {
+.post--big .post-title {
   margin: 0;
   position: absolute;
   left: 11%;
   right: 20%;
   bottom: 27%;
 }
-.blog .post--big .post-title a {
+.post--big .post-title a {
   color: #ffffff;
   font-size: 42px;
   line-height: 36px;
   font-weight: 400;
 }
-.blog .post--big .post-tags {
+.post--big .post-tags {
   position: absolute;
   left: 11%;
   bottom: 11%;
@@ -2026,12 +2061,12 @@ ul.brands-list li a:hover {
   font-weight: 400;
   letter-spacing: .38px;
 }
-.blog .post--big .post-tags a {
+.post--big .post-tags a {
   margin-right: 30px;
   color: #ffffff;
   opacity: 1;
 }
-.blog .post--big .post-tags a:last-child {
+.post--big .post-tags a:last-child {
   margin-right: 0;
 }
 .right-sidebar {
@@ -2069,6 +2104,116 @@ ul.brands-list li a:hover {
 }
 .add-posts .add-post:last-child {
   border-bottom: none;
+}
+.blog-detail .banner {
+  max-height: 520px;
+}
+.blog-detail .soc-links-wrapper {
+  position: absolute;
+  top: 150px;
+  left: -55px;
+  margin: 0;
+  padding: 0;
+}
+.blog-detail .soc-links-wrapper ul {
+  margin: 0;
+  padding-left: 0;
+}
+.blog-detail .soc-links-wrapper li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  list-style: none;
+}
+.blog-detail .soc-links-wrapper li a:hover {
+  text-decoration: none;
+}
+.blog-detail .soc-links-wrapper li a:hover i {
+  color: #f76d57;
+}
+.blog-detail .soc-links-wrapper li i {
+  color: #202f43;
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
+  -moz-transition: color .3s ease;
+  transition: color .3s ease;
+}
+.blog-detail-inner {
+  position: relative;
+  margin-top: -85px;
+  margin: -85px auto 85px;
+  padding: 30px 8.5% 100px;
+  width: 83%;
+  background: #ffffff;
+}
+.blog-detail-inner:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10.5%;
+  right: -10.5%;
+  display: block;
+  height: 1px;
+  background-color: #dddddd;
+}
+.blog-detail-inner .date {
+  margin-bottom: 20px;
+  color: #202f43;
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: .9px;
+  text-align: center;
+  font-family: "Cormorant-Italic";
+  opacity: .7;
+}
+.blog-detail-inner .title {
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: none;
+}
+.blog-detail-inner .header-text {
+  margin: 0 -13% 60px;
+  padding: 0 13% 60px;
+  color: #3b3b3b;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: .45px;
+  border-bottom: 1px solid #dddddd;
+}
+.blog-detail-inner a.tags {
+  margin-right: 10px;
+  padding: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: .4px;
+  border: 1px solid #263445;
+  color: #67717e;
+  opacity: .7;
+}
+.blog-detail-inner a.tags:last-child {
+  margin-right: 0;
+}
+.blog-detail-inner a.tags:hover {
+  text-decoration: none;
+  color: #f76d57;
+  opacity: 1;
+  border-color: #f76d57;
+}
+.blog-detail-inner ul,
+.blog-detail-inner ol {
+  margin-bottom: 60px;
+}
+.cart-wrapper {
+  margin-bottom: 90px;
+  margin: 0 -6% 90px;
+}
+.blog-detail-slider .post {
+  width: 100%;
 }
 /* PAGE FOOTER */
 .footer-top {
@@ -2388,6 +2533,11 @@ form.subscribe-form .btn-send:hover:after {
   margin-bottom: 65px;
   padding-bottom: 65px;
   border-bottom: 1px solid #dddddd;
+}
+.product-slider.no-border {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .product-slider .slick-slide {
   margin: 0 15px;

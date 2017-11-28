@@ -129,6 +129,42 @@ $('.blog-slider').slick({
 ]
 });
 
+$('.blog-detail-slider').slick({
+  arrows: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1000,
+  infinite: true,
+  centerPadding: '50px',
+  lazyLoad: 'ondemand',
+  prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
+  nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
+  responsive: [
+  {
+    breakpoint: 1025,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 940,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  },
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  },
+]
+});
+
 // PRODUCT SLIDER
 
 $('.soc-slider').slick({

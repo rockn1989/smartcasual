@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Блог детальная</title>
+  <meta property="og:url" content="">
+  <meta property="og:type" content="Article">
+  <meta property="og:site_name" content="">
+  <meta property="og:image" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="libs/css/uikit.min.css">
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick/slick-theme.css">
+  <link rel="stylesheet" href="libs/EasyZoom/easyzoom.css">
+  <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.fadein.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lte IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="libs/html5shiv.min.js"></script>
+    <script src="libs/placholder.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <header id="header" class="header">
+    <div class="header-top uk-clearfix">
+      <div class="uk-container">
+        <div class="tel uk-float-left">
+          <a href="tel:+78003405095">8 800 340 50 59</a>
+          <span>(бесплатный звонок)</span>
+        </div>
+        <div class="auth uk-float-right">
+          <a href="" class="enter">Войти</a>
+          <span>или</span>
+          <a href="" class="reg">Зарегистрироваться</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="header-bottom" class="header-bottom remove-padding-bottom">
+      <div class="uk-container border-bold">
+        <div id="nav-wrapper" class="uk-grid uk-grid-collapse">
+          <div class="uk-width-1-10">
+            <a href="/" class="logo">
+              <img src="img/logo.svg" alt="">
+            </a>
+          </div>
+          <div class="uk-width-8-10">
+            <nav class="uk-nav">
+              <ul class="uk-navbar-nav">
+                <li class="uk-parent" data-uk-dropdown="{justify: '#header', delay: 0, remaintime: 50}">
+                  <a href="">Новинки</a>
+                  <div class="uk-dropdown uk-dropdown-navbar">
+                    <div class="uk-container uk-container-small">
+                      <ul class="uk-grid dropdown-list">
+                        <li class="uk-width-2-10">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-2-10">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-2-10">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-2-10">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-2-10">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="uk-parent" data-uk-dropdown="{justify: '#header', delay: 0, remaintime: 50}">
+                  <a href="">Бренды</a>
+                  <div class="uk-dropdown uk-dropdown-navbar">
+                    <div class="uk-container uk-container-small">
+                      <ul class="uk-grid dropdown-list uk-grid-collapse">
+                        <li class="uk-width-1-4">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-1-4">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-1-4">
+                          <a href="" class="dropdown-title">LookBook</a>
+                          <ul class="sublist">
+                            <li><a href="#">Хиты весеннего сезона</a></li>
+                            <li><a href="#">Лучшие луки из кашемира</a></li>
+                            <li><a href="#">Самые смелые цветовые сочетания</a></li>
+                          </ul>
+                        </li>
+                        <li class="uk-width-1-4">
+                          <div class="nav-img">
+                            <a href="">
+                              <img src="img/dropdown-menu-img-255x340.png" alt="">
+                            </a>
+                            <a href="" class="nav-img-subtitle">Новый бренд <span>CHINTY & PARKER</span></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="uk-parent"><a href="#">Мужское</a></li>
+                <li class="uk-parent"><a href="#">Женское</a></li>
+                <li class="uk-parent"><a href="#">Распродажа</a></li>
+                <li class="uk-parent"><a href="#">Идеи по стилю</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="uk-width-1-10">
+            <div class="header-bottom-controls">
+              <ul>
+                <li>
+                  <a href="#search-form" class="control-icon icon-loop" data="search-form">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="control-icon icon-basket">
+                    <span class="basket-count">4</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="control-icon icon-heart">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-container uk-container-small">
+      <ul class="breadcrumbs">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/">Блог</a></li>
+        <li>Музыка это исскуство которое должно быть доступно всем</li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="blog-detail">
+        <div class="banner">
+          <img src="img/blog-detail-1140-520.png" alt="">
+        </div>
+        <div class="blog-detail-inner">
+          <div class="date">19 ноября 2017</div>
+          <div class="title">
+            Музыка это исскуство которое должно быть доступно всем
+          </div>
+          <div class="header-text">
+            Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.
+          </div>
+          <p>Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.</p>
+          <blockquote>
+            Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога
+            <span>Автор цитаты Андрей Смирнов</span>
+          </blockquote>
+          
+          <div class="cart-wrapper">
+            <div class="cart">
+              <div class="cart-img">
+                <img data-src="img/slider-img/best-seller-img-2-260x317.png" alt="">
+                <div class="cart-status">
+                  <div class="new">Новинка</div>
+                  <div class="discount">Скидка</div>
+                </div>
+                <div class="action-wrapper">
+                  <div class="favorites">
+                    <a href="" class="checked-favorites"></a>
+                  </div>
+                  <ul class="brand-color-list">
+                    <li>
+                      <a href="#" class="color color--lightgray" data-color="Светло серый"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="color color--blue" data-color="Синий"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="color color--darkgray" data-color="Темно серый"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
+              </div>
+              <div class="cart-brands">
+                <div class="cart-brand-name">
+                  <a href="">H&M</a>
+                </div>
+                <div class="cart-product-name">
+                  <a href="">Брюки стретч High waist</a>
+                </div>
+              </div>
+              <div class="cart-coast">
+                <span class="old-coast">4 590 р.</span>
+                <span class="coast">1 099 р.</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-img">
+                <img data-src="img/slider-img/best-seller-img-2-260x317.png" alt="">
+                <div class="cart-status">
+                  <div class="new">Новинка</div>
+                  <div class="discount">Скидка</div>
+                </div>
+                <div class="action-wrapper">
+                  <div class="favorites">
+                    <a href=""></a>
+                  </div>
+                  <ul class="brand-color-list">
+                    <li>
+                      <a href="#" class="color color--lightgray" data-color="Светло серый"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="color color--blue" data-color="Синий"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="color color--darkgray" data-color="Темно серый"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
+              </div>
+              <div class="cart-brands">
+                <div class="cart-brand-name">
+                  <a href="">H&M</a>
+                </div>
+                <div class="cart-product-name">
+                  <a href="">Брюки стретч High waist</a>
+                </div>
+              </div>
+              <div class="cart-coast">
+                <span class="old-coast">4 590 р.</span>
+                <span class="coast">1 099 р.</span>
+              </div>
+            </div>
+            <div class="cart">
+              <div class="cart-img">
+                <img data-src="img/slider-img/best-seller-img-2-260x317.png" alt="">
+                <div class="cart-status">
+                  <div class="new">Новинка</div>
+                  <div class="discount">Скидка</div>
+                </div>
+                <div class="action-wrapper">
+                  <div class="favorites">
+                    <a href=""></a>
+                  </div>
+                  <ul class="brand-color-list">
+                    <li>
+                      <a href="#" class="color color--lightgray" data-color="Светло серый"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="color color--blue" data-color="Синий"></a>
+                    </li>
+                    <li>
+                      <a href="#" class="color color--darkgray" data-color="Темно серый"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="preview-wrapper"><a href="#" class="preview">Быстрый просмотр</a></div>
+              </div>
+              <div class="cart-brands">
+                <div class="cart-brand-name">
+                  <a href="">H&M</a>
+                </div>
+                <div class="cart-product-name">
+                  <a href="">Брюки стретч High waist</a>
+                </div>
+              </div>
+              <div class="cart-coast">
+                <span class="old-coast">4 590 р.</span>
+                <span class="coast">1 099 р.</span>
+              </div>
+            </div>
+          </div>
+          <div class="title-h2">Заголовок второго уровня</div>
+          <p>Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.</p>
+          <ul>
+            <li>
+              Душа моя озарена неземной радостьюкак эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.
+            </li>
+            <li>
+              Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. 
+            </li>
+          </ul>
+          <div class="title-h2">Заголовок второго уровня</div>
+          <p>Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!</p>
+          <ol>
+            <li>
+              Душа моя озарена неземной радостьюкак эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца
+            </li>
+            <li>
+              Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я.
+            </li>
+          </ol>
+          <a href="" class="tags">Мода</a>
+          <a href="" class="tags">Новости</a>
+          <div class="soc-links-wrapper">
+            <ul>
+              <li><a href="#"><i class="icon-facebook-logo"></i></a></li>
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-instagram-logo"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-slider no-border">
+          <div class="title">Еще по теме</div>
+          <div class="blog-detail-slider">
+            <div class="slide">
+              <div class="post">
+                <div class="post-img">
+                  <a href=""><img src="img/blog-small-banner-1-360x275.png" width="360" height="275" alt=""></a>
+                </div>
+                <div class="post-title">
+                  <a href="">
+                    Скидки до 90% на актуальные коллекции!
+                  </a>
+                </div>
+                <div class="post-tags">
+                  <a href="">Мода</a>
+                  <a href="">Путешествия</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="post">
+                <div class="post-img">
+                  <a href=""><img src="img/blog-small-banner-2-360x275.png" width="360" height="275" alt=""></a>
+                </div>
+                <div class="post-title">
+                  <a href="">
+                    Скидки до 90% на актуальные коллекции!
+                  </a>
+                </div>
+                <div class="post-tags">
+                  <a href="">Мода</a>
+                  <a href="">Путешествия</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="post">
+                <div class="post-img">
+                  <a href=""><img src="img/blog-small-banner-3-360x275.png" width="360" height="275" alt=""></a>
+                </div>
+                <div class="post-title">
+                  <a href="">
+                    Скидки до 90% на актуальные коллекции!
+                  </a>
+                </div>
+                <div class="post-tags">
+                  <a href="">Мода</a>
+                  <a href="">Путешествия</a>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="post">
+                <div class="post-img">
+                  <a href=""><img src="img/blog-small-banner-1-360x275.png" width="360" height="275" alt=""></a>
+                </div>
+                <div class="post-title">
+                  <a href="">
+                    Скидки до 90% на актуальные коллекции!
+                  </a>
+                </div>
+                <div class="post-tags">
+                  <a href="">Мода</a>
+                  <a href="">Путешествия</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="uk-container uk-container-medium">
+        <div class="uk-grid">
+          <div class="uk-width-3-10">
+            <a href="" class="footer-title" data="toggle-list">
+              Знакомство с Smart Casual
+            </a>
+            <ul class="footer-list">
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Стиль Smart Casual</a></li>
+              <li><a href="#">Новости и события</a></li>
+              <li><a href="#">Сотрудничество</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Магазины</a></li>
+            </ul>
+          </div>
+          <div class="uk-width-5-10">
+            <a href="" class="footer-title" data="toggle-list">Информация</a>
+            <div class="uk-grid">
+              <div class="uk-width-1-2">
+                <ul class="footer-list">
+                  <li>
+                    <a href="#">Личный кабинет</a>
+                  </li>
+                  <li>
+                    <a href="#">Гид по размерам</a>
+                  </li>
+                  <li>
+                    <a href="#">Оплата и возврат</a>
+                  </li>
+                  <li>
+                    <a href="#">Доставка</a>
+                  </li>
+                  <li>
+                    <a href="#">Часто задаваемые вопросы</a>
+                  </li>
+                  <li>
+                    <a href="#">Подарочная карта</a>
+                  </li>
+                  <li>
+                    <a href="#">Акции</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="uk-width-1-2">
+                <ul class="footer-list">
+                  <li><a href="#">Оферта</a></li>
+                    <li>
+                      <a href="#">Политика конфиденциальности</a>
+                    </li>
+                    <li>
+                      <a href="#">Как отличить подделку</a>
+                    </li>
+                    <li>
+                      <a href="#">Наши поставщики</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-2-10">
+            <a href="" class="footer-title" data="toggle-list">Контакты</a>
+            <ul class="footer-list">
+              <li><a href="+78003405095">8 800 340 50 95</a></li>
+              <li><a href="mailto:info@smartcasual.ru">info@smartcasual.ru</a></li>
+              <li><a href="#order-form" data-uk-modal>Задать вопрос</a></li>
+              <li class="soc-links">
+                <a href="">
+                  <i class="icon-facebook-logo"></i>
+                </a>
+                <a href="">
+                  <i class="icon-instagram-logo"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="subscribe-block">
+          <div class="uk-grid">
+            <div class="uk-width-3-10">
+              <div class="copyright">© 2017 — Smart Casual</div>
+            </div>
+            <div class="uk-width-7-10">
+              <div class="footer-title">Подписаться на рассылку</div>
+              <form action="" class="uk-form subscribe-form">
+                <input type="email" placeholder="Введите email">
+                <button type="submit" class="btn-send">Подписаться</button>
+              </form>
+              <div class="politics">
+                Нажимая кнопку подписаться я даю свое согласие на <a href="">обработку персональных данных</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="uk-container uk-container-medium">
+        <ul class="delivery-list uk-float-left">
+          <li>Кашемир из Италии</li>
+          <li>Доставка по России</li>
+          <li>Бесплатные возвраты</li>
+        </ul>
+        <div class="dev uk-float-right">
+          <a href="https://aevrika.ru">
+            Разработка и продвижение — "ЭВРИКА"
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="search-form" class="search-form">
+    <div class="uk-container">
+      <div class="form-wrapper">
+        <div class="form-title">Поиск</div>
+        <form action="" method="get">
+          <input type="text" placeholder="Например, кашемировое пальто">
+          <button type="submit" class="send icon-search"></button>
+          <button type="button" class="close icon-close-button"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="order-form" class="uk-modal default-modal">
+    <div class="uk-modal-dialog">
+      <div class="uk-modal-header">
+        <div class="title">Обратная связь</div>
+        <a class="uk-modal-close uk-close"></a>
+      </div>
+      <div class="uk-modal-body">
+        <form action="" class="order-form">
+          <fieldset>
+            <label for="name">Имя</label>
+            <input type="text" id="name">
+          </fieldset>
+          <fieldset>
+            <label for="tel">Телефон</label>
+            <input type="text" name="tel" data-target="tel" class="js__input-phone">
+          </fieldset>
+          <fieldset>
+            <label for="order-email">Email <sup>*</sup></label>
+            <input type="email" data-target="order-email" name="email" required>
+          </fieldset>
+          <fieldset>
+            <label for="message" class="message">Сообщение <sup>*</sup></label>
+            <textarea name="message" data-target="message"></textarea>
+          </fieldset>
+          <div class="required-fileds">
+            <sup>*</sup> — обязательные поля
+          </div>
+          <button type="submit" class="modal-btn uk-float-right">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+  <script src="libs/jquery.mask.min.js" defer></script>
+  <script src="libs/jquery.validate.min.js" defer></script>
+  <script src="libs/lazy-load-xt-master/jquery.lazyloadxt.js" defer></script>
+  <script src="libs/js/uikit.min.js" defer></script>
+  <script src="libs/slick/slick.min.js" defer></script>
+  <script src="libs/svg4everybody.min.js" defer></script>
+  <script src="libs/EasyZoom/easyzoom.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
