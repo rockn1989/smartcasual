@@ -82,7 +82,7 @@ gulp.task("replace", function() {
 
 gulp.task("copy", function() {
 	return gulp.src([
-		"app/fonts/**/*.{woff,woff2}",
+		"app/fonts/**/*.{woff,woff2,ttf,eot}",
 		"app/img/**",
 		"app/js/**",
 		"app/libs/**",
