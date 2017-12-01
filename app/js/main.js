@@ -250,6 +250,27 @@ $('a[data="search-form"]').on('click', function (e) {
     $('#'+formModal).bind('click', closeModal);
 })
 
+// CUSTOM SELECT
+
+$('.custom-select-block').on('click', function () {
+  $(this)
+    .find('.custom-select-list')
+    .slideToggle('350')
+    .end()
+    .find('.custom-select-current')
+    .toggleClass('open');
+});
+
+$('.custom-select-list').on('click', 'a', function (e) {
+  e.preventDefault();
+  var parent = $(this).parents('.custom-select-block');
+  $(this)
+    .parents()
+    .find('a')
+    .removeClass('active');
+  $(this).addClass('active');
+  parent.find('.custom-select-current').text($(this).text());
+});
 
 // SHOP THE LOOK ON MAIN PAGE
 

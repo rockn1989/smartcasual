@@ -1,0 +1,51 @@
+{% extends "layouts/default.html" %}
+{% set title="Бренды" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Бренды"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Alexander McQueen</a></li>
+              <li><a href="#">Balenciaga</a></li>
+              <li><a href="#">Balmain</a></li>
+              <li><a href="#">Bottega Veneta</a></li>
+              <li><a href="#">Burberry</a></li>
+              <li><a href="#">Chloé</a></li>
+              <li><a href="#">Dolce & Gabbana</a></li>
+              <li><a href="#">Dsquared2</a></li>
+              <li><a href="#">Fendi</a></li>
+              <li><a href="#">Gianvito Rossi</a></li>
+              <li><a href="#">Givenchy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="catalog">
+            <div class="catalog-header">
+              <div class="title">Бренды</div>
+            </div>
+            <p class="quote">
+              Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.
+            </p>
+            <ul class="brands-list">
+              <li><a href="#"><img src="img/brand-1.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-2.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-3.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-4.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-5.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-6.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-7.png" alt=""></a></li>
+              <li><a href="#"><img src="img/brand-8.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

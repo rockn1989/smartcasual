@@ -10,13 +10,15 @@ function changeColor(color) {
 
 $('.brand-color-list').on('click', 'a.color', function (e) {
   e.preventDefault();
+  console.log($(this).parents('.brand-color-list'));
   $(this)
-    .parents()
+    .parents('.brand-color-list')
     .find('a')
     .removeClass('checked');
   $(this).addClass('checked');
   var color = $(this).attr('data-color');
-  changeColor(color);
+  $(this).parents('.brand-color-list').siblings('.brand-current-color').find('span').text('');
+  $(this).parents('.brand-color-list').siblings('.brand-current-color').find('span').text(color);
 });
 
 // CHANGE BRAND SIZE
@@ -114,11 +116,11 @@ $('.catalog-sidebar').on('click', '.js__catalog-sublist-toggle', function (e) {
 
 // FILTER EVENTS
 
-$('.filter, .catalog-sidebar').on('click','.jg__group-title-toggle', function() {
+$('.filter, .catalog-sidebar').on('click','.js__group-title-toggle', function() {
   var _self = $(this);
-  $(this).toggleClass('open-title');
-  $(this).siblings('.group-list').slideToggle('350', function() {
-   _self.toggleClass('open-list');
+  _self.toggleClass('open-title');
+  _self.siblings('.group-list').slideToggle('350', function() {
+    _self.toggleClass('open-list');
   });
 });
 
@@ -130,4 +132,70 @@ $('.filter, .catalog-sidebar').on('click','.jg__group-title-toggle', function() 
   $(this).toggleClass('open');
  });
 
+});
+
+
+// BASKET
+
+function updateBonus(value) {
+  var summBonus = parseInt($('.full-bonus>.result').text().replace(' ',''), 10);
+  var counter = $('i.counter');
+  var counterValue = parseInt(counter.text().replace("\\s",''), 10);
+  
+  if(counterValue < 0 || counterValue >= 0) {
+    value = value*(-1);
+  }
+
+  if(value == 0) {
+    value = counterValue*(-1);
+  }
+  if((counterValue+value)*-1 > summBonus) {
+    counterValue = 0;
+    value = (summBonus)*(-1);
+  }
+  $({numberValue: value}).animate({numberValue: counterValue+value}, {
+    duration: 500,
+    easing: 'linear',
+    step: function(val) {
+      $(counter).html(Math.ceil(val));
+    }
+  });
+};
+
+$(function() {
+  $('.table-products').on('click', '.close', function(e) {
+    e.preventDefault();
+    var el = $(this).parents('.product');
+    $(this)
+      .parents('.table-products')
+      .find(el)
+      .fadeOut('350', function() {
+        el.remove();
+      });
+  });
+
+  $('.checkout-block').on('click', '.spend-bonus-btn', function(e) {
+    e.preventDefault();
+    var input = $(this).siblings('input');
+    var el = parseInt(input.val(), 10);
+    updateBonus(el);
+    input.val(0);
+  });
+
+  $('.checkout-block').on('click', '.reset-bonus', function(e) {
+    e.preventDefault();
+    updateBonus(0);
+  });
+
+});
+
+// USER PROFILE ORDERS
+
+$(function() {
+  $('.order-table-header.toggle').on('click', function() {
+    $(this)
+      .toggleClass('open')
+      .siblings('.table-wrapper')
+      .slideToggle('150');
+  });
 });

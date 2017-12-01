@@ -1,0 +1,320 @@
+{% extends "layouts/default.html" %}
+{% set title="Casual" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Shop the look", "Casual"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="shopthelook-detail">
+        <div class="uk-grid">
+            <div class="uk-width-1-2">
+              <div class="detail-product-sliders">
+                <div class="detail-product-left">
+                  <div class="detail-product-preview-slider">
+                    <div class="slide">
+                      <img data-lazy="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
+                    </div>
+                    <div class="slide">
+                      <img data-lazy="img/slider-img/detail-preview-slider-2-70-90.png" alt="">
+                    </div>
+                    <div class="slide">
+                      <img data-lazy="img/slider-img/detail-preview-slider-3-70-90.png" alt="">
+                    </div>
+                    <div class="slide">
+                      <img data-lazy="img/slider-img/detail-preview-slider-4-70-90.png" alt="">
+                    </div>
+                    <div class="slide">
+                      <img data-lazy="img/slider-img/detail-preview-slider-3-70-90.png" alt="">
+                    </div>
+                    <div class="slide">
+                      <img data-lazy="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
+                    </div>
+        
+                  </div>
+                  <div class="detail-product-video-box">
+                      <video poster="img/video-preview-img.png" preload="metadata">
+                        <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
+                        <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv?test1" type="video/ogg">
+                      </video>
+                      <i class="videoPlay"></i>
+                  </div>
+                </div>
+                <div class="detail-product-box">
+                  <div class="detail-product-slider">
+                    <div class="slide easyzoom easyzoom--overlay">
+                     <a href="img/slider-img/detail-slider-1-1020-1110-zoom.png" data-uk-lightbox="{group: 'slider-group'}">
+                       <img data-lazy="img/slider-img/shopthelook-detail-slider-405x550.png" alt="">
+                     </a>
+                     <div class="zoom">
+                        <a href="img/slider-img/detail-slider-1-1020-1110-zoom.png" data-uk-lightbox="{group: 'slider-group'}">
+                          Увеличить
+                        </a>
+                     </div>
+                    </div>
+                    <div class="slide easyzoom easyzoom--overlay">
+                      <a href="http://via.placeholder.com/810x1100">
+                        <img data-lazy="http://via.placeholder.com/405x550" alt="">
+                      </a>
+                      <div class="zoom">
+                        <a href="img/slider-img/new-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                          Увеличить
+                        </a>
+                      </div>
+                    </div>
+                    <div class="slide easyzoom easyzoom--overlay">
+                      <a href="http://via.placeholder.com/810x1100">
+                        <img data-lazy="http://via.placeholder.com/405x550" alt="">
+                      </a>
+                      <div class="zoom">
+                        <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                          Увеличить
+                        </a>
+                      </div>
+                    </div>
+                    <div class="slide easyzoom easyzoom--overlay">
+                      <a href="http://via.placeholder.com/810x1100">
+                        <img data-lazy="http://via.placeholder.com/405x550" alt="">
+                      </a>
+                      <div class="zoom">
+                        <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                          Увеличить
+                        </a>
+                      </div>
+                    </div>
+                    <div class="slide easyzoom easyzoom--overlay">
+                      <a href="http://via.placeholder.com/810x1100">
+                        <img data-lazy="http://via.placeholder.com/405x550" alt="">
+                      </a>
+                      <div class="zoom">
+                        <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                          Увеличить
+                        </a>
+                      </div>
+                    </div>
+                    <div class="slide easyzoom easyzoom--overlay">
+                      <a href="http://via.placeholder.com/810x1100">
+                        <img data-lazy="http://via.placeholder.com/405x550" alt="">
+                      </a>
+                      <div class="zoom">
+                        <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                          Увеличить
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="detail-product-video disabled">
+                    <video id="detail-video" loop="loop" controls="controls" autoplay="true"></video>
+                  </div>
+                </div>
+              </div>
+              <div class="product-desc">
+                <div class="title-desc">Описание</div>
+                <div class="text">
+                  Длинный кардиган из чистого кашемира. Простой прямой крой, разрез спереди, матерчатый пояс, подчеркивающий талию. Мягкий силуэт с удобными вырезами внизу. Пуховик Colin's выполнен из стеганого текстиля и утеплен натуральными пухом и пером. Детали: объемный воротник, застежка на молнию, два кармана снаружи и один карман внутри, эластичные манжеты, текстильная подкладка.
+                </div>
+              </div>
+            </div>
+            <div class="uk-width-1-2">
+              <div class="shop-cards-list">
+                <div class="shop-card">
+                  <div class="card-img">
+                    <img data-src="img/shop-card-1-162x197.png" alt="">
+                  </div>
+                  <div class="card-desc">
+                    <div class="brand-name">
+                      <a href="">H&M</a>
+                    </div>
+                    <div class="product-name">
+                      <a href="">Брюки стретч High waist</a>
+                    </div>
+                    <div class="product-price">
+                      1 099 р.
+                    </div>
+                  </div>
+                  <div class="options">
+                    <div class="uk-grid">
+                      <div class="uk-width-1-2">
+                        <div class="brand-current-color">
+                          Цвет: <span>Синий</span>
+                        </div>
+                        <ul class="brand-color-list">
+                          <li><a href="" class="color color--lightgray" data-color="Светло серый"></a></li>
+                          <li><a href="" class="color color--blue checked" data-color="Синий"></a></li>
+                          <li><a href="" class="color color--darkgray" data-color="Темной серый"></a></li>
+                        </ul>
+                      </div>
+                      <div class="uk-width-1-2">
+                        <div class="brand-type">
+                          Размер: <span>Российский</span>
+                        </div>
+                        <div class="custom-select-block">
+                          <div class="custom-select-current">36</div>
+                          <ul class="custom-select-list">
+                            <li><a href="" class="active">36</a></li>
+                            <li><a href="">34</a></li>
+                            <li><a href="">40</a></li>
+                            <li><a href="">42</a></li>
+                            <li><a href="">44</a></li>
+                            <li><a href="">46</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shop-card">
+                  <div class="card-img">
+                    <img data-src="img/shop-card-2-162x197.png" alt="">
+                  </div>
+                  <div class="card-desc">
+                    <div class="brand-name">
+                      <a href="">H&M</a>
+                    </div>
+                    <div class="product-name">
+                      <a href="">Брюки стретч High waist</a>
+                    </div>
+                    <div class="product-price">
+                      1 099 р.
+                    </div>
+                  </div>
+                  <div class="options">
+                    <div class="uk-grid">
+                      <div class="uk-width-1-2">
+                        <div class="brand-current-color">
+                          Цвет: <span>Синий</span>
+                        </div>
+                        <ul class="brand-color-list">
+                          <li><a href="" class="color color--lightgray" data-color="Светло серый"></a></li>
+                          <li><a href="" class="color color--blue checked" data-color="Синий"></a></li>
+                          <li><a href="" class="color color--darkgray" data-color="Темной серый"></a></li>
+                        </ul>
+                      </div>
+                      <div class="uk-width-1-2">
+                        <div class="brand-type">
+                          Размер: <span>Российский</span>
+                        </div>
+                        <div class="custom-select-block">
+                          <div class="custom-select-current">36</div>
+                          <ul class="custom-select-list">
+                            <li><a href="" class="active">36</a></li>
+                            <li><a href="">34</a></li>
+                            <li><a href="">40</a></li>
+                            <li><a href="">42</a></li>
+                            <li><a href="">44</a></li>
+                            <li><a href="">46</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shop-card">
+                  <div class="card-img">
+                    <img data-src="img/shop-card-3-162x197.png" alt="">
+                  </div>
+                  <div class="card-desc">
+                    <div class="brand-name">
+                      <a href="">H&M</a>
+                    </div>
+                    <div class="product-name">
+                      <a href="">Брюки стретч High waist</a>
+                    </div>
+                    <div class="product-price">
+                      1 099 р.
+                    </div>
+                  </div>
+                  <div class="options">
+                    <div class="uk-grid">
+                      <div class="uk-width-1-2">
+                        <div class="brand-current-color">
+                          Цвет: <span>Синий</span>
+                        </div>
+                        <ul class="brand-color-list">
+                          <li><a href="" class="color color--lightgray" data-color="Светло серый"></a></li>
+                          <li><a href="" class="color color--blue checked" data-color="Синий"></a></li>
+                          <li><a href="" class="color color--darkgray" data-color="Темной серый"></a></li>
+                        </ul>
+                      </div>
+                      <div class="uk-width-1-2">
+                        <div class="brand-type">
+                          Размер: <span>Российский</span>
+                        </div>
+                        <div class="custom-select-block">
+                          <div class="custom-select-current">36</div>
+                          <ul class="custom-select-list">
+                            <li><a href="" class="active">36</a></li>
+                            <li><a href="">34</a></li>
+                            <li><a href="">40</a></li>
+                            <li><a href="">42</a></li>
+                            <li><a href="">44</a></li>
+                            <li><a href="">46</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="" class="btn btn--card">Купить комплект</a>
+            </div>
+        </div>
+      </div>
+      <div class="shop-the-look">
+        <div class="title-h2">Посмотрите другие образы</div>
+        <div class="shop-the-look-inner" data-uk-grid='{gutter: 20}' data-uk-scrollspy="{cls:'uk-animation-scale-up uk-invisible', target: '.shop-block', delay : 300, repeat: false}">
+          <div class="uk-width-4-10">
+            <div class="shop-block uk-invisible">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-1.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+          </div>
+          <div class="uk-width-2-10">
+            <div class="shop-block uk-invisible">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-2.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+          </div>
+          <div class="uk-width-4-10">
+            <div class="shop-block uk-invisible height50">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-3.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+            <div class="shop-block uk-invisible height50 width80">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-4.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+          </div>
+        </div>
+        <div class="shop-the-look-inner uk-hidden" data-uk-grid='{gutter: 20}' data-uk-scrollspy="{cls:'uk-animation-scale-up uk-invisible', target: '.shop-block', delay : 300, repeat: false}">
+          <div class="uk-width-2-10">
+            <div class="shop-block uk-invisible">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-2.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+          </div>
+          <div class="uk-width-4-10">
+            <div class="shop-block uk-invisible height50">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-3.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+            <div class="shop-block uk-invisible height50 width80">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-4.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+          </div>
+          <div class="uk-width-4-10">
+            <div class="shop-block uk-invisible">
+              <div class="shop-block-bg" style="background-image: url('img/shop-look-img-1.png')"></div>
+              <a href="" class="shop-block-preview">Смотреть</a>
+            </div>
+          </div>
+        </div>
+        <div class="read-more-wrapper">
+          <a href="" class="read-more shop-link">Смотреть еще</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

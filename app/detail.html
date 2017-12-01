@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@
   <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="libs/slick/slick-theme.css">
   <link rel="stylesheet" href="libs/EasyZoom/easyzoom.css">
+  <link rel="stylesheet" href="libs/malihuScrollBar/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.fadein.css">
   <link rel="stylesheet" href="css/style.css">
   <!--[if lte IE 9]>
@@ -26,9 +28,9 @@
     <script src="libs/placholder.js"></script>
   <![endif]-->
 </head>
-<body>
 
-  <header id="header" class="header">
+<body class="">
+    <header id="header" class="header">
     <div class="header-top uk-clearfix">
       <div class="uk-container">
         <div class="tel uk-float-left">
@@ -173,17 +175,22 @@
         </div>
       </div>
     </div>
-    <div class="uk-container uk-container-small">
-      <ul class="breadcrumbs">
-        <li><a href="/">Главная</a></li>
-        <li><a href="">Женское</a></li>
-        <li><a href="">Теплые кофты</a></li>
-        <li>Кашемировый кардиган туника с завязками</li>
-      </ul>
-    </div>
-  </header>
+          
+<div class="uk-container uk-container-small">
+  <ul class="breadcrumbs">
+                  <li><a href="">Главная</a></li>  
+                        <li><a href="">Женское</a></li>  
+                        <li><a href="">Теплые кофты</a></li>  
+                        <li>Кашемировый кардиган туника с завязками</li>  
+            </ul>
+</div>
 
-  <section class="content">
+      </header>
+      
+
+  
+  
+    <section class="content">
     <div class="uk-container uk-container-small">
       <div class="detail-product">
         <div class="uk-grid">
@@ -299,8 +306,8 @@
                 <div class="shot-desc">
                   <div class="brand-code">Артикул: <span>JE008EWUMI38</span></div>
                   <div class="brand-name">Бренд: <span><a href="">Stefanel</a></span></div>
-                  <div class="brand-current-color">Цвет: <span>Синий</span></div>
                 </div>
+                <div class="brand-current-color">Цвет: <span>Синий</span></div>
                 <ul class="brand-color-list">
                   <li><a href="" class="color color--lightgray" data-color="Светло серый"></a></li>
                   <li><a href="" class="color color--blue checked" data-color="Синий"></a></li>
@@ -406,7 +413,7 @@
           </div>
         </div>
         </div>
-
+      </div>
       <div class="product-slider">
         <div class="title">Другие вещи в этом образе</div>
         <div class="slider">
@@ -426,17 +433,7 @@
                 <div data-target="switcher-4" class="switcher"></div>
                 <div data-target="switcher-5" class="switcher"></div>
               </div>
-              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-<!--               <div class="slide-img-first">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-</div>
-<div class="slide-img-second">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-</div> -->
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt="">
               <div class="slide-fast-preview">
                 <a href="">Быстрый просмотр</a>
               </div>
@@ -472,13 +469,7 @@
                 <div data-target="switcher-4" class="switcher"></div>
                 <div data-target="switcher-5" class="switcher"></div>
               </div>
-              <img class="current-img" data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-<!--               <div class="slide-img-first">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-</div>
-<div class="slide-img-second">
- <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-</div> -->
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt="">
               <div class="slide-fast-preview">
                 <a href="">Быстрый просмотр</a>
               </div>
@@ -514,13 +505,7 @@
                 <div data-target="switcher-4" class="switcher"></div>
                 <div data-target="switcher-5" class="switcher"></div>
               </div>
-              <img class="current-img" data-lazy="img/slider-img/best-seller-img-3-260x317.png" alt=""></a>
-<!--               <div class="slide-img-first">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-3-260x317.png" alt=""></a>
-</div>
-<div class="slide-img-second">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-</div> -->
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-3-260x317.png" alt="">
               <div class="slide-fast-preview">
                 <a href="">Быстрый просмотр</a>
               </div>
@@ -555,13 +540,7 @@
                 <div data-target="switcher-4" class="switcher"></div>
                 <div data-target="switcher-5" class="switcher"></div>
               </div>
-              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-<!--               <div class="slide-img-first">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-</div>
-<div class="slide-img-second">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-</div> -->
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt="">
               <div class="slide-fast-preview">
                 <a href="">Быстрый просмотр</a>
               </div>
@@ -596,13 +575,7 @@
                 <div data-target="switcher-4" class="switcher"></div>
                 <div data-target="switcher-5" class="switcher"></div>
               </div>
-              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-<!--               <div class="slide-img-first">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
-</div>
-<div class="slide-img-second">
-  <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
-</div> -->
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt="">
               <div class="slide-fast-preview">
                 <a href="">Быстрый просмотр</a>
               </div>
@@ -759,15 +732,12 @@
           </div>
         </div>
       </div>
-
-      </div>
-
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-top">
-      <div class="uk-container uk-container-medium">
+      <div class="uk-container uk-container-small">
         <div class="uk-grid">
           <div class="uk-width-3-10">
             <a href="" class="footer-title" data="toggle-list">
@@ -864,7 +834,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="uk-container uk-container-medium">
+      <div class="uk-container uk-container-small">
         <ul class="delivery-list uk-float-left">
           <li>Кашемир из Италии</li>
           <li>Доставка по России</li>
@@ -961,11 +931,11 @@
         <form action="">
           <fieldset>
             <label for="name">Имя</label>
-            <input type="text" data-target="name">
+            <input type="text" id="name">
           </fieldset>
           <fieldset>
             <label for="email">Email <sup>*</sup></label>
-            <input type="email" data-target="email">
+            <input type="email" id="email">
           </fieldset>
           <button type="submit" class="modal-btn uk-float-right">Уведомить о наличии</button>
         </form>
@@ -987,26 +957,27 @@
           </fieldset>
           <fieldset>
             <label for="tel">Телефон</label>
-            <input type="text" name="tel" data-target="tel" class="js__input-phone">
+            <input type="text" name="tel" id="tel" class="js__input-phone">
           </fieldset>
           <fieldset>
             <label for="order-email">Email <sup>*</sup></label>
-            <input type="email" data-target="order-email" name="email" required>
+            <input type="email" id="order-email" name="email" required>
           </fieldset>
           <fieldset>
             <label for="message" class="message">Сообщение <sup>*</sup></label>
-            <textarea name="message" data-target="message"></textarea>
+            <textarea name="message" id="message"></textarea>
+            <div class="required-fileds">
+              <sup>*</sup> — обязательные поля
+            </div>
           </fieldset>
-          <div class="required-fileds">
-            <sup>*</sup> — обязательные поля
-          </div>
+
           <button type="submit" class="modal-btn uk-float-right">Отправить</button>
         </form>
       </div>
     </div>
   </div>
 
-  <div id="feedback" class="uk-modal feedback default-modal">
+<div id="feedback" class="uk-modal feedback default-modal">
     <div class="uk-modal-dialog">
       <div class="uk-modal-header">
         <div class="title">Оставить отзыв</div>
@@ -1095,9 +1066,11 @@
   <script src="libs/js/uikit.min.js" defer></script>
   <script src="libs/slick/slick.min.js" defer></script>
   <script src="libs/svg4everybody.min.js" defer></script>
+  <script src="libs/malihuScrollBar/jquery.mCustomScrollbar.concat.min.js" defer></script>
   <script src="libs/EasyZoom/easyzoom.js" defer></script>
   <script src="js/catalog.js" defer></script>
   <script src="js/video.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js" defer></script>  
+
 </body>
 </html>

@@ -1,0 +1,13 @@
+
+<div class="uk-container uk-container-small">
+  <ul class="breadcrumbs">
+    {% for value in bread %}
+      {% if loop.last == false %}
+        <li><a href="">{{value}}</a></li>  
+      {% else %}
+        <li>{{value}}</li>  
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+

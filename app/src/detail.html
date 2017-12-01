@@ -1,0 +1,552 @@
+{% extends "layouts/default.html" %}
+{% set title="Детальная" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Женское", "Теплые кофты", "Кашемировый кардиган туника с завязками"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="detail-product">
+        <div class="uk-grid">
+          <div class="uk-width-6-10">
+            <div class="detail-product-sliders">
+              <div class="detail-product-left">
+                <div class="detail-product-preview-slider">
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-2-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-3-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-4-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-3-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
+                  </div>
+
+                </div>
+                <div class="detail-product-video-box">
+                    <video poster="img/video-preview-img.png" preload="metadata">
+                      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
+                      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv?test1" type="video/ogg">
+                    </video>
+                    <i class="videoPlay"></i>
+                </div>
+              </div>
+              <div class="detail-product-box">
+                <div class="detail-product-slider">
+                  <div class="slide easyzoom easyzoom--overlay">
+                   <a href="img/slider-img/detail-slider-1-1020-1110-zoom.png" data-uk-lightbox="{group: 'slider-group'}">
+                     <img data-lazy="img/slider-img/detail-slider-1-510-550.png" alt="">
+                   </a>
+                   <div class="zoom">
+                      <a href="img/slider-img/detail-slider-1-1020-1110-zoom.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                   </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1080x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/new-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-product-video disabled">
+                  <video id="detail-video" loop="loop" controls="controls" autoplay="true"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-4-10">
+            <div class="detail-product-content">
+              <div class="detail-product-title">Кашемировый кардиган туника с завязками</div>
+              <div class="coast">
+                <div class="coast-old">49 900 р.</div>
+                <div class="coast-actual">39 900 р.</div>
+              </div>
+              <div class="brand-options">
+                <div class="shot-desc">
+                  <div class="brand-code">Артикул: <span>JE008EWUMI38</span></div>
+                  <div class="brand-name">Бренд: <span><a href="">Stefanel</a></span></div>
+                </div>
+                <div class="brand-current-color">Цвет: <span>Синий</span></div>
+                <ul class="brand-color-list">
+                  <li><a href="" class="color color--lightgray" data-color="Светло серый"></a></li>
+                  <li><a href="" class="color color--blue checked" data-color="Синий"></a></li>
+                  <li><a href="" class="color color--darkgray" data-color="Темно серый"></a></li>
+                </ul>
+                <div class="uk-grid">
+                  <div class="uk-width-1-2">
+                    <div class="brand-size">Размер: <span>Российский</span></div>
+                    <div class="brand-size-block">
+                      <div class="brand-size-current">36</div>
+                      <ul class="brand-size-list">
+                        <li><a href="">37</a></li>
+                        <li><a href="">30</a></li>
+                        <li><a href="">31</a></li>
+                        <li><a href="">32</a></li>
+                        <li><a href="">33</a></li>
+                        <li><a href="">34</a></li>
+                        <li><a href="">35</a></li>
+                      </ul>
+                    </div>
+                    <a href="" class="basket">В корзину</a>
+                  </div>
+                  <div class="uk-width-1-2">
+                    <a href="#brand-size-grid" class="brand-size-grid" data-uk-modal>Размерная сетка</a>
+                    <p class="question">Не нашли свой размер?</p>
+                    <a href="#subscribe" class="notification" data-uk-modal>Уведомить о поступлении</a>
+                    <a href="" class="favorites">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-1-1">
+            <div class="detail-product-options">
+              <div class="uk-overflow-container">
+                <div class="uk-tab options" data-uk-tab="{connect: '#tab-content'}">
+                  <li><a href="">Описание</a></li>
+                  <li><a href="">Состав</a></li>
+                  <li><a href="">Оплата и доставка</a></li>
+                  <li><a href="">Правила ухода</a></li>
+                  <li><a href="">Отзывы (<span>2</span>)</a></li>
+                </div>
+              </div>
+              <ul id="tab-content" class="uk-switcher">
+                <li>
+                  Длинный кардиган из чистого кашемира. Простой прямой крой, разрез спереди, матерчатый пояс,
+                  подчеркивающий талию. Мягкий силуэт с удобными вырезами внизу.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, laudantium, fugit delectus incidunt ducimus recusandae accusantium ad. Dolores quam ex, itaque distinctio perferendis quisquam, molestias nostrum! Labore aperiam quae nihil.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore aliquid numquam, sint deleniti ut ea!
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum a perspiciatis, natus consequatur eveniet nulla.
+                </li>
+                <li>
+                  <div class="comments">
+                    <div class="comment">
+                      <div class="comment-header uk-clearfix">
+                        <div class="name">Наталья Толстова</div>
+                        <div class="date"> 9 месяцев назад</div>
+                        <div class="rating rating--four-star">
+                          <div class="empty-rating"></div>
+                          <div class="currently-rating"></div>
+                        </div>
+                      </div>
+                      <div class="comment-body">
+                        Качество отличное! очень приятный к телу, на 50 размер сел идеально
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <div class="comment-header uk-clearfix">
+                        <div class="name">Гульназ</div>
+                        <div class="date"> 10 месяцев назад</div>
+                        <div class="rating rating--three-star">
+                          <div class="empty-rating"></div>
+                          <div class="currently-rating"></div>
+                        </div>
+                      </div>
+                      <div class="comment-body">
+                        Кардиган отличного качества. На свой 46 и рост 174 - 46 размер подошел идеально! Мне понравился, взяла!
+                      </div>
+                    </div>
+                    <ul class="uk-pagination">
+                      <li class="uk-pagination-prev uk-hidden">
+                        <a href="">Предыдущая</a>
+                       </li>
+                      <li class="uk-active"><span>1</span></li>
+                      <li><a href="">2</a></li>
+                      <li><a href="">3</a></li>
+                      <li><span>...</span></li>
+                      <li><a href="">174</a></li>
+                      <li class="uk-pagination-next">
+                        <a href="">Следующая</a>
+                       </li>
+                    </ul>
+                    <a href="#feedback" class="btn add-comment" data-uk-modal>Оставить отзыв</a>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="product-slider">
+        <div class="title">Другие вещи в этом образе</div>
+        <div class="slider">
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-indicator-wrapper">
+                <div data-target="indicator-1" class="indicator active" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+                <div data-target="indicator-2" class="indicator" data-img="img/slider-img/best-seller-img-3-260x317.png"></div>
+                <div data-target="indicator-3" class="indicator" data-img="img/slider-img/best-seller-img-2-260x317.png"></div>
+                <div data-target="indicator-4" class="indicator" data-img="img/slider-img/best-seller-img-4-260x317.png"></div>
+                <div data-target="indicator-5" class="indicator" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+              </div>
+              <div class="slide-switcher">
+                <div data-target="switcher-1" class="switcher"></div>
+                <div data-target="switcher-2" class="switcher"></div>
+                <div data-target="switcher-3" class="switcher"></div>
+                <div data-target="switcher-4" class="switcher"></div>
+                <div data-target="switcher-5" class="switcher"></div>
+              </div>
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt="">
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+              <div class="discount">скидка</div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Stefanel</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Футболка с длинным руковм</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast">4 590 р.</span>
+                <span class="coast"> 3 290 р.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-indicator-wrapper">
+                <div data-target="indicator-1" class="indicator active" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+                <div data-target="indicator-2" class="indicator" data-img="img/slider-img/best-seller-img-3-260x317.png"></div>
+                <div data-target="indicator-3" class="indicator" data-img="img/slider-img/best-seller-img-2-260x317.png"></div>
+                <div data-target="indicator-4" class="indicator" data-img="img/slider-img/best-seller-img-4-260x317.png"></div>
+                <div data-target="indicator-5" class="indicator" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+              </div>
+              <div class="slide-switcher">
+                <div data-target="switcher-1" class="switcher"></div>
+                <div data-target="switcher-2" class="switcher"></div>
+                <div data-target="switcher-3" class="switcher"></div>
+                <div data-target="switcher-4" class="switcher"></div>
+                <div data-target="switcher-5" class="switcher"></div>
+              </div>
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt="">
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">H&M</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Брюки стретч High waist</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 1 099 р.</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-indicator-wrapper">
+                <div data-target="indicator-1" class="indicator active" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+                <div data-target="indicator-2" class="indicator" data-img="img/slider-img/best-seller-img-3-260x317.png"></div>
+                <div data-target="indicator-3" class="indicator" data-img="img/slider-img/best-seller-img-2-260x317.png"></div>
+                <div data-target="indicator-4" class="indicator" data-img="img/slider-img/best-seller-img-4-260x317.png"></div>
+                <div data-target="indicator-5" class="indicator" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+              </div>
+              <div class="slide-switcher">
+                <div data-target="switcher-1" class="switcher"></div>
+                <div data-target="switcher-2" class="switcher"></div>
+                <div data-target="switcher-3" class="switcher"></div>
+                <div data-target="switcher-4" class="switcher"></div>
+                <div data-target="switcher-5" class="switcher"></div>
+              </div>
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-3-260x317.png" alt="">
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Gucci</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Вязанный шарф</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 2 499 р.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-indicator-wrapper">
+                <div data-target="indicator-1" class="indicator active" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+                <div data-target="indicator-2" class="indicator" data-img="img/slider-img/best-seller-img-3-260x317.png"></div>
+                <div data-target="indicator-3" class="indicator" data-img="img/slider-img/best-seller-img-2-260x317.png"></div>
+                <div data-target="indicator-4" class="indicator" data-img="img/slider-img/best-seller-img-4-260x317.png"></div>
+                <div data-target="indicator-5" class="indicator" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+              </div>
+              <div class="slide-switcher">
+                <div data-target="switcher-1" class="switcher"></div>
+                <div data-target="switcher-2" class="switcher"></div>
+                <div data-target="switcher-3" class="switcher"></div>
+                <div data-target="switcher-4" class="switcher"></div>
+                <div data-target="switcher-5" class="switcher"></div>
+              </div>
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt="">
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Stefanel und Sholmaster</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Кожаная сумка через плечо</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 1 499 р.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-indicator-wrapper">
+                <div data-target="indicator-1" class="indicator active" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+                <div data-target="indicator-2" class="indicator" data-img="img/slider-img/best-seller-img-3-260x317.png"></div>
+                <div data-target="indicator-3" class="indicator" data-img="img/slider-img/best-seller-img-2-260x317.png"></div>
+                <div data-target="indicator-4" class="indicator" data-img="img/slider-img/best-seller-img-4-260x317.png"></div>
+                <div data-target="indicator-5" class="indicator" data-img="img/slider-img/best-seller-img-1-260x317.png"></div>
+              </div>
+              <div class="slide-switcher">
+                <div data-target="switcher-1" class="switcher"></div>
+                <div data-target="switcher-2" class="switcher"></div>
+                <div data-target="switcher-3" class="switcher"></div>
+                <div data-target="switcher-4" class="switcher"></div>
+                <div data-target="switcher-5" class="switcher"></div>
+              </div>
+              <img class="current-img" data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt="">
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Stefanel und Sholmaster</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Кожаная сумка через плечо</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 1 499 р.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-slider">
+        <div class="title">Другие вещи этого размера</div>
+        <div class="slider">
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-img-first">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-img-second">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+              <div class="discount">скидка</div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Stefanel</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Футболка с длинным руковм</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast">4 590 р.</span>
+                <span class="coast"> 3 290 р.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-img-first">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-img-second">
+               <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">H&M</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Брюки стретч High waist</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 1 099 р.</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-img-first">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-3-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-img-second">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Gucci</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Вязанный шарф</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 2 499 р.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-img-first">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-img-second">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Stefanel und Sholmaster</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Кожаная сумка через плечо</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 1 499 р.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <div class="slide-img-first">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-1-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-img-second">
+                <a href=""><img data-lazy="img/slider-img/best-seller-img-2-260x317.png" alt=""></a>
+              </div>
+              <div class="slide-fast-preview">
+                <a href="">Быстрый просмотр</a>
+              </div>
+            </div>
+            <div class="slide-product-brands">
+              <div class="slide-product-brаnd">
+                <a href="">Stefanel und Sholmaster</a>
+              </div>
+              <div class="slide-product-name">
+                <a href="">Кожаная сумка через плечо</a>
+              </div>
+              <div class="slide-product-coast">
+                <span class="old-coast uk-hidden">4 590 р.</span>
+                <span class="coast"> 1 499 р.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

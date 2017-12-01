@@ -135,6 +135,7 @@
     color: #3b3b3b;
   }
   &.signin {
+    width: 100%;
     max-width: 360px;
     .action-text {
       margin-bottom: 43px;
@@ -151,12 +152,166 @@
     .btn {
       margin-top: 20px;
     }
+    &.profile {
+      padding: 70px 95px;
+    }
   }
   &.gray {
     label,
     input {
       background-color: #f6f6f6;
     }
+  }
+  .custom-select-block {
+    margin-bottom: 40px;
+    height: 60px;
+    line-height: 60px;
+    background: #ffffff;
+    .custom-select-current {
+      padding-left: 35px;
+      font-size: 15px;
+      letter-spacing: .38px;
+      &:after {
+        right: 25px;
+      }
+    }
+    .custom-select-list {
+      padding-left: 0;
+      background: #ffffff;
+      li {
+        height: 60px;
+        line-height: 60px;
+        padding-left: 0;
+        a {
+          padding: 0;
+          padding-left: 35px;
+          font-size: 15px;
+          letter-spacing: .38px;
+          &.active {
+            &:after {
+              right: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  label.radio-btn {
+    margin-bottom: 25px;
+    display: block;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    padding-left: 0;
+    float: none;
+    background: transparent;
+    opacity: 1;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    input[type="radio"] {
+      display: none;
+      &:checked ~.custom-radio {
+        &:after {
+          content: '';
+          display: block;
+          border-radius: 50%;
+          background-color: #f76d57;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &:checked ~.custom-label {
+        font-weight: 700;
+      }
+    }
+    .custom-radio {
+      padding: 3px;
+      float: left;
+      display: inline-block;
+      vertical-align: top;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #d2d5d9;
+      border-radius: 50%;
+      box-shadow: 0 0 2px 0 #f3f3f3;
+    }
+    .custom-label {
+      position: relative;
+      margin-left: 15px;
+      padding-top: 2px;
+      display: inline-block;
+      vertical-align: top;
+      overflow: hidden;
+      color: #67717e;
+      letter-spacing: .4px;
+      color: @mainColor;
+      font-family: 'Circe';
+      font-size: 16px;
+      opacity: 1;
+    }
+  }
+  textarea {
+    margin-bottom: 10px;
+    padding: 20px 35px;
+    width: 100%;
+    resize: vertical;
+    border: none;
+    font-family: "Cormorant-Italic";
+    letter-spacing: .9px;
+    font-size: 18px;
+    color: #202f43;
+    min-height: 85px;
+    &.comments {
+      min-height: 100px;
+    }
+  }
+  .tooltip {
+    color: #202f43;
+    font-size: 15px;
+    letter-spacing: .4px;
+    opacity: .7;
+  }
+  input.date-pic {
+    margin-top: 30px;
+    padding-left: 35px;
+    width: 100%;
+    font-family: "Cormorant-Italic";
+    letter-spacing: .9px;
+    font-size: 18px;
+  }
+  .uk-autocomplete {
+    width: 100%;
+    .uk-dropdown {
+      width: 100%;
+      padding: 0;
+      ul {
+        padding-left: 0;
+      }
+      li {
+        padding: 0;
+        background-color: #ffffff;
+        &.uk-active{
+          a {
+            background: #d3d3d3;
+          }
+        }
+      }
+    }
+    .uk-dropdown-scrollable {
+      overflow-x: hidden;
+    }
+  }
+}
+
+.fieldset-group {
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .action-text {
+    margin-bottom: 35px;
   }
 }
 

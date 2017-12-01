@@ -188,11 +188,15 @@ button.btn {
   text-align: center;
   text-transform: uppercase;
   background-color: #253446;
-  letter-spacing: 1.3px;
-  font-size: 16px;
+  letter-spacing: 2.8px;
+  font-size: 14px;
   &:hover {
     text-decoration: none;
     background-color: #f76d57;
+  }
+  &--card {
+    display: block;
+    max-width: 335px;
   }
 }
 
@@ -200,7 +204,12 @@ button.btn {
 .mt25 {
   margin-top: 25px;
 }
-
+.mt30 {
+  margin-top: 30px;
+}
+.mt80 {
+  margin-top: 79px;
+}
 .preloader {
   position: fixed;
   top: 0;
@@ -254,4 +263,36 @@ button.btn {
 
 .vsc-controller{
   display: none;
+}
+
+
+.uk-tooltip {
+  padding: 15px 20px;
+  background: #ffffff;
+  color: @mainColor;
+  font-size: 14px;
+  letter-spacing: .4px;
+}
+
+.uk-tooltip:after {
+  border: 15px dashed #ffffff;
+}
+.uk-tooltip-right:after {
+  left: -10px;
+  top: 50%;
+  margin-top: -15px;
+  border-right-style: solid;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: #ffffff;
+}
+
+.uk-grid {
+  .uk-width-55 {
+    width: 55%;
+  }
+  .uk-width-45 {
+    width: 45%;
+  }
 }

@@ -1,0 +1,202 @@
+{% extends "layouts/default.html" %}
+{% set title="Casual" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Shop The Look", "Casual"] %}
+{% set main = false %}
+{% block content %} 
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="catalog-sidebar">
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">Все образы</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Брюки</a></li>
+                  <li><a href="#">Шорты</a></li>
+                  <li>
+                    <a href="#" class="active js__catalog-sublist-toggle">Верхняя одежда</a>
+                    <ul class="catalog-sublist">
+                      <li><a href="#">Бомберы</a></li>
+                      <li><a href="#">Горнолыжные куртки</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Джинсы</a></li>
+                  <li><a href="#">Жакеты / Жилеты</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle open-title">Casual</div>
+              <div class="group-list open-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Брюки</a></li>
+                  <li><a href="#">Шорты</a></li>
+                  <li>
+                    <a href="#" class="active js__catalog-sublist-toggle">Верхняя одежда</a>
+                    <ul class="catalog-sublist">
+                      <li><a href="#">Бомберы</a></li>
+                      <li><a href="#">Горнолыжные куртки</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Джинсы</a></li>
+                  <li><a href="#">Жакеты / Жилеты</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">City Chic</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Брюки</a></li>
+                  <li><a href="#">Шорты</a></li>
+                  <li>
+                    <a href="#" class="active js__catalog-sublist-toggle">Верхняя одежда</a>
+                    <ul class="catalog-sublist">
+                      <li><a href="#">Бомберы</a></li>
+                      <li><a href="#">Горнолыжные куртки</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Джинсы</a></li>
+                  <li><a href="#">Жакеты / Жилеты</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">Верхняя одежда</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Брюки</a></li>
+                  <li><a href="#">Шорты</a></li>
+                  <li>
+                    <a href="#" class="active js__catalog-sublist-toggle">Верхняя одежда</a>
+                    <ul class="catalog-sublist">
+                      <li><a href="#">Бомберы</a></li>
+                      <li><a href="#">Горнолыжные куртки</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Джинсы</a></li>
+                  <li><a href="#">Жакеты / Жилеты</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Casual</div>
+          <div class="shop-the-look-list" data-uk-scrollspy="{cls:'uk-animation-scale-up uk-invisible', target: '.shop-block', delay : 300, repeat: false}">
+            <div class="uk-grid">
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-1-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-2-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-3-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-4-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-5-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-6-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-7-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-8-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3">
+                <div class="shop-block uk-invisible">
+                  <div class="shop-block-bg" style="background-image:url('img/shop-the-look-detail-8-263x347.png')"></div>
+                  <a href="" class="shop-block-preview">Смотреть</a>
+                  <div class="shop-block-info">
+                    <div class="product-brand"><a href="#">H&M</a></div>
+                    <div class="product-name"><a href="#">Брюки стретч Hight waist</a></div>
+                    <div class="product-coast"><span class="old-coast">4444 р.</span><span class="coast">1099 р.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% include 'includes/readmore.html' %}
+          {% include 'includes/pagination.html' %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

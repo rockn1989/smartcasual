@@ -1,0 +1,254 @@
+{% extends "layouts/default.html" %}
+{% set title="Мои заказы" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#" class="active">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Мои заказы</div>
+          <div class="orders-list">
+            <div class="orders-toggle">
+              <a href="">Текущие</a>
+              <a href="" class="active">История</a>
+            </div> 
+            <div class="order-wrapper">
+              <div class="order-table-header uk-clearfix toggle open">
+                <div class="code">№49625391</div>
+                <div class="status status--history">
+                  — Заказ выдан клиенту <span class="date">26.07.2017 22:32:15</span>
+                </div>
+              </div>
+              <div class="table-wrapper table-open">
+                <table class="order-table">
+                  <thead>
+                    <tr class="settings-list">
+                      <td>Товар</td>
+                      <td>Цвет и размер</td>
+                      <td>Колличество</td>
+                      <td>Цена</td>
+                      <td>Бонусы</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="order-product">
+                      <td>
+                        <div class="product-name">
+                          Кашемировый кардиган туника с завязками
+                        </div>
+                        <div class="product-code">
+                          Артикул: JE008EWUMI38
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-size">38 EUR</div>
+                        <div class="product-color">бежевый</div>
+                      </td>
+                      <td>
+                        <div class="product-count">1 шт.</div>
+                      </td>
+                      <td>
+                        <div class="product-price">29 099 р.</div>
+                      </td>
+                      <td>
+                        <div class="product-bonus">500</div>
+                      </td>
+                    </tr>
+                    <tr class="order-product">
+                      <td>
+                        <div class="product-name">
+                          Кашемировый кардиган туника с завязками
+                        </div>
+                        <div class="product-code">
+                          Артикул: JE008EWUMI38
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-size">38 EUR</div>
+                        <div class="product-color">бежевый</div>
+                      </td>
+                      <td>
+                        <div class="product-count">1 шт.</div>
+                      </td>
+                      <td>
+                        <div class="product-price">
+                          <div class="old-price">4 590 р.</div>
+                          <div class="coast">3 290 р.</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-bonus">500</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="order-wrapper">
+              <div class="order-table-header uk-clearfix toggle">
+                <div class="code">№49625391</div>
+                <div class="status status--history">
+                  — Заказ выдан клиенту <span class="date">26.07.2017 22:32:15</span>
+                </div>
+              </div>
+              <div class="table-wrapper">
+                <table class="order-table">
+                  <thead>
+                    <tr class="settings-list">
+                      <td>Товар</td>
+                      <td>Цвет и размер</td>
+                      <td>Колличество</td>
+                      <td>Цена</td>
+                      <td>Бонусы</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="order-product">
+                      <td>
+                        <div class="product-name">
+                          Кашемировый кардиган туника с завязками
+                        </div>
+                        <div class="product-code">
+                          Артикул: JE008EWUMI38
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-size">38 EUR</div>
+                        <div class="product-color">бежевый</div>
+                      </td>
+                      <td>
+                        <div class="product-count">1 шт.</div>
+                      </td>
+                      <td>
+                        <div class="product-price">29 099 р.</div>
+                      </td>
+                      <td>
+                        <div class="product-bonus">500</div>
+                      </td>
+                    </tr>
+                    <tr class="order-product">
+                      <td>
+                        <div class="product-name">
+                          Кашемировый кардиган туника с завязками
+                        </div>
+                        <div class="product-code">
+                          Артикул: JE008EWUMI38
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-size">38 EUR</div>
+                        <div class="product-color">бежевый</div>
+                      </td>
+                      <td>
+                        <div class="product-count">1 шт.</div>
+                      </td>
+                      <td>
+                        <div class="product-price">
+                          <div class="old-price">4 590 р.</div>
+                          <div class="coast">3 290 р.</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-bonus">500</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="order-wrapper">
+              <div class="order-table-header uk-clearfix toggle">
+                <div class="code">№49625391</div>
+                <div class="status status--history">
+                  — Заказ выдан клиенту <span class="date">26.07.2017 22:32:15</span>
+                </div>
+              </div>
+              <div class="table-wrapper">
+                <table class="order-table">
+                  <thead>
+                    <tr class="settings-list">
+                      <td>Товар</td>
+                      <td>Цвет и размер</td>
+                      <td>Колличество</td>
+                      <td>Цена</td>
+                      <td>Бонусы</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="order-product">
+                      <td>
+                        <div class="product-name">
+                          Кашемировый кардиган туника с завязками
+                        </div>
+                        <div class="product-code">
+                          Артикул: JE008EWUMI38
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-size">38 EUR</div>
+                        <div class="product-color">бежевый</div>
+                      </td>
+                      <td>
+                        <div class="product-count">1 шт.</div>
+                      </td>
+                      <td>
+                        <div class="product-price">29 099 р.</div>
+                      </td>
+                      <td>
+                        <div class="product-bonus">500</div>
+                      </td>
+                    </tr>
+                    <tr class="order-product">
+                      <td>
+                        <div class="product-name">
+                          Кашемировый кардиган туника с завязками
+                        </div>
+                        <div class="product-code">
+                          Артикул: JE008EWUMI38
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-size">38 EUR</div>
+                        <div class="product-color">бежевый</div>
+                      </td>
+                      <td>
+                        <div class="product-count">1 шт.</div>
+                      </td>
+                      <td>
+                        <div class="product-price">
+                          <div class="old-price">4 590 р.</div>
+                          <div class="coast">3 290 р.</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="product-bonus">500</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

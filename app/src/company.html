@@ -1,0 +1,57 @@
+{% extends "layouts/default.html" %}
+{% set title="О Компании" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Знакомство с Smart Casual"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#" class="active">О компании</a></li>
+              <li><a href="#">Стиль Smart Casual</a></li>
+              <li><a href="#">Новости и события</a></li>
+              <li><a href="#">Сотрудничество</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Магазины</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="catalog">
+            <div class="catalog-header">
+              <div class="title">О компании</div>
+              <div class="about-company-banner" style="background-image: url('img/preview-catalog-850x310.png')"></div>
+            </div>
+            <p class="quote">
+              Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.
+            </p>
+            <p>
+              Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.
+            </p>
+            <ul>
+              <li>Душа моя озарена неземной радостьюкак эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</li>
+              <li>
+                Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. 
+              </li>
+            </ul>
+            <div class="uk-accordion" data-uk-accordion>
+                <h3 class="uk-accordion-title">Описание</h3>
+                <div class="uk-accordion-content">
+                  Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.
+                </div>
+
+                <h3 class="uk-accordion-title">Доставка</h3>
+                <div class="uk-accordion-content">
+                  Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты.
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

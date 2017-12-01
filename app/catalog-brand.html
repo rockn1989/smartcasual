@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +18,9 @@
   <link rel="stylesheet" href="libs/css/uikit.min.css">
   <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" href="libs/slick/slick-theme.css">
-  <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.fadein.css">
+  <link rel="stylesheet" href="libs/EasyZoom/easyzoom.css">
   <link rel="stylesheet" href="libs/malihuScrollBar/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.fadein.css">
   <link rel="stylesheet" href="css/style.css">
   <!--[if lte IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -26,9 +28,9 @@
     <script src="libs/placholder.js"></script>
   <![endif]-->
 </head>
-<body>
 
-  <header id="header" class="header">
+<body class="">
+    <header id="header" class="header">
     <div class="header-top uk-clearfix">
       <div class="uk-container">
         <div class="tel uk-float-left">
@@ -173,16 +175,21 @@
         </div>
       </div>
     </div>
-    <div class="uk-container uk-container-small">
-      <ul class="breadcrumbs">
-        <li><a href="/">Главная</a></li>
-        <li><a href="">Женское</a></li>
-        <li>Одежда</li>
-      </ul>
-    </div>
-  </header>
+          
+<div class="uk-container uk-container-small">
+  <ul class="breadcrumbs">
+                  <li><a href="">Главная</a></li>  
+                        <li><a href="">Женское</a></li>  
+                        <li>Одежда</li>  
+            </ul>
+</div>
 
-  <section class="content">
+      </header>
+      
+
+  
+  
+    <section class="content">
     <div class="uk-container uk-container-small">
       <div class="uk-grid">
         <div class="uk-width-1-4 uk-padding-remove padding-right">
@@ -787,7 +794,7 @@
 
   <footer class="footer">
     <div class="footer-top">
-      <div class="uk-container uk-container-medium">
+      <div class="uk-container uk-container-small">
         <div class="uk-grid">
           <div class="uk-width-3-10">
             <a href="" class="footer-title" data="toggle-list">
@@ -884,7 +891,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="uk-container uk-container-medium">
+      <div class="uk-container uk-container-small">
         <ul class="delivery-list uk-float-left">
           <li>Кашемир из Италии</li>
           <li>Доставка по России</li>
@@ -993,7 +1000,7 @@
     </div>
   </div>
 
-  <div id="order-form" class="uk-modal order-modal">
+  <div id="order-form" class="uk-modal default-modal">
     <div class="uk-modal-dialog">
       <div class="uk-modal-header">
         <div class="title">Обратная связь</div>
@@ -1027,16 +1034,100 @@
     </div>
   </div>
 
+<div id="feedback" class="uk-modal feedback default-modal">
+    <div class="uk-modal-dialog">
+      <div class="uk-modal-header">
+        <div class="title">Оставить отзыв</div>
+        <a class="uk-modal-close uk-close"></a>
+      </div>
+      <div class="uk-modal-body">
+        <div class="example-field">
+          <div class="comment">
+            <div class="comment-header uk-clearfix">
+              <div class="name">Наталья Толстова</div>
+              <div class="date"> 9 месяцев назад</div>
+              <div class="rating rating--four-star">
+                <div class="empty-rating"></div>
+                <div class="currently-rating"></div>
+              </div>
+            </div>
+            <div class="comment-body">
+              <div class="quality bold">Достоинства: <span>Очень просто устанавливатся</span></div>
+              <div class="sleaze bold">Недостатки: <span>нет</span></div>
+              <div class="text bold">Комментарий: <span>Простой и нужный компонент</span></div>
+            </div>
+          </div>
+        </div>
+        <form action="" class="feedback-form">
+
+          <fieldset>
+            <label for="">Оценка <sup>*</sup></label>
+            <div class="score-box">
+              <label for="score1" class="label-score">
+                <input type="radio" name="score[]" id="score1">
+                <span class="custom-radio"></span>
+                <span class="custom-radio-text">1</span>
+              </label>
+              <label for="score2" class="label-score">
+                <input type="radio" name="score[]" id="score2">
+                <span class="custom-radio"></span>
+                <span class="custom-radio-text">2</span>
+              </label>
+              <label for="score3" class="label-score">
+                <input type="radio" name="score[]" id="score3">
+                <span class="custom-radio"></span>
+                <span class="custom-radio-text">3</span>
+              </label>
+              <label for="score4" class="label-score">
+                <input type="radio" name="score[]" id="score4">
+                <span class="custom-radio"></span>
+                <span class="custom-radio-text">4</span>
+              </label>
+              <label for="score5" class="label-score">
+                <input type="radio" name="score[]" id="score5">
+                <span class="custom-radio"></span>
+                <span class="custom-radio-text">5</span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <label for="message-quality" class="message">Достоинства <sup>*</sup></label>
+            <textarea name="message-quality" id="message-quality"></textarea>
+          </fieldset>
+          <fieldset>
+            <label for="message-sleaze" class="message">Недостатки <sup>*</sup></label>
+            <textarea name="message-sleaze" id="message-sleaze"></textarea>
+          </fieldset>
+          <fieldset>
+            <label for="message-text" class="message">Комментарий <sup>*</sup></label>
+            <textarea name="message-text" id="message-text"></textarea>
+          </fieldset>
+          <fieldset>
+            <label for="name">Имя <sup>*</sup></label>
+            <input type="text" id="name" name="name">
+          </fieldset>
+          <fieldset>
+            <label for="order-email">Email <sup>*</sup></label>
+            <input type="email" id="order-email" name="email" required>
+          </fieldset>
+          <button type="submit" class="modal-btn uk-float-right">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
   <script src="libs/jquery.mask.min.js" defer></script>
   <script src="libs/jquery.validate.min.js" defer></script>
-
+  <script src="libs/lazy-load-xt-master/jquery.lazyloadxt.js" defer></script>
   <script src="libs/js/uikit.min.js" defer></script>
   <script src="libs/slick/slick.min.js" defer></script>
   <script src="libs/svg4everybody.min.js" defer></script>
-  <script src="libs/lazy-load-xt-master/jquery.lazyloadxt.js" defer></script>
   <script src="libs/malihuScrollBar/jquery.mCustomScrollbar.concat.min.js" defer></script>
+  <script src="libs/EasyZoom/easyzoom.js" defer></script>
   <script src="js/catalog.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/video.js" defer></script>
+  <script src="js/main.js" defer></script>  
+
 </body>
 </html>

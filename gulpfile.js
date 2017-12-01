@@ -1,5 +1,6 @@
 
 var gulp = require("gulp"),
+    twig = require("gulp-twig"),
 		less = require("gulp-less"),
 		autoprefixer = require("gulp-autoprefixer"),
 		rename    = require("gulp-rename"),
@@ -15,6 +16,12 @@ var gulp = require("gulp"),
 		svgSprite = require('gulp-svg-sprite'),
 		cheerio   = require("gulp-cheerio"),
 		clean     = require("gulp-clean");
+
+gulp.task("templates", function() {
+  return gulp.src("app/src/*.html")
+         .pipe(twig())
+         .pipe(gulp.dest('app/'))
+});
 
 gulp.task("clean", function() {
 	return gulp.src('app/img/icon-svg/sprite-svg.svg')
@@ -48,17 +55,18 @@ gulp.task("svgstoreDev",["clean"], function() {
 				.pipe(gulp.dest("app/img/icon-svg/"))
 });
 
-gulp.task("serve", ["less", "svgstore"], function() {
+gulp.task("serve", ["less", "templates", "svgstore"], function() {
 	browserSync.init({
 		server: "./app",
 		notify: false
 	});
 
-	gulp.watch("app/less/**/*.less", ["less"]);
-	gulp.watch("app/img/icon-svg/*.svg", ["svgstoreDev"]);
-	gulp.watch("app/img/icon-svg/*.svg", browserSync.reload);
-	gulp.watch("app/js/**/*.js", browserSync.reload);
-	gulp.watch("app/*.html", browserSync.reload);
+	gulp.watch("app/src/**/*.html", ["templates"]);
+  gulp.watch("app/less/**/*.less", ["less"]);
+  gulp.watch("app/img/icon-svg/*.svg", ["svgstoreDev"]);
+  gulp.watch("app/img/icon-svg/*.svg", browserSync.reload);
+  gulp.watch("app/js/**/*.js", browserSync.reload);
+  gulp.watch("app/*.html", browserSync.reload);
 
 });
 
