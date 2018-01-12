@@ -135,11 +135,20 @@
     top: -86px;
     bottom: auto;
     right: 75px;
+    @media (min-width: 0) and (max-width: 420px) {
+      right: 35px;
+    }
+    @media @tablet-w {
+      top: -65px;
+    }
   }
   .slick-next {
     right: -6px;
     top: -86px;
     bottom: auto;
+    @media @tablet-w {
+      top: -65px;
+    }
   }
   i {
     font-size: 16px;
@@ -160,6 +169,9 @@
     height: 320px;
     width: 260px;
     overflow: hidden;
+    @media @mob-w {
+      width: 100%;
+    }
     .discount {
       position: absolute;
       top: 10px;
@@ -229,7 +241,7 @@
     }
     &:hover {
       .slide-img-first {
-        opacity:0;
+        opacity: 0;
       }
       .slide-img-second {
         opacity: 1;

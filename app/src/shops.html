@@ -1,0 +1,132 @@
+{% extends "layouts/default.html" %}
+{% set title="Магазины" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Магазины"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="title">Магазины</div>
+      <div class="uk-grid">
+        <div class="uk-width-4-10">
+          <form action="" class="shop-select-form">
+            <label for="select-city">Выберите город</label>
+            <select name="" id="select-city" class="custom-select">
+              <option value="">Москва</option>
+              <option value="">Санкт-Петербург</option>
+              <option value="">Казань</option>
+              <option value="">Волгоград</option>
+              <option value="">Астрахань</option>
+            </select>
+          </form>
+        </div>
+        <div class="uk-width-4-10">
+          <form action="" class="shop-select-form">
+            <label for="select-metro">Выберите метро</label>
+            <select name="" id="select-metro" class="custom-select">
+              <option value="">Аэропорт</option>
+              <option value="">Динамо</option>
+              <option value="">Таганская</option>
+              <option value="">Тульская</option>
+              <option value="">Чертановская</option>
+            </select>
+          </form>
+        </div>
+        <div class="uk-width-1-1">
+          <div id="shops-map" class="map">
+
+          </div>
+        </div>
+        <div class="uk-width-1-1">
+          <ul class="list-shops">
+            <li>
+              <a href="">
+                <div class="title">Тц Авиапарк</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="title">Трк Атриум</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="title">Трц Европейский</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="title">Трк Капитолий Вернадского</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="title">Тц Мега Химки</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="title">Тц метрополис</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="title">Тц Кузнецово плаза</div>
+                <div class="phone">+7 495 540 7170</div>
+                <div class="subway">Аэропорт</div>
+                <div class="address">Ходынский бульвар, 4, 1 торговый уровень</div>
+                <div class="working">
+                  <p><b>пн-чт: </b>10.00 - 22.00</p>
+                  <p><b>пт-вс: </b>10.00 - 23.00</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

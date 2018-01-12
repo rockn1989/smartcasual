@@ -1,0 +1,188 @@
+/* SHOPS */
+
+.shop-select-form {
+  label {
+    margin-right: 5%;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    color: @mainColor;
+    letter-spacing: .4px;
+  }
+  select {
+    width: 100%;
+  }
+}
+
+ul.list-shops {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  padding-left: 0;
+  display: block;
+  width: 100%;
+  list-style: none;
+  li {
+    padding: 0;
+    padding-bottom: 5px;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3.33333%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  .title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .subway {
+    margin-bottom: 15px;
+  }
+  .address {
+    margin-bottom: 15px;
+  }
+  .phone {
+    margin-bottom: 15px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+  a {
+    margin-bottom: 35px;
+    padding: 15px;
+    min-height: 268px;
+    display: block;
+    color: @mainColor;
+    text-transform: none;
+    box-shadow: 0 0 5px 0 @themeColor;
+    &:hover {
+      text-decoration: none;
+      box-shadow: 5px 5px 5px 0 @hoverColor;
+    }
+  }
+}
+
+
+.select2-container {
+  outline: none !important;
+  .select2-selection {
+    height: 50px;
+    border-radius: 0;
+    border: 1px solid #b2aaa2;
+  }
+  .select2-selection__rendered {
+    line-height: 50px !important;
+  }
+  .select2-selection__arrow {
+    height: 50px !important;
+    b {
+      margin-top: -8px !important;
+      margin-left: -10px !important;
+      border: none !important;
+      height: 0;
+      left: 50%;
+      margin-left: -4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      width: 0;
+      &:after {
+        font-size: 12px;
+        content: "\e917";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+  &--open {
+    .select2-selection__arrow {
+      b {
+        &:after {
+          content: '\e916';
+        }
+      }
+    }
+  }
+  .select2-search__field {
+    outline: none;
+  }
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: @themeColor;
+  }
+  .select2-results__option[aria-selected=true] {
+    background-color: lighten(@themeColor, 10%);
+  }
+}
+
+
+.about-center {
+  p {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  a {
+    color: @mainColor;
+    text-decoration: underline;
+    &:hover {
+      color: @themeColor;
+    }
+  }
+  .soc-links {
+    margin-top: 5px;
+    a {
+      margin-right: 10px;
+      color: @themeColor;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.slider-center {
+  .slide {
+    width: 100%;
+    height: 340px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .slick-dots {
+    bottom: 30px;
+  }
+  .slick-dots li button:before {
+    color: @themeColor;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .slick-dots li.slick-active button:before {
+    color: lighten(@themeColor, 30%);
+  }
+}
+
+.map {
+  margin-top: 0px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+#shops-map.map {
+  margin-top: 40px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}

@@ -1,0 +1,48 @@
+{% extends "layouts/default.html" %}
+{% set title="Карты лояльности" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#" class="active">Карты лояльности</a></li>
+              <li><a href="#">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Карты лояльности</div>
+          <ul class="card-type-list">
+            <li><img src="img/card-smartcasual.jpg" alt=""></li>
+            <li><img src="img/card-smartcasual.jpg" alt=""></li>
+          </ul>
+          <div>Привяжите карту лояльности* брендов Stefanel и/или Navigare к вашему личному кабинету если она здесь не отображается</div>
+          <form action="" class="user-form gray card">
+            <input type="text" placeholder="код карты">
+            <button class="btn uk-margin-remove">Привязать</button>
+          </form>
+          <div>Если у вас нет бонусной карты, то вы можете ее заказать</div>
+          <a href="#add-bonus-card-modal" class="user-profile-add" data-uk-modal>Получить бонусную карту интернет-магазина</a>
+          <div>
+            <sup>
+              * Карта лояльности (скидочная карта) брендов Stefanel и/или Navigare выдается только в фирменных розничных магазинах
+            </sup>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layouts/default.html" %}
+{% set title="Карты лояльности" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#" class="active">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Карты лояльности</div>
+            <ul class="card-list">
+              <li>
+                <div class="card-desc">
+                  <div class="card-name">Подарочная карта Stefanel - №49667895</div>
+                  <div class="card-discount">Скидка 10% по карте</div>
+                </div>
+                <div class="card-img">
+                  <img src="img/card-smartcasual.jpg" alt="">
+                </div>
+              </li>
+              <li>
+                <div class="card-desc">
+                  <div class="card-name">Подарочная карта Navigare - №49667895</div>
+                  <div class="card-discount">Скидка 10% по карте</div>
+                </div>
+                <div class="card-img">
+                  <img src="img/card-smartcasual.jpg" alt="">
+                </div>
+              </li>
+            </ul>
+            <a href="#add-bonus-card-modal" class="user-profile-add" data-uk-modal>Получить бонусную карту интернет-магазина</a>
+            <div class="title-h2">Заголовок h2</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quibusdam ullam perspiciatis corporis molestias nisi iste quis rem accusantium inventore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

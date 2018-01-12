@@ -1,0 +1,33 @@
+{% extends "layouts/default.html" %}
+{% set title="Каталог" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Каталог"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="title">Каталог</div>
+      <p>Каталог находится в разработке.</p>
+      <div class="section">
+        <div id="mybook">
+            <div>
+                <img src="img/left-booklet.png" alt="">
+            </div>
+            <div>
+                <img src="img/right-booklet.png" alt="">
+            </div>
+            <div>
+                <img src="img/right-booklet.png" alt="">
+            </div>
+            <div>
+                <img src="img/left-booklet.png" alt="">
+            </div>
+            <div>
+                <img src="img/right-booklet.png" alt="">
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

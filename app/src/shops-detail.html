@@ -1,0 +1,37 @@
+{% extends "layouts/default.html" %}
+{% set title="Магазины" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Магазины", "Москва", "Тц Авиапарк"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="title">ТЦ Авиапарк</div>
+      <div class="uk-grid">
+        <div class="uk-width-1-3">
+          <div class="about-center">
+            <p>ТЦ Авиапарк</p>
+            <p>Место расположения:</p>
+            <p>Ходынский бульвар, 4, 1 торговый уровень</p>
+            <p>Контакты:</p>
+            <p>Тел:<a href="tel:+74955407170">+7 495 540 7170</a></p>
+            <p>Время работы:</p>
+            <p>10.00 - 22.00; пт-сб 10.00 - 23.00</p>
+          </div>
+        </div>
+        <div class="uk-width-2-3">
+          <div class="slider-center">
+            <div class="slide" style="background-image: url('img/slider-img/slider-center-1.jpg')"></div>
+            <div class="slide" style="background-image: url('img/slider-img/slider-center-2.jpg')"></div>
+            <div class="slide" style="background-image: url('img/slider-img/slider-center-3.jpg')"></div>
+          </div>
+        </div>
+        <div class="uk-width-1-1">
+          <div id="map" class="map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

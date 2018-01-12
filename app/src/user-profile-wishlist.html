@@ -1,0 +1,118 @@
+{% extends "layouts/default.html" %}
+{% set title="Избранное" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#">Бонусный счет</a></li>
+              <li><a href="#" class="active">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Избранное</div>
+          <div class="wishlist-wrapper">
+            <a href="#wishlist-form" class="wishlist-send-to-email" data-uk-modal>Отправить список на почту</a>
+            <ul class="user-wishlist">
+              <li class="product">
+                <div class="product-desc">
+                  <div class="product-img">
+                    <img src="img/product-img-small-1-63x76.png" alt="">
+                  </div>
+                  <div class="product-text">
+                    <div class="product-name">
+                      <a href="">Кашемировый кардиган туника с завязками</a>
+                    </div>
+                    <div class="product-article">Артикул-  JE008EWUMI38</div>
+                  </div>
+                </div>
+                <div class="product-type">
+                  <div class="size">38 EUR</div>
+                  <div class="color">Бежевый</div>
+                </div>
+                <div class="product-coast">
+                  <div class="old-coast">24 500р.</div>
+                  <div class="coast">21 499 р.</div>
+                </div>
+                <div class="product-basket">
+                  <button type="button" class="btn js__ajax-send">В корзину</button>
+                </div>
+                <div class="product-delete-wrapper">
+                  <a href="" class="product-delete js__product-delte">✖</a>
+                </div>
+              </li>
+              <li class="product">
+                <div class="product-desc">
+                  <div class="product-img">
+                    <img src="img/product-img-small-1-63x76.png" alt="">
+                  </div>
+                  <div class="product-text">
+                    <div class="product-name">
+                      <a href="">Кашемировый кардиган туника с завязками</a>
+                    </div>
+                    <div class="product-article">Артикул-  JE008EWUMI38</div>
+                  </div>
+                </div>
+                <div class="product-type">
+                  <div class="size">38 EUR</div>
+                  <div class="color">Бежевый</div>
+                </div>
+                <div class="product-coast">
+                  <div class="old-coast">24 500р.</div>
+                  <div class="coast">21 499 р.</div>
+                </div>
+                <div class="product-basket">
+                  <button type="button" class="btn js__ajax-send">В корзину</button>
+                </div>
+                <div class="product-delete-wrapper">
+                  <a href="" class="product-delete js__product-delte">✖</a>
+                </div>
+              </li>
+              <li class="product">
+                <div class="product-desc">
+                  <div class="product-img">
+                    <img src="img/product-img-small-1-63x76.png" alt="">
+                  </div>
+                  <div class="product-text">
+                    <div class="product-name">
+                      <a href="">Кашемировый кардиган туника с завязками</a>
+                    </div>
+                    <div class="product-article">Артикул-  JE008EWUMI38</div>
+                  </div>
+                </div>
+                <div class="product-type">
+                  <div class="size">38 EUR</div>
+                  <div class="color">Бежевый</div>
+                </div>
+                <div class="product-coast">
+                  <div class="old-coast">24 500р.</div>
+                  <div class="coast">21 499 р.</div>
+                </div>
+                <div class="product-basket">
+                  <button type="button" class="btn js__ajax-send">В корзину</button>
+                </div>
+                <div class="product-delete-wrapper">
+                  <a href="" class="product-delete js__product-delte">✖</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

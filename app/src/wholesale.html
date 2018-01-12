@@ -1,0 +1,46 @@
+{% extends "layouts/default.html" %}
+{% set title="Оптовые продажи" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Оптовые продажи"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="title">Оптовые продажи</div>
+      <p>Статус прямого представительства STEFANEL в России позволяет нам предложить нашим оптовым клиентам максимально выгодные условия:</p>
+      <ul>
+        <li>Поставка со склада в Москве</li>
+        <li>Широкий ассортимент товара актуального сезона</li>
+        <li>Возможность формирования индивидуальной размерной сетки</li>
+        <li>Возможность заказа товара коллекций прошлых сезонов со скидкой.</li>
+      </ul>
+      <p>Для городов с населением менее 350 000 человек мы представляем эксклюзивное право представлять бренд STEFANEL при закупке от 10 000 евро в сезон.</p>
+      <p>Минимальная партия по предзаказу - 7 000 Евро <br> Минимальная партия со свободного склада - 3 000 Евро</p>
+      <div class="uk-grid">
+        <div class="uk-width-1-2">
+          <form action="" class="user-form reg contacts">
+            <div class="action-text">Вопрос с сайта</div>
+            <fieldset>
+              <label for="reg-form-name"><span>Имя</span></label>
+              <input type="text" id="reg-form-name">
+            </fieldset>
+            <fieldset>
+              <label for="reg-form-email"><span>Телефон</span></label>
+              <input type="mail" id="reg-form-email">
+            </fieldset>
+            <fieldset>
+              <label for="reg-form-email"><span>Email</span></label>
+              <input type="mail" id="reg-form-email">
+            </fieldset>
+            <fieldset>
+                <label for="reg-form-pass" class="message"><span>Вопрос</span></label>
+                <textarea name="" id="" class="comments"></textarea>
+            </fieldset>
+            <button type="submit" class="btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends "layouts/default.html" %}
+{% set title="Акции" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Акции"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="catalog-sidebar">
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle open-title">2019</div>
+              <div class="group-list open-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Январь</a></li>
+                  <li><a href="#">Февраль</a></li>
+                  <li><a href="#">Март</a></li>
+                  <li><a href="#">Апрель</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">2018</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Январь</a></li>
+                  <li><a href="#">Февраль</a></li>
+                  <li><a href="#">Март</a></li>
+                  <li><a href="#">Апрель</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">2017</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">Январь</a></li>
+                  <li><a href="#">Февраль</a></li>
+                  <li><a href="#">Март</a></li>
+                  <li><a href="#">Апрель</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="catalog">
+            <div class="title">Акции</div>
+
+            <div class="stock-list">
+              <div class="stock-item">
+                <div class="stock-img">
+                  <a href="">
+                    <img src="img/blog-small-banner-4-360x275.png" alt="">
+                  </a>
+                </div>
+                <div class="stock-desc">
+                  <div class="date">01.10.19 — 12.10.19</div>
+                  <div class="stock-title">
+                    <a href="">Скидка 10 процентов за регистрация на сайте</a>
+                  </div>
+                  <div class="stock-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+                  </div>
+                </div>
+              </div>
+              <div class="stock-item">
+                <div class="stock-img">
+                  <a href="">
+                    <img src="img/blog-small-banner-3-360x275.png" alt="">
+                  </a>
+                </div>
+                <div class="stock-desc">
+                  <div class="date">01.10.19 — 12.10.19</div>
+                  <div class="stock-title">
+                    <a href="">Скидка 10 процентов за регистрация на сайте</a>
+                  </div>
+                  <div class="stock-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+                  </div>
+                </div>
+              </div>
+              <div class="stock-item">
+                <div class="stock-img">
+                  <a href="">
+                    <img src="img/blog-small-banner-4-360x275.png" alt="">
+                  </a>
+                </div>
+                <div class="stock-desc">
+                  <div class="date">01.10.19 — 12.10.19</div>
+                  <div class="stock-title">
+                    <a href="">Скидка 10 процентов за регистрация на сайте</a>
+                  </div>
+                  <div class="stock-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="uk-pagination uk-float-right mt25">
+              <li class="uk-pagination-prev uk-hidden">
+                <a href="">Предыдущая</a>
+               </li>
+              <li class="uk-active"><span>1</span></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><span>...</span></li>
+              <li><a href="">174</a></li>
+              <li class="uk-pagination-next">
+                <a href="">Следующая</a>
+               </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

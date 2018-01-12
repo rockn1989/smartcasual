@@ -1,0 +1,160 @@
+{% extends "layouts/default.html" %}
+{% set title="Страница не найдена. Ошибка 404" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Страница не найдена. Ошибка 404"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid bg-404">
+        <div class="uk-width-1-1">
+          <div class="title title-404">404</div>
+          <div class="text-404">Cтраница не найдена. Вероятно, вы перешли по ошибочной ссылке</div>
+          <ul class="actions-404">
+            <li>Вы можете перейти на <a href="/">главную страницу</a></li>
+            <li>Воспользоваться <a href="#search-form" data="search-form">поиском</a> по сайту</li>
+            <li>Перейти в наш <a href="catalog.html">каталог</a></li>
+          </ul>
+        </div>
+        <div class="uk-width-1-1">
+          <div class="product-slider">
+            <div class="title">Вам может понравиться</div>
+            <div class="slider">
+              <div class="slide">
+                <div class="slide-img-wrapper">
+                  <div class="slide-img-first">
+                    <a href=""><img data-lazy="img/slider-img/new-img-1-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-img-second">
+                    <a href=""><img data-lazy="img/slider-img/new-img-2-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-fast-preview">
+                    <a href="">Быстрый просмотр</a>
+                  </div>
+                </div>
+                <div class="slide-product-brands">
+                  <div class="slide-product-brаnd">
+                    <a href="">Stefanel</a>
+                  </div>
+                  <div class="slide-product-name">
+                    <a href="">Футболка с длинным рукавом</a>
+                  </div>
+                  <div class="slide-product-coast">
+                    <span class="old-coast">4 590 р.</span>
+                    <span class="coast"> 3 290 р.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide-img-wrapper">
+                  <div class="slide-img-first">
+                    <a href=""><img data-lazy="img/slider-img/new-img-2-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-img-second">
+                    <a href=""><img data-lazy="img/slider-img/new-img-1-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-fast-preview">
+                    <a href="">Быстрый просмотр</a>
+                  </div>
+                </div>
+                <div class="slide-product-brands">
+                  <div class="slide-product-brаnd">
+                    <a href="">H&M</a>
+                  </div>
+                  <div class="slide-product-name">
+                    <a href="">Брюки стретч High waist</a>
+                  </div>
+                  <div class="slide-product-coast">
+                    <span class="old-coast uk-hidden">4 590 р.</span>
+                    <span class="coast"> 1 099 р.</span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="slide">
+                <div class="slide-img-wrapper">
+                  <div class="slide-img-first">
+                    <a href=""><img data-lazy="img/slider-img/new-img-3-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-img-second">
+                    <a href=""><img data-lazy="img/slider-img/new-img-2-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-fast-preview">
+                    <a href="">Быстрый просмотр</a>
+                  </div>
+                </div>
+                <div class="slide-product-brands">
+                  <div class="slide-product-brаnd">
+                    <a href="">Gucci</a>
+                  </div>
+                  <div class="slide-product-name">
+                    <a href="">Вязанный шарф</a>
+                  </div>
+                  <div class="slide-product-coast">
+                    <span class="old-coast uk-hidden">4 590 р.</span>
+                    <span class="coast"> 2 499 р.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide-img-wrapper">
+                  <div class="slide-img-first">
+                    <a href=""><img data-lazy="img/slider-img/new-img-1-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-img-second">
+                    <a href=""><img data-lazy="img/slider-img/new-img-2-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-fast-preview">
+                    <a href="">Быстрый просмотр</a>
+                  </div>
+                </div>
+                <div class="slide-product-brands">
+                  <div class="slide-product-brаnd">
+                    <a href="">Stefanel und Sholmaster</a>
+                  </div>
+                  <div class="slide-product-name">
+                    <a href="">Кожаная сумка через плечо</a>
+                  </div>
+                  <div class="slide-product-coast">
+                    <span class="old-coast uk-hidden">4 590 р.</span>
+                    <span class="coast"> 1 499 р.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="slide-img-wrapper">
+                  <div class="slide-img-first">
+                    <a href=""><img data-lazy="img/slider-img/new-img-1-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-img-second">
+                    <a href=""><img data-lazy="img/slider-img/new-img-2-260x317.png" alt=""></a>
+                  </div>
+                  <div class="slide-fast-preview">
+                    <a href="">Быстрый просмотр</a>
+                  </div>
+                </div>
+                <div class="slide-product-brands">
+                  <div class="slide-product-brаnd">
+                    <a href="">Stefanel und Sholmaster</a>
+                  </div>
+                  <div class="slide-product-name">
+                    <a href="">Кожаная сумка через плечо</a>
+                  </div>
+                  <div class="slide-product-coast">
+                    <span class="old-coast uk-hidden">4 590 р.</span>
+                    <span class="coast"> 1 499 р.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

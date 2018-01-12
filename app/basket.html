@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="libs/EasyZoom/easyzoom.css">
   <link rel="stylesheet" href="libs/malihuScrollBar/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="libs/lazy-load-xt-master/jquery.lazyloadxt.fadein.css">
+  <link rel="stylesheet" href="libs/select2/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css">
   <!--[if lte IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -530,7 +531,7 @@
             <label for="email">Email <sup>*</sup></label>
             <input type="email" id="email">
           </fieldset>
-          <button type="submit" class="modal-btn uk-float-right">Уведомить о наличии</button>
+          <a href="#" class="modal-btn uk-float-right" data-uk-modal="{target: '#send-form-modal', modal: false}">Уведомить о наличии</a>
         </form>
       </div>
     </div>
@@ -570,7 +571,245 @@
     </div>
   </div>
 
-<div id="feedback" class="uk-modal feedback default-modal">
+  <div id="wishlist-form" class="uk-modal default-modal">
+    <div class="uk-modal-dialog">
+      <div class="uk-modal-header">
+        <div class="title">Отправить список на почту</div>
+        <a class="uk-modal-close uk-close"></a>
+      </div>
+      <div class="uk-modal-body">
+        <form action="" class="order-form">
+          <fieldset>
+            <label for="wishlist-email">Email</label>
+            <input type="email" id="wishlist-email" name="email" required>
+          </fieldset>
+          <button type="submit" class="modal-btn uk-align-center">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="send-form-modal" class="uk-modal default-modal">
+    <div class="uk-modal-dialog">
+      <div class="uk-modal-header">
+        <div class="title">Спасибо!</div>
+        <a class="uk-modal-close uk-close"></a>
+      </div>
+      <div class="uk-modal-body">
+        Ваша заявка отправлена
+      </div>
+    </div>
+  </div>
+
+  <div id="quick-view-modal" class="uk-modal quick-view default-modal">
+    <div class="uk-modal-dialog">
+      <div class="uk-modal-header">
+        <a class="uk-modal-close uk-close"></a>
+      </div>
+      <div class="detail-product">
+        <div class="uk-grid">
+          <div class="uk-width-6-10">
+            <div class="detail-product-sliders">
+              <div class="detail-product-left">
+                <div class="detail-product-preview-slider">
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-2-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-3-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-4-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-3-70-90.png" alt="">
+                  </div>
+                  <div class="slide">
+                    <img data-lazy="img/slider-img/detail-preview-slider-1-70-90.png" alt="">
+                  </div>
+
+                </div>
+                <div class="detail-product-video-box">
+                    <video poster="img/video-preview-img.png" preload="metadata">
+                      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
+                      <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv?test1" type="video/ogg">
+                    </video>
+                    <i class="videoPlay"></i>
+                </div>
+              </div>
+              <div class="detail-product-box">
+                <div class="detail-product-slider">
+                  <div class="slide easyzoom easyzoom--overlay">
+                   <a href="img/slider-img/detail-slider-1-1020-1110-zoom.png" data-uk-lightbox="{group: 'slider-group'}">
+                     <img data-lazy="img/slider-img/detail-slider-1-510-550.png" alt="">
+                   </a>
+                   <div class="zoom">
+                      <a href="img/slider-img/detail-slider-1-1020-1110-zoom.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                   </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1080x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/new-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                  <div class="slide easyzoom easyzoom--overlay">
+                    <a href="http://via.placeholder.com/1020x1110">
+                      <img data-lazy="http://via.placeholder.com/510x550" alt="">
+                    </a>
+                    <div class="zoom">
+                      <a href="img/slider-img/best-seller-img-2-260x317.png" data-uk-lightbox="{group: 'slider-group'}">
+                        Увеличить
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-product-video disabled">
+                  <video id="detail-video" loop="loop" controls="controls" autoplay="true"></video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="uk-width-4-10">
+            <div class="detail-product-content">
+              <div class="detail-product-title">Кашемировый кардиган туника с завязками</div>
+              <div class="coast">
+                <div class="coast-old">49 900 р.</div>
+                <div class="coast-actual">39 900 р.</div>
+              </div>
+              <div class="brand-options">
+                <div class="shot-desc">
+                  <div class="brand-code">Артикул: <span>JE008EWUMI38</span></div>
+                  <div class="brand-name">Бренд: <span><a href="">Stefanel</a></span></div>
+                </div>
+                <div class="brand-current-color">Цвет: <span>Синий</span></div>
+                <ul class="brand-color-list">
+                  <li><a href="" class="color color--lightgray" data-color="Светло серый"></a></li>
+                  <li><a href="" class="color color--blue checked" data-color="Синий"></a></li>
+                  <li><a href="" class="color color--darkgray" data-color="Темно серый"></a></li>
+                </ul>
+                <div class="uk-grid">
+                  <div class="uk-width-1-2">
+                    <div class="brand-size">Размер: <span>Российский</span></div>
+                    <div class="brand-size-block">
+                      <form action="" class="brand-size-form">
+                        <select name="" id="brand-size-select" class="js__custom-select-modal">
+                          <option value="">37</option>
+                          <option value="">30</option>
+                          <option value="">31</option>
+                          <option value="">32</option>
+                          <option value="">33</option>
+                          <option value="">34</option>
+                          <option value="">35</option>
+                        </select>
+                      </form>
+                    </div>
+                    <a href="" class="basket">В корзину</a>
+                  </div>
+                  <div class="uk-width-1-2">
+                    <a href="#brand-size-grid" class="brand-size-grid" data-uk-modal>Размерная сетка</a>
+                    <p class="question">Не нашли свой размер?</p>
+                    <a href="#" class="notification" data-uk-modal="{target: '#subscribe', modal: false}">Уведомить о поступлении</a>
+                    <a href="" class="favorites">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="add-bonus-card-modal" class="uk-modal default-modal">
+    <div class="uk-modal-dialog">
+      <div class="uk-modal-header">
+        <div class="title">Получить бонусную карту интернет-магазина</div>
+        <a class="uk-modal-close uk-close"></a>
+      </div>
+      <div class="uk-modal-body">
+        <form action="" class="add-bonus-card-form user-form reg">
+          <fieldset>
+            <label for="name">ФИО</label>
+            <input type="text" id="name" name="add-bonus-card-name" value="Иванов Иван Иваныч">
+          </fieldset>
+          <fieldset>
+            <label for="tel">Телефон</label>
+            <input type="text" name="add-bonus-card-tel" id="tel" class="js__input-phone" value="+75555555555">
+          </fieldset>
+          <fieldset>
+            <label for="add-bonus-card-email">Email</label>
+            <input type="email" id="add-bonus-card-email" name="add-bonus-card-email" required value="test@test.ru">
+          </fieldset>
+            <fieldset class="rules">
+              <label for="politics-checkbox">
+                <input type="checkbox" id="politics-checkbox" required>
+                <span class="custom-checkbox"></span>
+                <span class="custom-label">Я принимаю политику конфиденциальностиы</span>
+              </label>
+              <label for="refusal-checkbox">
+                <input type="checkbox" id="refusal-checkbox">
+                <span class="custom-checkbox"></span>
+                <span class="custom-label">
+                  Я хочу получать информацию от SmartCasual по электронной почте
+                </span>
+              </label>
+              <label for="sms-checkbox">
+                <input type="checkbox" id="sms-checkbox">
+                <span class="custom-checkbox"></span>
+                <span class="custom-label">
+                  Я хочу получать информацию от SmartCasual по SMS
+                </span>
+              </label>
+            </fieldset>
+
+          <button type="submit" class="modal-btn uk-float-right">Получить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="feedback" class="uk-modal feedback default-modal">
     <div class="uk-modal-dialog">
       <div class="uk-modal-header">
         <div class="title">Оставить отзыв</div>
@@ -652,6 +891,10 @@
     </div>
   </div>
 
+<!--   <div class="custom-tooltip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, repellat.
+</div> -->
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
   <script src="libs/jquery.mask.min.js" defer></script>
   <script src="libs/jquery.validate.min.js" defer></script>
@@ -661,6 +904,8 @@
   <script src="libs/svg4everybody.min.js" defer></script>
   <script src="libs/malihuScrollBar/jquery.mCustomScrollbar.concat.min.js" defer></script>
   <script src="libs/EasyZoom/easyzoom.js" defer></script>
+  <script src="libs/select2/select2.min.js" defer></script>
+  <script src="libs/notify.min.js" defer></script>
   <script src="js/catalog.js" defer></script>
   <script src="js/video.js" defer></script>
   <script src="js/main.js" defer></script>  

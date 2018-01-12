@@ -1,0 +1,111 @@
+{% extends "layouts/default.html" %}
+{% set title="Новости" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Новости"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="catalog-sidebar">
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle open-title">Новые коллекции</div>
+              <div class="group-list open-list">
+                <ul class="catalog-list">
+                  <li><a href="#">PRESS DAY Spring/Summer 2017</a></li>
+                  <li><a href="#">PRESS DAY Winter/Summer 2016</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">Новые магазины</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">STEFANEL в ТРЦ МЕГА ХИМКИ</a></li>
+                  <li><a href="#">STEFANEL в ТРЦ ЕВРОПОЛИС</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="group-wrapper">
+              <div class="group-title js__group-title-toggle">Рекламные компании</div>
+              <div class="group-list">
+                <ul class="catalog-list">
+                  <li><a href="#">STEFANEL Осень-Зима 2017/18</a></li>
+                  <li><a href="#">STEFANEL Весна-Лето 2016/17</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="uk-width-3-4">
+          <div class="title uk-margin-large-bottom">Новости</div>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-img">
+                <a href="">
+                  <img src="img/blog-small-banner-4-360x275.png" alt="">
+                </a>
+              </div>
+              <div class="news-desc">
+                <div class="date">01.10.19</div>
+                <div class="news-title">
+                  <a href="">Рекламная кампания STEFANEL Осень-Зима 2017/18</a>
+                </div>
+                <div class="news-text">
+                  Образы новой рекламной кампании Осень-Зима 2017/2018 – это взгляд Stefanel в будущее и начало процесса эстетического переосмысления в современном ключе своей идентичности и ценностей, характеризующих саму суть марки на протяжении 60 лет
+                </div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-img">
+                <a href="">
+                  <img src="img/blog-small-banner-2-360x275.png" alt="">
+                </a>
+              </div>
+              <div class="news-desc">
+                <div class="date">01.08.19</div>
+                <div class="news-title">
+                  <a href="">Рекламная кампания STEFANEL Осень-Зима 2017/18</a>
+                </div>
+                <div class="news-text">
+                  Образы новой рекламной кампании Осень-Зима 2017/2018 – это взгляд Stefanel в будущее и начало процесса эстетического переосмысления в современном ключе своей идентичности и ценностей, характеризующих саму суть марки на протяжении 60 лет
+                </div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-img">
+                <a href="">
+                  <img src="img/blog-small-banner-3-360x275.png" alt="">
+                </a>
+              </div>
+              <div class="news-desc">
+                <div class="date">24.03.16</div>
+                <div class="news-title">
+                  <a href="">Рекламная кампания STEFANEL Осень-Зима 2017/18</a>
+                </div>
+                <div class="news-text">
+                  Образы новой рекламной кампании Осень-Зима 2017/2018 – это взгляд Stefanel в будущее и начало процесса эстетического переосмысления в современном ключе своей идентичности и ценностей, характеризующих саму суть марки на протяжении 60 лет
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="uk-pagination uk-float-right mt25">
+            <li class="uk-pagination-prev uk-hidden">
+              <a href="">Предыдущая</a>
+             </li>
+            <li class="uk-active"><span>1</span></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><span>...</span></li>
+            <li><a href="">174</a></li>
+            <li class="uk-pagination-next">
+              <a href="">Следующая</a>
+             </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

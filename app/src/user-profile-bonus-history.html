@@ -1,0 +1,125 @@
+{% extends "layouts/default.html" %}
+{% set title="Бонусный счет" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#" class="active">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Бонусный счет</div>
+            <div class="card-bonus">
+              <div class="card-bonus-desc">
+                <div class="name">Бонусная карта Smart Casual - <span>№49625391</span></div>
+                <div class="total">153 доступных бонусов</div>
+              </div>
+              <div class="img"><img src="img/card-smartcasual.jpg" alt=""></div>
+            </div>
+            <div class="card-title">Неактивные баллы</div>
+            <table class="order-table">
+              <thead>
+                <tr class="settings-list">
+                  <td>Дата покупки</td>
+                  <td>№ Заказа</td>
+                  <td>Бонусы</td>
+                  <td>Будут начисленны</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    12.10.2015
+                  </td>
+                  <td>
+                    12-34-567
+                  </td>
+                  <td>
+                    +500
+                  </td>
+                  <td>
+                    22.10.2015
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="card-title">История начислений</div>
+            <table class="order-table">
+              <thead>
+                <tr class="settings-list">
+                  <td>Дата покупки</td>
+                  <td>№ Заказа</td>
+                  <td>Бонусы</td>
+                  <td>Действительны ДО</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    12.10.2015
+                  </td>
+                  <td>
+                    12-34-567
+                  </td>
+                  <td>
+                    +500 <br>
+                    +50 экстра-баллов
+                  </td>
+                  <td>
+                    22.10.2015 <br>
+                    22.10.2015
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    12.10.2015
+                  </td>
+                  <td>
+                    12-34-567
+                  </td>
+                  <td>
+                    -30
+                  </td>
+                  <td>
+                    22.10.2015
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    12.10.2015
+                  </td>
+                  <td>
+                    12-34-567
+                  </td>
+                  <td>
+                    +50
+                  </td>
+                  <td>
+                    22.10.2015
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="title-h2">Заголовок текста h2</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae facilis consectetur sunt modi quisquam minima esse laborum perferendis, aliquid! Molestiae.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

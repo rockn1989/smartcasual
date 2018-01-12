@@ -1,0 +1,48 @@
+{% extends "layouts/default.html" %}
+{% set title="Вакансии" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Вакансии"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="title">Вакансии</div>
+      <div class="uk-grid">
+        <div class="uk-width-2-3">
+          <p>
+            Стефанель Групп (Stefanel Group) известна в индустрии моды под брендом Stefanel с 1982 года. Сегодня компания приобрела международный размах и имеет в сфере розничной торговли одеждой два подразделения – Стефанель (Stefanel) и Интерфешн (Interfashion). Обе торговые марки принадлежат одной Группе и совместно с некоторыми другими брендами играют важную роль и имеют значительную представленность на полках многочисленных магазинов по всему миру.
+          </p>
+          <p>
+            Стефанель Групп представляет богатый и широкий ассортимент изделий, чем обеспечивает себе успешное присутствие на международных рынках.
+          </p>
+          <p>
+            Все сферы бизнеса преследуют одну и ту же цель: обеспечить предложение той продукции, которую ожидают получить клиенты, при этом стремясь к самым высоким стандартам качества и инноваций.
+          </p>
+          <p>
+            Стефанель Групп (Stefanel Group) – это международная компания, которая смотрит в будущее, никогда не забывая о своей страсти к одежде и собственных корнях.
+          </p>
+          <div class="uk-tab options" data-uk-tab="{connect:'#tab-content'}">
+            <li><a href="">Москва</a></li>
+            <li><a href="">Санкт-Петербург</a></li>
+            <li><a href="">Астана</a></li>
+            <li><a href="">Екатеринбург</a></li>
+          </div>
+          <ul id="tab-content" class="uk-switcher">
+            <li>
+              <a href="" class="vacancies-link">Администратор магазина (Москва)</a> <br>
+              <a href="" class="vacancies-link">Продавец кассир</a> <br>
+              <a href="" class="vacancies-link">Директор магазина</a>
+            </li>
+            <li>123</li>
+            <li>15</li>
+            <li>567</li>
+          </ul>
+        </div>
+        <div class="uk-width-1-3">
+          <img src="http://via.placeholder.com/380x470" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layouts/default.html" %}
+{% set title="Вход на сайт" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Вход на сайт"] %}
+{% set main = false %}
+{% block content %} 
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-large-4-10">
+          <div class="title">Вход на сайт</div>
+          <form action="" class="user-form signin gray">
+            <div class="action-text">Восстановление пароля</div>
+            <fieldset>
+              <label for="signin-form-name"><span>Email</span></label>
+              <input type="text" id="signin-form-name">
+            </fieldset>
+            <div>На указанный электронный адрес будет отправлено письмо с новым паролем</div>
+            <br>
+            <button type="submit" class="btn">Восстановить пароль</button>
+          </form>
+        </div>
+        <div class="uk-width-large-6-10">
+          <form action="" class="user-form reg">
+            <div class="action-text">Зарегистрироваться</div>
+            <fieldset>
+              <label for="reg-form-name"><span>Имя</span></label>
+              <input type="text" id="reg-form-name">
+            </fieldset>
+            <fieldset>
+              <label for="reg-form-email"><span>Email</span></label>
+              <input type="mail" id="reg-form-email">
+            </fieldset>
+            <fieldset>
+              <label for="reg-form-pass"><span>Пароль</span></label>
+              <input type="text" id="reg-form-pass">
+            </fieldset>
+            <fieldset class="rules">
+              <label for="politics">
+                <input type="checkbox" id="politics">
+                <span class="custom-checkbox"></span>
+                <span class="custom-label">Я принимаю политику конфиденциальностиы</span>
+              </label>
+              <label for="refusal">
+                <input type="checkbox" id="refusal">
+                <span class="custom-checkbox"></span>
+                <span class="custom-label">
+                  Я не хочу получать информацию от SmartCasual по электронной почте
+                </span>
+              </label>
+            </fieldset>
+            <button type="submit" class="btn">Регистрация</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

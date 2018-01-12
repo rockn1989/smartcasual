@@ -3,6 +3,7 @@
 .blog {
   .title {
     margin-bottom: 30px;
+    font-weight: 700;
   }
   .links-tags {
     margin: 0;
@@ -17,6 +18,21 @@
       display: inline-block;
       vertical-align: top;
       font-size: 0;
+      @media @mob-w {
+        margin-bottom: 10px;
+        width: 38%;
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
+      @media (min-width: 480px) and (max-width: 767px) {
+        width: auto;
+        margin-right: 8%;
+      }
+      @media @tablet-w {
+        margin-right: 8%;
+        margin-bottom: 30px;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -29,6 +45,9 @@
         text-transform: uppercase;
         letter-spacing: 1.4px;
         border-bottom: 2px solid transparent;
+        @media @mob-w {
+          line-height: 1;
+        }
         &.active{
           font-weight: 700;
           border-bottom-color: #000000;
@@ -54,6 +73,19 @@
   vertical-align: top;
   font-size: 0;
   transition: filter .3s ease;
+  @media @mob-w {
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom: 1px solid @themeColor;
+    &:last-child {
+      border: none;
+    }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    width: 48%;
+    border: none;
+  }
   &:nth-child(odd) {
     margin-right: 0;
   }
@@ -101,6 +133,15 @@
     margin-bottom: 80px;
     max-height: 475px;
     width: auto;
+    @media @mob-w {
+      margin-left: 0;
+      margin-bottom: 40px;
+      border: none;
+    }
+    @media @tablet-w {
+      margin-left: 0;
+      margin-bottom: 50px;
+    }
     .post-img {
       margin-bottom: 0;
       max-height: 475px;
@@ -112,11 +153,36 @@
       left: 11%;
       right: 20%;
       bottom: 27%;
+      @media @mob-w {
+        max-height: 100px;
+        overflow: hidden;
+        left: 5%;
+        right: 5%;
+      }
+      @media @tablet-w {
+        right: 10%;
+        left: 10%;
+        bottom: 20%;
+        max-height: 140px;
+        overflow: hidden;
+      }
       a {
         color: #ffffff;
         font-size: 42px;
         line-height: 36px;
         font-weight: 400;
+        @media @mob-w {
+          font-size: 18px;
+          line-height: 20px;
+        }
+        @media (min-width: 480px) and (max-width: 767px) {
+          font-size: 26px;
+          line-height: 30px;
+        }
+        @media @tablet-w {
+          font-size: 30px;
+          line-height: 32px;
+        }
       }
     }
     .post-tags {
@@ -126,6 +192,13 @@
       font-size: 15px;
       font-weight: 400;
       letter-spacing: .38px;
+      @media @mob-w {
+        left: 5%;
+        bottom: 5%;
+      }
+      @media @tablet-w {
+        bottom: 5%;
+      }
       a {
         margin-right: 30px;
         color: #ffffff;
@@ -139,16 +212,53 @@
 }
 
 .right-sidebar {
-  padding-left: 100px;
-
+  padding-left: 28%;
+  @media @mob-w {
+    padding-top: 40px;
+    padding-left: 0;
+  }
+  @media @tablet-w {
+    padding-left: 5%;
+  }
+  @media (min-width: 960px) and (max-width: 1300px) {
+    padding-left: 5%;
+  }
+  .title-h2 {
+    max-width: 70%;
+  }
   .blog-slider {
     .slick-prev,
     .slick-next {
       top: -95px;
+      @media @mob-w {
+        top: -37px;
+      }
+      @media @tablet-w {
+        top: -78px;
+      }
+    }
+    .slick-prev {
+      @media @tablet-w {
+        left: 65%;
+      }
+    }
+    .slide-img-first,
+    .slide-img-second,
+    .slide-img-wrapper {
+      @media @mob-w {
+        height: 200px !important;
+      }
+    } 
+    .slide-img-first:before,
+    .slide-img-second:before {
+      height: 0;
+      display: none;
+      vertical-align: top;
+      content: '';
     }
   }
-
 }
+
 
 .add-posts {
   .add-post {
@@ -156,6 +266,24 @@
     margin-right: -75px;
     padding-bottom: 65px;
     border-bottom: 1px solid #dddddd;
+    @media @mob-w {
+      margin-bottom: 40px;
+      margin-right: 0;
+      padding-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    @media @tablet-w {
+      margin-bottom: 40px;
+      margin-right: 0;
+      padding-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
     .title-h2 {
       max-width: 75%;
     }
@@ -310,6 +438,32 @@
       letter-spacing: .9px;
       opacity: .7;
     }
+  }
+}
+
+blockquote.big-quote {
+  margin: 0;
+  margin: 60px -13% 100px;
+  padding: 40px 13%;
+  color: #253446;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "CormorantGaramond-Bold";
+  line-height: 36px;
+  text-align: center;
+  font-style: normal;
+  background-color: #f6f6f6;
+  border: none;
+  span {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Cormorant-Italic";
+    font-style: normal;
+    line-height: 35px;
+    letter-spacing: .9px;
+    opacity: .7;
   }
 }
 

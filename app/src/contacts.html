@@ -1,0 +1,56 @@
+{% extends "layouts/default.html" %}
+{% set title="Магазины" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Магазины", "Москва", "Тц Авиапарк"] %}
+{% set main = false %}
+{% block content %}
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="title">Контакты</div>
+      <div class="contacts">
+        <div class="uk-grid">
+          <div class="uk-width-1-2">
+            <p>Адрес: 117105 Москва,</p>
+            <p>Варшавское ш., дом 1 стр. 6</p>
+            <p>График работы: Пн-Пт с 10.00 до 19.00</p>
+          </div>
+          <div class="uk-width-1-2">
+            <p>Телефон: <a href="tel:+74957440178">+7 495 744-01-78</a></p>
+            <p>Email: <a href="mailto:info@navigare-russia.ru">info@navigare-russia.ru</a></p>
+            <div class="soc-links">
+                <a href="">
+                  <i class="icon-facebook-logo"></i>
+                </a>
+                <a href="">
+                  <i class="icon-instagram-logo"></i>
+                </a>
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <div id="placeMap" class="map">
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <form action="" class="user-form reg contacts">
+              <div class="action-text">Вопрос с сайта</div>
+              <fieldset>
+                <label for="reg-form-name"><span>Имя</span></label>
+                <input type="text" id="reg-form-name">
+              </fieldset>
+              <fieldset>
+                <label for="reg-form-email"><span>Телефон</span></label>
+                <input type="mail" id="reg-form-email">
+              </fieldset>
+              <fieldset>
+                  <label for="reg-form-pass" class="message"><span>Вопрос</span></label>
+                  <textarea name="" id="" class="comments"></textarea>
+              </fieldset>
+              <button type="submit" class="btn">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

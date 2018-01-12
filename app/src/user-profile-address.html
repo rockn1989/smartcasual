@@ -1,0 +1,73 @@
+{% extends "layouts/default.html" %}
+{% set title="Мои адреса" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#" class="active">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Мои адреса</div>
+          <div class="uk-overflow-container">
+            <table class="table-address">
+              <thead>
+                <tr>
+                  <td>Работа</td>
+                  <td><div class="status">Выбран для доставки</span></td>
+                  <td>
+                    <div class="table-controls">
+                      <a href="" class="edit icon-pencil-edit-button"></a>
+                      <a href="" class="delete icon-close-button"></a>
+                    </div>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">122122, г.Москва, ул. Народного ополчения 34., с1, оф 318</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table-address">
+              <thead>
+                <tr>
+                  <td>Дом</td>
+                  <td><div class="status"></span></td>
+                  <td>
+                    <div class="table-controls">
+                      <a href="" class="edit icon-pencil-edit-button"></a>
+                      <a href="" class="delete icon-close-button"></a>
+                    </div>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="3">122122, г.Москва, ул. Народного ополчения 34., с1, оф 318</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="" class="user-profile-add ">Добавить адрес</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

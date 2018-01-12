@@ -1,0 +1,60 @@
+{% extends "layouts/default.html" %}
+{% set title="Подписка" %}
+{% set paddingRemove="remove-padding-bottom" %}
+{% set borderBold="border-bold" %}
+{% set bread = ["Главная", "Личный кабинет"] %}
+{% set main = false %}
+{% block content %}  
+  <section class="content">
+    <div class="uk-container uk-container-small">
+      <div class="uk-grid">
+        <div class="uk-width-1-4 uk-padding-remove padding-right">
+          <div class="links-sidebar">
+            <ul class="links-list">
+              <li><a href="#" class="active">Заказы</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">Мои адреса</a></li>
+              <li><a href="#">Карты лояльности</a></li>
+              <li><a href="#">Бонусный счет</a></li>
+              <li><a href="#">Избранное</a></li>
+              <li><a href="#">Подписки</a></li>
+              <li><a href="#">Персональные предложения</a></li>
+              <li><a href="#">Выход</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-3-4">
+          <div class="title">Подписка</div>
+          <p>В данный момент вы подписаны на следующие каналы для получения сообщений:</p>
+          <div class="subscribe-wrapper">
+            <form action="" class="user-form signin">
+              <fieldset class="rules">
+                <label for="sms">
+                  <input type="checkbox" id="sms">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">SMS уведомления</span>
+                </label>
+                <label for="dispatch">
+                  <input type="checkbox" id="dispatch">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">
+                    Новостная рассылка по email
+                  </span>
+                </label>
+                <label for="stock">
+                  <input type="checkbox" id="stock">
+                  <span class="custom-checkbox"></span>
+                  <span class="custom-label">
+                    Уведомления о проводящихся акциях
+                  </span>
+                </label>
+              </fieldset>
+              <button type="submit" class="btn">Сохранить</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

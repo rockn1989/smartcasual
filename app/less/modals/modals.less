@@ -109,6 +109,7 @@
 
 
 .subscribe-modal {
+  z-index: 501;
   .uk-modal-dialog {
     padding: 80px 110px;
     width: 840px;
@@ -213,13 +214,21 @@
     max-width: 750px;
     width: auto;
     background: #f6f6f6;
+    @media @mob-w {
+      padding: 30px 20px;
+    }
   }
   .title {
     margin-bottom: 50px;
     font-size: 24px;
+    line-height: 30px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.3px;
+    @media @mob-w {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
   }
   .uk-close {
     position: absolute;
@@ -228,6 +237,10 @@
     font-size: 20px;
     opacity: 1;
     font-weight: 400;
+    @media @mob-w {
+      top: 31px;
+      font-size: 16px;
+    }
     &:after {
       color: #697380;
       content: '\e915';
@@ -271,11 +284,22 @@
       font-size: 18px;
       font-family: "Cormorant-Italic";
       color: #A9ADB1;
+      @media @mob-w {
+        margin-bottom: 10px;
+        padding-left: 0;
+        width: 100%;
+        height: auto;
+        line-height: 1;
+        background: transparent;
+      }
       sup {
         color: pink;
       }
       &.message {
         height: 160px;
+        @media @mob-w {
+          height: auto;
+        }
       }
       &.error {
         padding: 0;
@@ -295,6 +319,14 @@
       background: #ffffff;
       outline: none;
       font-size: 18px;
+      @media @mob-w {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    input[type="file"] {
+      display: none;
     }
     textarea {
       padding: 20px;
@@ -309,6 +341,23 @@
       outline: none;
       font-size: 18px;
       resize: none;
+      @media @mob-w {
+        width: 100%;
+      }
+    }
+  }
+  .custom-file {
+    padding: 0 25px;
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    background-color: #ffffff;
+    height: 60px;
+    line-height: 60px;
+    color: #A9ADB1;
+    font-family: "Cormorant-Italic";
+    @media @mob-w {
+      width: 100%;
     }
   }
   .modal-btn {
@@ -332,6 +381,9 @@
   .required-fileds {
     margin-top: 30px;
     color: #A9ADB1;
+    @media @mob-w {
+      margin-top: 15px;
+    }
     sup {
       color: pink;
       line-height: 1;
@@ -340,6 +392,13 @@
   }
   .modal-btn {
     min-width: 220px;
+    @media @mob-w {
+      margin: 15px auto 0;
+      display: block;
+      float: none;
+      width: 100%;
+      max-width: 360px;
+    }
   }
   input[type="radio"] {
     display: none;
@@ -363,6 +422,9 @@
     height: auto;
     line-height: 1;
     float: none;
+  }
+  label.input-file {
+    cursor: pointer;
   }
   .custom-radio {
     margin-right: 8px;
@@ -391,6 +453,9 @@
     height: 60px;
     line-height: 60px;
     background-color: #ffffff;
+  }
+  .user-form.reg {
+    padding: 0;
   }
 }
 
@@ -438,3 +503,43 @@
     }
   }
 }
+
+
+.quick-view.default-modal {
+  z-index: 500;
+  .uk-modal-dialog {
+    padding: 80px 3%;
+    max-width: 1200px;
+  }
+  .detail-product-title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.select2-container {
+  width: 200px !important;
+}
+.select2-container .select2-selection__arrow {
+  height: 50px !important;
+  line-height: 1;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  top: 53%;
+}
+
+.select2-container {
+  .mCSB_scrollTools {
+    width: 9px !important;
+  }
+  .mCSB_container {
+    margin-right: 6px !important;
+  }
+
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: @mainColor;
+    height: 100%;
+  }
+}
+
+

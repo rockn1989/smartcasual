@@ -120,9 +120,9 @@ $('.blog-slider').slick({
     }
   },
   {
-    breakpoint: 600,
+    breakpoint: 767,
     settings: {
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1
     }
   },
@@ -230,6 +230,45 @@ $('.detail-product-preview-slider').slick({
   nextArrow: '<div class="btn-slide slick-next"><i class="icon-slider-arrow-down"></i></div>',
 });
 
+if($('.slider-center').length) {
+  $('.slider-center').slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    infinite: true,
+    lazyLoad: 'progressive',
+    centerPadding: '50px',
+    prevArrow: '<div class="btn-slide slick-prev"><div class="stef-arrow-left"></div></div>',
+    nextArrow: '<div class="btn-slide slick-next"><div class="stef-arrow-right"></div></div>',
+    responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 940,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
+  });
+}
+
 // HEADER SEARCH FORM
 
 function closeModal (e) {
@@ -252,24 +291,59 @@ $('a[data="search-form"]').on('click', function (e) {
 
 // CUSTOM SELECT
 
-$('.custom-select-block').on('click', function () {
-  $(this)
-    .find('.custom-select-list')
-    .slideToggle('350')
-    .end()
-    .find('.custom-select-current')
-    .toggleClass('open');
+$('.js__custom-select-modal').select2({
+  minimumResultsForSearch: -1
+});
+$('.js__custom-select-page').select2({
+  minimumResultsForSearch: -1
 });
 
-$('.custom-select-list').on('click', 'a', function (e) {
+$('.js__custom-select-page').on('select2:open', function (e) {
+ $('.select2-results__options').mCustomScrollbar('destroy');
+  setTimeout(function () {
+    $('.select2-results__options').mCustomScrollbar({
+      axis: "y",
+      theme: "siteTheme",
+      scrollInertia: 300
+    });
+  }, 0);
+});
+
+$('.js__custom-select-modal').on('select2:open', function (e) {
+ $('.select2-results__options').mCustomScrollbar('destroy');
+  setTimeout(function () {
+    $('.select2-results__options').mCustomScrollbar({
+      axis: "y",
+      theme: "siteTheme",
+      scrollInertia: 300
+    });
+  }, 0);
+});
+
+// ADD FAVORITES
+
+$('.js__ajax-send').on('click', function (e) {
   e.preventDefault();
-  var parent = $(this).parents('.custom-select-block');
-  $(this)
-    .parents()
-    .find('a')
-    .removeClass('active');
-  $(this).addClass('active');
-  parent.find('.custom-select-current').text($(this).text());
+  var _self = $(this);
+  var error = false;
+  if(error == true) {
+    $(_self).notify(
+      "Для того чтобы добавить в избранное Вам необходимо авторизоваться", {
+        position: "top left",
+        arrowShow: false
+      });
+  } else {
+    $(_self).addClass('sending');
+    $(_self).append('<span class="ajax-adding"></span>');
+    $(_self).attr('disabled','true');
+    setTimeout(function () {
+      $(_self).remove('span.ajax-adding');
+      $(_self).removeClass('sending');
+      $(_self).addClass('success-adding');
+      $(_self).text('Добавлено');
+      $(_self).removeAttr('disabled');
+    }, 2000);
+  };
 });
 
 // SHOP THE LOOK ON MAIN PAGE
@@ -399,6 +473,15 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
   // ACCARDION
   $('.uk-accardion').on('toggle.uk.accordion', function() {
     console.log(123)
+  });
+
+  // FORM FILE UPLOAD
+
+  $('.uk-modal form input[type="file"]').on('change', function () {
+    var fileName = $(this).val().replace('C:\\fakepath\\','');
+    var customFileInput = $('.uk-modal form span.custom-file');
+    customFileInput.text();
+    customFileInput.text(fileName);
   });
 
   // VIDEO PLAYER

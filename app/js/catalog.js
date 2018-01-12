@@ -6,11 +6,16 @@ function changeColor(color) {
   $('.brand-current-color span').text('');
   $('.brand-current-color span').text(color);
 }
+
+// CHANGE IMG IN CARD
+
+/* SOME CODE */
+
+
 // CHANGE BRAND COLORS
 
 $('.brand-color-list').on('click', 'a.color', function (e) {
   e.preventDefault();
-  console.log($(this).parents('.brand-color-list'));
   $(this)
     .parents('.brand-color-list')
     .find('a')
@@ -50,7 +55,7 @@ $('.brand-list-size').on('click', 'a', function (e) {
 
 // CHANGE FILTER TYPE
 
-$('.catalog-select').on('click', function () {
+/*$('.catalog-select').on('click', function () {
   $('.catalog-option-list').slideToggle('350');
 });
 
@@ -62,12 +67,12 @@ $('.catalog-option-list').on('click', 'a', function (e) {
     .removeClass('active');
   $(this).addClass('active');
   $('.catalog-option-current').text($(this).text());
-});
+});*/
 
 
 // CARD CHANGE IMG
 
-$('.action-wrapper .brand-color-list').on('click', 'a' , function (e) {
+$('.action-wrapper .cart-brand-color-list').on('click', 'a' , function (e) {
   e.preventDefault();
 
 });
@@ -85,6 +90,14 @@ $('.action-wrapper .brand-color-list').on('click', 'a' , function (e) {
 $('.action-wrapper .favorites').on('click', 'a' , function (e) {
   e.preventDefault();
   $(this).addClass('checked-favorites');
+});
+
+// WISHLIST REMOVE CARD
+
+$('.js__remove-cart').on('click', function (e) {
+  e.preventDefault();
+  var cart = $(this).parents('.cart');
+  $(this).parents('.wishlist-body').find(cart).remove();
 });
 
 // ZOOM IMG
@@ -196,6 +209,7 @@ $(function() {
     $(this)
       .toggleClass('open')
       .siblings('.table-wrapper')
+      .stop(true, true)
       .slideToggle('150');
   });
 });
