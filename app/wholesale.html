@@ -642,13 +642,16 @@
                         </select>
                       </form>
                     </div>
-                    <a href="" class="basket">В корзину</a>
+                    <a href="" class="basket js__ajax-send">В корзину</a>
                   </div>
                   <div class="uk-width-1-2">
-                    <a href="#brand-size-grid" class="brand-size-grid" data-uk-modal>Размерная сетка</a>
+                    <a href="#" class="brand-size-grid" data-uk-modal="{target: '#brand-size-grid', modal: false}">Размерная сетка</a>
                     <p class="question">Не нашли свой размер?</p>
                     <a href="#" class="notification" data-uk-modal="{target: '#subscribe', modal: false}">Уведомить о поступлении</a>
-                    <a href="" class="favorites">В избранное</a>
+                    <button type="button" class="favorites">
+                      В избранное
+                      <span class="favorites-error">Для того чтобы добавить в избранное Вы должны быть авторизованны</span>
+                    </button>
                   </div>
                 </div>
               </div>

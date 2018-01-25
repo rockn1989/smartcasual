@@ -6,7 +6,8 @@
     padding: 0 0 80px;
   }
   @media @desk-w {
-    padding: 0 90px 120px;
+    //padding: 0 90px 120px;
+    padding: 0 90px 40px;
   }
   ul:not([class]),ol:not([class]) {
     padding-left: 20px;
@@ -29,6 +30,10 @@
         color: @mainColor;
         &:hover {
           color: @hoverColor;
+        }
+        &.btn {
+          color: #ffffff;
+          display: inline-block;
         }
       }
     }
@@ -638,8 +643,9 @@ a.read-more {
   }
   .favorites {
     position: relative;
-    padding-left: 50px;
+    padding-left: 30px;
     display: block;
+    width: 100%;
     height: 60px;
     line-height: 66px;
     color: @mainColor;
@@ -722,6 +728,9 @@ a.read-more {
       a {
         border-bottom: 2px solid #000000;
       }
+    }
+    &.uk-tab-responsive {
+      width: 100%;
     }
   }
   .uk-nav {
@@ -1530,7 +1539,7 @@ img[data-src] {
     &:hover,&:focus {
       text-decoration: none;
     }
-    &:after {
+    i.icon-catalog {
       content: '';
       position: absolute;
       top: 0px;
@@ -1544,7 +1553,7 @@ img[data-src] {
       font-size: 18px;
     }
     &.active {
-      &:after {
+      i.icon-catalog {
         transform: translateY(50%) rotate(90deg);
       }
     }
@@ -1700,19 +1709,22 @@ ul.brands-list {
   position: relative;
   &.sending {
     &:after {
-      content: '';
+      //content: '';
     }
   }
   span.ajax-adding {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     width: 24px;
     height: 24px;
+    width: 100%;
+    height: 100%;
+    //background: rgba(0, 0, 0, .3);
     display: block;
     z-index: 150;
-    animation: spin .6s linear infinite;
     &:after {
+      animation: spin .6s linear infinite;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -1727,15 +1739,27 @@ ul.brands-list {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      font-size: 24px;
-      
+      font-size: 20px;
+      line-height: 20px;
+      color: inherit;
+      width: 20px;
+      height: 20px;
+      display: block;
     }
   }
   &.warrning {
     position: relative;
   }
+}
+
+button {
   &.success-adding {
-   //color: @hoverColor;
+    color: @hoverColor !important;
+  }
+  &.error {
+    span {
+      animation: toggleError .3s ease forwards;
+    }
   }
 }
 
@@ -1761,13 +1785,43 @@ ul.brands-list {
   }
 }
 
+span.favorites-error {
+  position: absolute;
+  left: -60px;
+  right: 10%;
+  top: auto;
+  bottom: 0;
+  visibility: hidden;
+  margin: 0 auto;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  background: #fff;
+  line-height: 22px;
+  opacity: 1;
+  transition: bottom 1s, opacity .3s ease;
+  color: @mainColor;
+}
+
+@keyframes toggleError {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 101%;
+    visibility: visible;
+  }
+}
+
 @keyframes spin {
   0% {
-    transform: translateY(-50%) rotate(0);
+    transform: translate(-50%,-50%) rotate(0);
     transform-origin: center;
   }
   100% {
     transform-origin: center;
-    transform: translateY(-50%) rotate(360deg);
+    transform: translate(-50%,-50%) rotate(360deg);
   }
 }

@@ -755,7 +755,7 @@ ul.breadcrumbs li a {
 }
 @media (min-width: 960px) {
   .content {
-    padding: 0 90px 120px;
+    padding: 0 90px 40px;
   }
 }
 .content ul:not([class]),
@@ -787,6 +787,10 @@ ul.breadcrumbs li a {
 }
 .content ul.uk-switcher li a:hover {
   color: #f76d57;
+}
+.content ul.uk-switcher li a.btn {
+  color: #ffffff;
+  display: inline-block;
 }
 .content .uk-accordion {
   margin: 50px 0;
@@ -1436,8 +1440,9 @@ a.read-more:after {
 }
 .detail-product-content .favorites {
   position: relative;
-  padding-left: 50px;
+  padding-left: 30px;
   display: block;
+  width: 100%;
   height: 60px;
   line-height: 66px;
   color: #202f43;
@@ -1521,6 +1526,9 @@ a.read-more:after {
 }
 .uk-tab.options li.uk-active a {
   border-bottom: 2px solid #000000;
+}
+.uk-tab.options li.uk-tab-responsive {
+  width: 100%;
 }
 .uk-tab.options .uk-nav li.uk-active a {
   border: none !important;
@@ -2326,7 +2334,7 @@ img[data-src] {
 .links-sidebar .links-sidebar-title:focus {
   text-decoration: none;
 }
-.links-sidebar .links-sidebar-title:after {
+.links-sidebar .links-sidebar-title i.icon-catalog {
   content: '';
   position: absolute;
   top: 0px;
@@ -2349,7 +2357,7 @@ img[data-src] {
     font-size: 18px;
   }
 }
-.links-sidebar .links-sidebar-title.active:after {
+.links-sidebar .links-sidebar-title.active i.icon-catalog {
   -webkit-transform: translateY(50%) rotate(90deg);
      -moz-transform: translateY(50%) rotate(90deg);
       -ms-transform: translateY(50%) rotate(90deg);
@@ -2489,22 +2497,21 @@ ul.brands-list li a:hover {
 .js__ajax-send {
   position: relative;
 }
-.js__ajax-send.sending:after {
-  content: '';
-}
 .js__ajax-send span.ajax-adding {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 24px;
   height: 24px;
+  width: 100%;
+  height: 100%;
   display: block;
   z-index: 150;
+}
+.js__ajax-send span.ajax-adding:after {
   -webkit-animation: spin .6s linear infinite;
      -moz-animation: spin .6s linear infinite;
           animation: spin .6s linear infinite;
-}
-.js__ajax-send span.ajax-adding:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2522,10 +2529,23 @@ ul.brands-list li a:hover {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 20px;
+  color: inherit;
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 .js__ajax-send.warrning {
   position: relative;
+}
+button.success-adding {
+  color: #f76d57 !important;
+}
+button.error span {
+  -webkit-animation: toggleError .3s ease forwards;
+     -moz-animation: toggleError .3s ease forwards;
+          animation: toggleError .3s ease forwards;
 }
 .notifyjs-wrapper {
   max-width: 300px;
@@ -2549,39 +2569,92 @@ ul.brands-list li a:hover {
   display: block;
   word-wrap: break-word;
 }
+span.favorites-error {
+  position: absolute;
+  left: -60px;
+  right: 10%;
+  top: auto;
+  bottom: 0;
+  visibility: hidden;
+  margin: 0 auto;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  background: #fff;
+  line-height: 22px;
+  opacity: 1;
+  -webkit-transition: bottom 1s, opacity .3s ease;
+  -o-transition: bottom 1s, opacity .3s ease;
+  -moz-transition: bottom 1s, opacity .3s ease;
+  transition: bottom 1s, opacity .3s ease;
+  color: #202f43;
+}
+@-webkit-keyframes toggleError {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 101%;
+    visibility: visible;
+  }
+}
+@-moz-keyframes toggleError {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 101%;
+    visibility: visible;
+  }
+}
+@keyframes toggleError {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 101%;
+    visibility: visible;
+  }
+}
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: translateY(-50%) rotate(0);
-            transform: translateY(-50%) rotate(0);
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
     -webkit-transform-origin: center;
             transform-origin: center;
   }
   100% {
     -webkit-transform-origin: center;
             transform-origin: center;
-    -webkit-transform: translateY(-50%) rotate(360deg);
-            transform: translateY(-50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 @-moz-keyframes spin {
   0% {
-    -moz-transform: translateY(-50%) rotate(0);
-         transform: translateY(-50%) rotate(0);
+    -moz-transform: translate(-50%, -50%) rotate(0);
+         transform: translate(-50%, -50%) rotate(0);
     -moz-transform-origin: center;
          transform-origin: center;
   }
   100% {
     -moz-transform-origin: center;
          transform-origin: center;
-    -moz-transform: translateY(-50%) rotate(360deg);
-         transform: translateY(-50%) rotate(360deg);
+    -moz-transform: translate(-50%, -50%) rotate(360deg);
+         transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 @keyframes spin {
   0% {
-    -webkit-transform: translateY(-50%) rotate(0);
-       -moz-transform: translateY(-50%) rotate(0);
-            transform: translateY(-50%) rotate(0);
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+       -moz-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
     -webkit-transform-origin: center;
        -moz-transform-origin: center;
             transform-origin: center;
@@ -2590,9 +2663,9 @@ ul.brands-list li a:hover {
     -webkit-transform-origin: center;
        -moz-transform-origin: center;
             transform-origin: center;
-    -webkit-transform: translateY(-50%) rotate(360deg);
-       -moz-transform: translateY(-50%) rotate(360deg);
-            transform: translateY(-50%) rotate(360deg);
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+       -moz-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 /* SHOP THE LOOK DETAIL */
@@ -3712,8 +3785,15 @@ ul.list-shops a:hover {
 }
 .news-item .news-title {
   font-size: 24px;
+  line-height: 30px;
   margin-bottom: 10px;
   letter-spacing: .8px;
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  .news-item .news-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 .news-item .news-text {
   letter-spacing: .4px;
@@ -3753,6 +3833,27 @@ ul.list-shops a:hover {
 .size-list table td:first-child {
   text-align: left;
 }
+table.size-list {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #263445;
+}
+table.size-list tr {
+  border: 1px solid #263445;
+}
+table.size-list tr:hover td {
+  background-color: #f76d57;
+  cursor: pointer;
+}
+table.size-list td {
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 13px;
+  border-right: 1px solid #263445;
+}
+table.size-list td:first-child {
+  text-align: left;
+}
 /* CONTACTS */
 .contacts p {
   margin-bottom: 15px;
@@ -3779,6 +3880,15 @@ ul.list-shops a:hover {
 }
 .about-center {
   padding: 0;
+}
+.map.map-contacts {
+  height: 680px;
+}
+@media (min-width: 0) and (max-width: 767px) {
+  .map.map-contacts {
+    margin-bottom: 30px;
+    height: 300px;
+  }
 }
 /* 404 PAGE */
 .uk-grid.bg-404 {
@@ -4902,6 +5012,10 @@ form.subscribe-form .btn-send:hover:after {
     padding: 30px 20px;
   }
 }
+.default-modal .uk-modal-dialog .politics {
+  margin-top: 15px;
+  font-size: 14px;
+}
 .default-modal .title {
   margin-bottom: 50px;
   font-size: 24px;
@@ -4994,6 +5108,7 @@ form.subscribe-form .btn-send:hover:after {
   }
 }
 .default-modal fieldset label:not(class).error {
+  width: 100%;
   padding: 0;
   height: 30px;
   line-height: 30px;
@@ -5359,6 +5474,7 @@ form.subscribe-form .btn-send:hover:after {
 }
 .user-form label:not(class).error {
   padding: 0;
+  width: 100%;
   height: 30px;
   line-height: 30px;
   color: red;
@@ -5604,6 +5720,10 @@ form.subscribe-form .btn-send:hover:after {
 }
 .user-form .uk-autocomplete .uk-dropdown-scrollable {
   overflow-x: hidden;
+}
+.user-form .politics {
+  margin-top: 15px;
+  font-size: 14px;
 }
 .fieldset-group {
   margin-bottom: 50px;

@@ -325,20 +325,30 @@ $('.js__custom-select-modal').on('select2:open', function (e) {
 $('.js__ajax-send').on('click', function (e) {
   e.preventDefault();
   var _self = $(this);
-  var error = false;
+  $(_self).addClass('sending');
+  $(_self).text('');
+  $(_self).append('<span class="ajax-adding"></span>');
+  $(_self).attr('disabled','true');
+  setTimeout(function () {
+    $(_self).remove('span.ajax-adding');
+    $(_self).removeClass('sending');
+    $(_self).text('Добавлено');
+    $(_self).removeAttr('disabled');
+  }, 2000);
+});
+
+$('button.favorites').on('click', function (e) {
+  e.preventDefault();
+  var _self = $(this);
+  var error = true;
   if(error == true) {
-    $(_self).notify(
-      "Для того чтобы добавить в избранное Вам необходимо авторизоваться", {
-        position: "top left",
-        arrowShow: false
-      });
+    $(_self).addClass('error');
+    setTimeout(function () {
+      $(_self).removeClass('error');
+    }, 3000)
   } else {
-    $(_self).addClass('sending');
-    $(_self).append('<span class="ajax-adding"></span>');
     $(_self).attr('disabled','true');
     setTimeout(function () {
-      $(_self).remove('span.ajax-adding');
-      $(_self).removeClass('sending');
       $(_self).addClass('success-adding');
       $(_self).text('Добавлено');
       $(_self).removeAttr('disabled');

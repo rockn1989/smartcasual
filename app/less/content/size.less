@@ -31,3 +31,27 @@
     }
   }
 }
+
+table.size-list {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid @themeColor;
+  tr {
+    border: 1px solid @themeColor;
+    &:hover {
+      td {
+        background-color: @hoverColor;
+        cursor: pointer;
+      }
+    }
+  }
+  td {
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 13px;
+    border-right: 1px solid @themeColor;
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
