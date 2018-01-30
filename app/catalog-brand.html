@@ -32,7 +32,7 @@
 
 <body class="">
     <header id="header" class="header">
-    <div class="header-top uk-clearfix">
+    <div class="header-top uk-clearfix uk-visible-large">
       <div class="uk-container">
         <div class="tel uk-float-left">
           <a href="tel:+78003405095">8 800 340 50 59</a>
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div id="header-bottom" class="header-bottom remove-padding-bottom">
+    <div id="header-bottom" class="header-bottom uk-visible-large remove-padding-bottom">
       <div class="uk-container border-bold">
         <div id="nav-wrapper" class="uk-grid uk-grid-collapse">
           <div class="uk-width-1-10">
@@ -176,6 +176,77 @@
         </div>
       </div>
     </div>
+    <div class="mobile-menu uk-hidden-large">
+      <div class="uk-container">
+        <div class="uk-grid uk-grid-collapse">
+          <div class="uk-width-1-2">
+            <a href="/" class="logo">
+              <img src="img/icon-svg/mobile-logo.svg" alt="">
+            </a>
+            <div class="mobile-tel">
+              <a href="tel:+78003405095">8 800 340 50 95</a>
+              <span>(бесплатный звонок)</span>
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <div class="uk-subnav uk-float-right">
+              <ul>
+                <li><a href="" class="control-icon icon-loop mobile-search"></a></li>
+                <li>
+                  <a href="#" class="control-icon icon-basket">
+                    <span class="basket-count">4</span>
+                  </a>
+                </li>
+                <li><a href="#" class="control-icon icon-heart"></a></li>
+                <li><a href="#offcanvas-menu" data-uk-offcanvas class="control-icon icon-menu-mobile"></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="offcanvas-menu" class="uk-offcanvas">
+              <div class="uk-offcanvas-bar">
+                  <div class="uk-panel">
+                    <ul class="uk-nav">
+                        <li class="uk-active">
+                          <a href="">О Бренде</a>
+                        </li>
+                        <li><a href="">Каталог</a></li>
+                        <li>
+                          <a href="">
+                            Покупателям
+                            <i class="js__menu-sublist-toggle"></i>
+                          </a>
+                          <ul class="menu-sublist">
+                            <li><a href="">Франчайзинг</a></li>
+                            <li><a href="">Оптовые продажи</a></li>
+                            <li><a href="">СМИ</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">
+                            Сотрудничество
+                            <i class="js__menu-sublist-toggle"></i>
+                          </a>
+                          <ul class="menu-sublist">
+                            <li><a href="">Lorem ipsum</a></li>
+                            <li><a href="">Lorem ipsum</a></li>
+                            <li><a href="">Lorem ipsum</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+          <form action="" class="mobile-form" method="post">
+            <input type="text" class="mobile-search" name="mobile-search">
+            <button type="submit" class="mobile-button"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
           
 <div class="uk-container uk-container-small">
   <ul class="breadcrumbs">
@@ -195,7 +266,7 @@
       <div class="uk-grid">
         <div class="uk-width-1-4 uk-padding-remove padding-right">
           <div class="catalog-sidebar">
-            <div class="group-title jg__group-title-toggle open-title">Каталог</div>
+            <div class="group-title js__group-title-toggle open-title">Каталог</div>
             <div class="group-list open-list">
               <ul class="catalog-list">
                 <li><a href="#">Брюки</a></li>
@@ -230,7 +301,7 @@
           <div class="filter">
             <form action="" class="filter-form">
               <fieldset>
-                <div class="group-title jg__group-title-toggle open-title">Материалы</div>
+                <div class="group-title js__group-title-toggle open-title">Материалы</div>
                 <div class="group-list open-list">
                   <label for="type-01">
                     <input type="checkbox" id="type-01">
@@ -285,7 +356,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle open-title">Размер</div>
+                <div class="group-title js__group-title-toggle open-title">Размер</div>
                 <div class="group-list open-list">
                   <label for="size-01">
                     <input type="checkbox" id="size-01">
@@ -320,7 +391,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle open-title">Цвет</div>
+                <div class="group-title js__group-title-toggle open-title">Цвет</div>
                 <div class="group-list open-list">
                   <label for="color-01">
                     <input type="checkbox" id="color-01">
@@ -340,7 +411,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle">Бренды</div>
+                <div class="group-title js__group-title-toggle">Бренды</div>
                 <div class="group-list">
                   <label for="brands-01">
                     <input type="checkbox" id="brands-01">
@@ -360,7 +431,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle">Дополнительно</div>
+                <div class="group-title js__group-title-toggle">Дополнительно</div>
                 <div class="group-list">
                   <label for="add-opt-01">
                     <input type="checkbox" id="add-opt-01">
@@ -417,14 +488,17 @@
                 </div>
               </div>
               <div class="catalog-select">
-                <div class="catalog-option-current">Наш выбор</div>
-                <ul class="catalog-option-list">
-                  <li><a href="#">Наш выбор</a></li>
-                  <li><a href="#">Цена возр.</a></li>
-                  <li><a href="#">Цена убыв</a></li>
-                  <li><a href="#">Популярность возр.</a></li>
-                  <li><a href="#">Популряность убыв.</a></li>
-                </ul>
+                <div class="catalog-option-list">
+                  <form action="" class="catalog-option-form">
+                    <select name="" id="catalog-option-select" class="js__custom-select-page">
+                      <option value="">Наш выбор</option>
+                      <option value="">Цена возр.</option>
+                      <option value="">Цена убыв</option>
+                      <option value="">Популярность возр.</option>
+                      <option value="">Популряность убыв.</option>
+                    </select>
+                  </form>
+                </div>
               </div>
             </div>
             <div class="catalog-body">

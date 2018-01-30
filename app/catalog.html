@@ -32,7 +32,7 @@
 
 <body class="">
     <header id="header" class="header">
-    <div class="header-top uk-clearfix">
+    <div class="header-top uk-clearfix uk-visible-large">
       <div class="uk-container">
         <div class="tel uk-float-left">
           <a href="tel:+78003405095">8 800 340 50 59</a>
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <div id="header-bottom" class="header-bottom remove-padding-bottom">
+    <div id="header-bottom" class="header-bottom uk-visible-large remove-padding-bottom">
       <div class="uk-container border-bold">
         <div id="nav-wrapper" class="uk-grid uk-grid-collapse">
           <div class="uk-width-1-10">
@@ -176,6 +176,77 @@
         </div>
       </div>
     </div>
+    <div class="mobile-menu uk-hidden-large">
+      <div class="uk-container">
+        <div class="uk-grid uk-grid-collapse">
+          <div class="uk-width-1-2">
+            <a href="/" class="logo">
+              <img src="img/icon-svg/mobile-logo.svg" alt="">
+            </a>
+            <div class="mobile-tel">
+              <a href="tel:+78003405095">8 800 340 50 95</a>
+              <span>(бесплатный звонок)</span>
+            </div>
+          </div>
+          <div class="uk-width-1-2">
+            <div class="uk-subnav uk-float-right">
+              <ul>
+                <li><a href="" class="control-icon icon-loop mobile-search"></a></li>
+                <li>
+                  <a href="#" class="control-icon icon-basket">
+                    <span class="basket-count">4</span>
+                  </a>
+                </li>
+                <li><a href="#" class="control-icon icon-heart"></a></li>
+                <li><a href="#offcanvas-menu" data-uk-offcanvas class="control-icon icon-menu-mobile"></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="offcanvas-menu" class="uk-offcanvas">
+              <div class="uk-offcanvas-bar">
+                  <div class="uk-panel">
+                    <ul class="uk-nav">
+                        <li class="uk-active">
+                          <a href="">О Бренде</a>
+                        </li>
+                        <li><a href="">Каталог</a></li>
+                        <li>
+                          <a href="">
+                            Покупателям
+                            <i class="js__menu-sublist-toggle"></i>
+                          </a>
+                          <ul class="menu-sublist">
+                            <li><a href="">Франчайзинг</a></li>
+                            <li><a href="">Оптовые продажи</a></li>
+                            <li><a href="">СМИ</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">
+                            Сотрудничество
+                            <i class="js__menu-sublist-toggle"></i>
+                          </a>
+                          <ul class="menu-sublist">
+                            <li><a href="">Lorem ipsum</a></li>
+                            <li><a href="">Lorem ipsum</a></li>
+                            <li><a href="">Lorem ipsum</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="">Новости</a></li>
+                        <li><a href="">Контакты</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+          <form action="" class="mobile-form" method="post">
+            <input type="text" class="mobile-search" name="mobile-search">
+            <button type="submit" class="mobile-button"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
           
 <div class="uk-container uk-container-small">
   <ul class="breadcrumbs">
@@ -388,15 +459,13 @@
               <div class="title">Одежда</div>
               <div class="catalog-select">
                 <div class="catalog-option-list">
-                  <form action="" class="catalog-option-form">
-                    <select name="" id="catalog-option-select" class="js__custom-select-page">
-                      <option value="">Наш выбор</option>
-                      <option value="">Цена возр.</option>
-                      <option value="">Цена убыв</option>
-                      <option value="">Популярность возр.</option>
-                      <option value="">Популряность убыв.</option>
-                    </select>
-                  </form>
+                  <select name="" id="catalog-option-select" class="js__custom-select-page">
+                    <option value="">Наш выбор</option>
+                    <option value="">Цена возр.</option>
+                    <option value="">Цена убыв</option>
+                    <option value="">Популярность возр.</option>
+                    <option value="">Популряность убыв.</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -414,7 +483,7 @@
                     </div>
                     <ul class="cart-brand-color-list">
                       <li>
-                        <a href="#" class="color color--lightgray" data-color="Светло серый"></a>А
+                        <a href="#" class="color color--lightgray" data-color="Светло серый"></a>
                       </li>
                       <li>
                         <a href="#" class="color color--blue" data-color="Синий"></a>

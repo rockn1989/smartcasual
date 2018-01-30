@@ -518,4 +518,38 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
     });
    }
 
+// MOBILE MENU
+
+$('.js__menu-sublist-toggle').on('click', function(e) {
+    e.preventDefault();
+    $(this)
+      .parents('a')
+      .toggleClass('active')
+      .siblings('.menu-sublist')
+      .stop(true,true)
+      .slideToggle('350');
+
+  }
+);
+
+$('.uk-subnav').on('click', '.control-icon.mobile-search', function (e) {
+  e.preventDefault();
+  $('.mobile-form').slideToggle('350', function () {
+    $(this).find('input[type="text"]').focus();
+  });
+});
+
+$('i[data="toggle-list"]').on('click', function(e) {
+  if($(window).width() < 768) {
+    e.preventDefault();
+    $(this)
+      .parents('a')
+      .toggleClass('active')
+      .siblings('ul[data="target-list"]')
+      .stop(true,true)
+      .slideToggle('350');
+  }
+});
+
+
 });

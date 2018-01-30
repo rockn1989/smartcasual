@@ -10,7 +10,7 @@
       <div class="uk-grid">
         <div class="uk-width-1-4 uk-padding-remove padding-right">
           <div class="catalog-sidebar">
-            <div class="group-title jg__group-title-toggle open-title">Каталог</div>
+            <div class="group-title js__group-title-toggle open-title">Каталог</div>
             <div class="group-list open-list">
               <ul class="catalog-list">
                 <li><a href="#">Брюки</a></li>
@@ -45,7 +45,7 @@
           <div class="filter">
             <form action="" class="filter-form">
               <fieldset>
-                <div class="group-title jg__group-title-toggle open-title">Материалы</div>
+                <div class="group-title js__group-title-toggle open-title">Материалы</div>
                 <div class="group-list open-list">
                   <label for="type-01">
                     <input type="checkbox" id="type-01">
@@ -100,7 +100,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle open-title">Размер</div>
+                <div class="group-title js__group-title-toggle open-title">Размер</div>
                 <div class="group-list open-list">
                   <label for="size-01">
                     <input type="checkbox" id="size-01">
@@ -135,7 +135,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle open-title">Цвет</div>
+                <div class="group-title js__group-title-toggle open-title">Цвет</div>
                 <div class="group-list open-list">
                   <label for="color-01">
                     <input type="checkbox" id="color-01">
@@ -155,7 +155,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle">Бренды</div>
+                <div class="group-title js__group-title-toggle">Бренды</div>
                 <div class="group-list">
                   <label for="brands-01">
                     <input type="checkbox" id="brands-01">
@@ -175,7 +175,7 @@
                 </div>
               </fieldset>
               <fieldset>
-                <div class="group-title jg__group-title-toggle">Дополнительно</div>
+                <div class="group-title js__group-title-toggle">Дополнительно</div>
                 <div class="group-list">
                   <label for="add-opt-01">
                     <input type="checkbox" id="add-opt-01">
@@ -232,14 +232,17 @@
                 </div>
               </div>
               <div class="catalog-select">
-                <div class="catalog-option-current">Наш выбор</div>
-                <ul class="catalog-option-list">
-                  <li><a href="#">Наш выбор</a></li>
-                  <li><a href="#">Цена возр.</a></li>
-                  <li><a href="#">Цена убыв</a></li>
-                  <li><a href="#">Популярность возр.</a></li>
-                  <li><a href="#">Популряность убыв.</a></li>
-                </ul>
+                <div class="catalog-option-list">
+                  <form action="" class="catalog-option-form">
+                    <select name="" id="catalog-option-select" class="js__custom-select-page">
+                      <option value="">Наш выбор</option>
+                      <option value="">Цена возр.</option>
+                      <option value="">Цена убыв</option>
+                      <option value="">Популярность возр.</option>
+                      <option value="">Популряность убыв.</option>
+                    </select>
+                  </form>
+                </div>
               </div>
             </div>
             <div class="catalog-body">

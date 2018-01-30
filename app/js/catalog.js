@@ -124,7 +124,7 @@ if($('.filter').length) {
 $('.catalog-sidebar').on('click', '.js__catalog-sublist-toggle', function (e) {
   e.preventDefault();
   $(this).toggleClass('active');
-  $(this).siblings('.catalog-sublist').slideToggle('350');
+  $(this).stop(true, true).siblings('.catalog-sublist').slideToggle('350');
 });
 
 // FILTER EVENTS
@@ -132,7 +132,7 @@ $('.catalog-sidebar').on('click', '.js__catalog-sublist-toggle', function (e) {
 $('.filter, .catalog-sidebar').on('click','.js__group-title-toggle', function() {
   var _self = $(this);
   _self.toggleClass('open-title');
-  _self.siblings('.group-list').slideToggle('350', function() {
+  _self.siblings('.group-list').stop(true, true).slideToggle('350', function() {
     _self.toggleClass('open-list');
   });
 });
