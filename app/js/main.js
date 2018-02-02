@@ -61,7 +61,7 @@ $('.slider').slick({
   arrows: true,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   infinite: true,
   centerPadding: '50px',
@@ -70,7 +70,7 @@ $('.slider').slick({
   nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
   responsive: [
   {
-    breakpoint: 1025,
+    breakpoint: 1300,
     settings: {
       slidesToShow: 3,
       slidesToScroll: 1
@@ -87,7 +87,8 @@ $('.slider').slick({
     breakpoint: 600,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      centerPadding: '0'
     }
   },
 ]
@@ -205,6 +206,9 @@ $('.soc-slider').slick({
 
 // DETAIL SLIDER
 
+  var sliderTotal = $(window).width() >= 768 ? 4 : 3,
+      sliderPosition = $(window).width() >= 768 ? true : false;
+
  $('.detail-product-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -213,11 +217,11 @@ $('.soc-slider').slick({
   lazyLoad: 'progressive',
   prevArrow: '<div class="btn-slide slick-prev"><i class="icon-left-arrow"></i></div>',
   nextArrow: '<div class="btn-slide slick-next"><i class="icon-right-arrow-thin"></i></div>',
-  asNavFor: '.detail-product-preview-slider'
+  asNavFor: '.detail-product-preview-slider',
 });
 
 $('.detail-product-preview-slider').slick({
-  slidesToShow: 4,
+  slidesToShow: sliderTotal,
   slidesToScroll: 1,
   asNavFor: '.detail-product-slider',
   dots: false,
@@ -225,7 +229,7 @@ $('.detail-product-preview-slider').slick({
   centerMode: false,
   lazyLoad: 'progressive',
   focusOnSelect: true,
-  vertical: true,
+  vertical: sliderPosition,
   prevArrow: '<div class="btn-slide slick-prev"><i class="icon-slider-arrow-up"></i></div>',
   nextArrow: '<div class="btn-slide slick-next"><i class="icon-slider-arrow-down"></i></div>',
 });
@@ -513,7 +517,7 @@ $('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(fu
       }
     });
 
-    $('.detail-product-video-box').on(typeEvent, function () {
+    $('.detail-product-video-box').on('click', function () {
       player.init();
     });
    }
@@ -545,7 +549,8 @@ $('i[data="toggle-list"]').on('click', function(e) {
     $(this)
       .parents('a')
       .toggleClass('active')
-      .siblings('ul[data="target-list"]')
+      .parent('div')
+      .find('ul[data="target-list"]')
       .stop(true,true)
       .slideToggle('350');
   }

@@ -4,7 +4,15 @@
 .footer-top {
   padding: 75px 0 65px;
   background-color: #f6f6f6;
+  @media @mob-w {
+    padding: 25px 0 35px;
+  }
+  @media @tablet-w {
+    padding: 35px 0 45px;
+  }
   .footer-title {
+    position: relative;
+    padding-right: 30px;
     margin-bottom: 40px;
     display: inline-block;
     vertical-align: top;
@@ -12,6 +20,15 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.6px;
+    @media @mob-w {
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 14px;
+    }
+    @media @tablet-w {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
   }
   a {
     color: #2f3d50;
@@ -20,6 +37,53 @@
     &:hover {
       color: #f76d57;
       text-decoration: none;
+    }
+    i.footer-icon-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none;
+      @media @mob-w {
+        display: block;
+      }
+      &:after {
+        width: auto;
+        height: auto;
+        background: transparent;
+        content: "\e90b";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translateY(-50%);
+        font-size: 12px;
+      }
+    }
+    &.active {
+      @media @mob-w {
+        i.footer-icon-toggle {
+          &:after {
+            content: "\e917";
+          }
+        }
+      }
+    }
+  }
+  .footer-list[data] {
+    @media @mob-w {
+      padding-bottom: 20px;
+      display: none;
+    }
+    @media @tablet-w {
+      display: block !important;
+    }
+    @media @desk-w {
+      display: block !important;
     }
   }
   ul {
@@ -32,6 +96,9 @@
   }
   .soc-links {
     margin-top: 40px;
+    @media @mob-w {
+      margin-top: 20px;
+    }
     a {
       margin-right: 30px;
       font-size: 16px;
@@ -51,6 +118,13 @@
     letter-spacing: .9px;
     color: #202f43;
     opacity: .5;
+    @media @mob-w {
+      line-height: 1;
+      display: none;
+    }
+    @media @tablet-w {
+      display: none;
+    }
   }
   .politics {
     margin-top: 15px;
@@ -81,6 +155,9 @@
     padding: 0;
     list-style: none;
     opacity: .5;
+    @media @mob-w {
+      float: none !important;
+    }
     li {
       position: relative;
       margin-right: 20px;
@@ -89,6 +166,11 @@
       vertical-align: top;
       font-size: 15px;
       color: #202f43;
+      @media @mob-w {
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+      }
       &:after {
         content: '';
         position: absolute;
@@ -99,6 +181,9 @@
         height: 15px;
         background-color: #202f43;
         opacity: .8;
+        @media @mob-w {
+          display: none;
+        }
       }
       &:last-child {
         &:after {
@@ -108,10 +193,22 @@
     }
   }
   .dev {
+    @media @mob-w {
+      float: none !important;
+      text-align: center;
+    }
+    @media @tablet-w {
+      margin-top: 15px;
+      float: left !important;
+      text-align: center;
+    }    
     a {
       position: relative;
       padding-left: 25px;
       color: #202f43;
+      @media @mob-w {
+        font-size: 14px;
+      }
       &:after {
         position: absolute;
         top: 46%;
@@ -148,6 +245,10 @@ form.subscribe-form {
     font-family: "Cormorant-Italic";
     background: #ffffff;
     border: none !important;
+    @media @mob-w {
+      height: 40px !important;
+      line-height: 40px !important;
+    }
   }
   .btn-send {
     position: absolute;
@@ -167,6 +268,10 @@ form.subscribe-form {
     letter-spacing: 2px;
     cursor: pointer;
     background: #ffffff;
+    @media @mob-w {
+      height: 40px !important;
+      line-height: 40px !important;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -177,6 +282,9 @@ form.subscribe-form {
       height: 4px;
       background-color: #f76d57;
       transition: background-color .3s ease;
+      @media @mob-w {
+        bottom: 5px;
+      }
     }
     &:hover {
       &:after {
@@ -189,7 +297,19 @@ form.subscribe-form {
 
 .subscribe-block {
   margin-top: 80px;
+  @media @mob-w {
+    margin-top: 30px;
+  }
+  @media @tablet-w {
+    margin-top: 30px;
+  }
   .footer-title {
     margin-bottom: 20px;
+    @media @mob-w {
+      margin-bottom: 10px;
+    }
+    @media @tablet-w {
+      margin-top: 0;
+    }
   }
 }

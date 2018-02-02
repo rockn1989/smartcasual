@@ -1,3 +1,4 @@
+html,
 body,
 table {
   font-family: @mainFont;
@@ -47,7 +48,7 @@ svg {
 .uk-container {
   margin: 0 auto;
   @media @mob-w {
-    padding: 0 10px;
+    padding: 0 15px;
   }
   @media @desk-w {
     padding: 0 20px;
@@ -64,8 +65,10 @@ svg {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   color: @mainColor;
+  font-family: @mainFont;
 }
 
 h1 {
@@ -84,8 +87,8 @@ h1 {
     letter-spacing: 2.25px;
     @media @mob-w {
       margin-bottom: 30px;
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 20px;
+      line-height: 26px;
     }
     @media @tablet-w {
       margin-bottom: 45px;

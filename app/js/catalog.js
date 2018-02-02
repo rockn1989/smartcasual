@@ -103,10 +103,13 @@ $('.js__remove-cart').on('click', function (e) {
 // ZOOM IMG
 
 if($('div').is('.easyzoom')) {
-  var $easyzoom = $('.easyzoom').easyZoom();
+  if($(window).width() > 768) {
+    var $easyzoom = $('.easyzoom').easyZoom();
 
-  // Get an instance API
-  var api = $easyzoom.data('easyZoom');
+    // Get an instance API
+    var api = $easyzoom.data('easyZoom');
+  }
+
 }
 
 // CATALOG SCROLLBAR
